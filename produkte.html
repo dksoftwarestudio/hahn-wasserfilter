@@ -51,7 +51,7 @@
     </nav>
 
     <div class="hidden md:flex items-center gap-3">
-      <a href="https://wa.me/491624012037" target="_blank"
+      <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
          class="border border-green-500 text-green-600 px-6 py-2.5 rounded-2xl font-medium hover:bg-green-50 transition">
         WhatsApp
       </a>
@@ -85,13 +85,11 @@
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
     <!-- BASIC -->
-    <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+    <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:scale-[1.02] hover:shadow-xl transition duration-300">
       <img src="ambient-basic.jpg" alt="Basic Wasserfilter"
            class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
 
-      <h2 class="text-2xl font-bold mb-2 text-center">
-        Basic
-      </h2>
+      <h2 class="text-2xl font-bold mb-2 text-center">Basic</h2>
 
       <p class="text-zinc-600 mb-6 text-center">
         Kompakte Einstiegslösung für kleinere Haushalte.
@@ -114,7 +112,7 @@
     </div>
 
     <!-- KOMFORT -->
-    <div class="reveal relative bg-white rounded-3xl p-8 border-2 border-cyan-600 shadow-xl md:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl transition duration-300">
+    <div class="reveal relative bg-white rounded-3xl p-8 border-2 border-cyan-600 shadow-xl md:scale-[1.03] hover:scale-[1.04] hover:shadow-2xl transition duration-300">
       <div class="absolute -top-4 left-8 bg-cyan-600 text-white text-xs font-semibold px-4 py-2 rounded-full">
         Beliebteste Lösung
       </div>
@@ -122,9 +120,7 @@
       <img src="nais-standard.jpg" alt="Komfort Wasserfilter"
            class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
 
-      <h2 class="text-2xl font-bold mb-2 text-center">
-        Komfort
-      </h2>
+      <h2 class="text-2xl font-bold mb-2 text-center">Komfort</h2>
 
       <p class="text-zinc-600 mb-6 text-center">
         Die ideale Lösung für Familien und den Alltag.
@@ -147,7 +143,7 @@
     </div>
 
     <!-- PREMIUM -->
-    <div class="reveal relative bg-white rounded-3xl p-8 border border-zinc-200 shadow-lg hover:-translate-y-1 hover:shadow-2xl transition duration-300">
+    <div class="reveal relative bg-white rounded-3xl p-8 border border-zinc-200 shadow-lg hover:scale-[1.02] hover:shadow-2xl transition duration-300">
       <div class="absolute top-4 right-4 bg-zinc-900 text-white text-xs font-semibold px-3 py-1 rounded-full">
         Premium
       </div>
@@ -155,9 +151,7 @@
       <img src="nais-cafe.jpg" alt="NAIS CAFE Premium Wasserfilter"
            class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
 
-      <h2 class="text-2xl font-bold mb-2 text-center">
-        NAIS CAFE Premium
-      </h2>
+      <h2 class="text-2xl font-bold mb-2 text-center">NAIS CAFE Premium</h2>
 
       <p class="text-zinc-600 mb-6 text-center">
         Maximale Ausstattung für höchsten Komfort.
@@ -185,7 +179,7 @@
 
 <section class="pb-16">
   <div class="max-w-4xl mx-auto px-6">
-    <div class="reveal bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+    <div class="reveal bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm hover:scale-[1.02] hover:shadow-xl transition duration-300">
       <h2 class="text-2xl font-bold mb-4">
         Nicht sicher, welches System passt?
       </h2>
@@ -204,7 +198,7 @@
 
 <section class="bg-white py-16">
   <div class="max-w-5xl mx-auto px-6 text-center">
-    <div class="reveal bg-white rounded-3xl p-8 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+    <div class="reveal bg-white rounded-3xl p-8 hover:scale-[1.02] hover:shadow-xl transition duration-300">
       <h2 class="text-3xl font-bold mb-6">
         Ersatzfilter & Zubehör
       </h2>
@@ -252,7 +246,7 @@
         </p>
 
         <a href="https://wa.me/491624012037"
-           target="_blank"
+           target="_blank" rel="noopener noreferrer"
            class="inline-block bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-2xl text-sm font-semibold transition">
           WhatsApp schreiben
         </a>
@@ -275,7 +269,7 @@
 </footer>
 
 <a href="https://wa.me/491624012037"
-   target="_blank"
+   target="_blank" rel="noopener noreferrer"
    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg z-50 transition"
    aria-label="WhatsApp schreiben">
   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 24 24">
@@ -295,7 +289,7 @@
         }
       });
     }, {
-      threshold: 0.15
+      threshold: 0.05
     });
 
     items.forEach(item => observer.observe(item));
