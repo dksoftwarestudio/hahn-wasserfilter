@@ -7,6 +7,27 @@
   <meta name="description" content="Wasserfilter und Umkehrosmose-Systeme: Basic, Komfort und Premium. Preisorientierung und unverbindliche Beratung in Hof und Umgebung.">
 
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
@@ -28,6 +49,18 @@
       <a href="produkte.html" class="text-cyan-700 font-semibold">Produkte</a>
       <a href="index.html#kontakt" class="hover:text-cyan-700 transition">Kontakt</a>
     </nav>
+
+    <div class="hidden md:flex items-center gap-3">
+      <a href="https://wa.me/491624012037" target="_blank"
+         class="border border-green-500 text-green-600 px-6 py-2.5 rounded-2xl font-medium hover:bg-green-50 transition">
+        WhatsApp
+      </a>
+
+      <a href="index.html#kontakt"
+         class="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2.5 rounded-2xl font-medium transition">
+        Beratung anfragen
+      </a>
+    </div>
   </div>
 </header>
 
@@ -52,10 +85,9 @@
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
     <!-- BASIC -->
-<div class="bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
-
+    <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
       <img src="ambient-basic.jpg" alt="Basic Wasserfilter"
-     class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
+           class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
 
       <h2 class="text-2xl font-bold mb-2 text-center">
         Basic
@@ -81,15 +113,14 @@
       </a>
     </div>
 
-   <!-- KOMFORT -->
-<div class="relative bg-white rounded-3xl p-8 border-2 border-cyan-600 shadow-xl scale-[1.03] hover:-translate-y-1 hover:shadow-2xl transition duration-300">
-
+    <!-- KOMFORT -->
+    <div class="reveal relative bg-white rounded-3xl p-8 border-2 border-cyan-600 shadow-xl md:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl transition duration-300">
       <div class="absolute -top-4 left-8 bg-cyan-600 text-white text-xs font-semibold px-4 py-2 rounded-full">
         Beliebteste Lösung
       </div>
 
-      <img src="nais-standard.jpg" alt="Basic Wasserfilter"
-     class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
+      <img src="nais-standard.jpg" alt="Komfort Wasserfilter"
+           class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
 
       <h2 class="text-2xl font-bold mb-2 text-center">
         Komfort
@@ -116,14 +147,13 @@
     </div>
 
     <!-- PREMIUM -->
-<div class="relative bg-white rounded-3xl p-8 border border-zinc-200 shadow-lg hover:-translate-y-1 hover:shadow-2xl transition duration-300">
-
+    <div class="reveal relative bg-white rounded-3xl p-8 border border-zinc-200 shadow-lg hover:-translate-y-1 hover:shadow-2xl transition duration-300">
       <div class="absolute top-4 right-4 bg-zinc-900 text-white text-xs font-semibold px-3 py-1 rounded-full">
         Premium
       </div>
 
-      <img src="nais-cafe.jpg" alt="Basic Wasserfilter"
-     class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
+      <img src="nais-cafe.jpg" alt="NAIS CAFE Premium Wasserfilter"
+           class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
 
       <h2 class="text-2xl font-bold mb-2 text-center">
         NAIS CAFE Premium
@@ -155,7 +185,7 @@
 
 <section class="pb-16">
   <div class="max-w-4xl mx-auto px-6">
-    <div class="bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm">
+    <div class="reveal bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
       <h2 class="text-2xl font-bold mb-4">
         Nicht sicher, welches System passt?
       </h2>
@@ -174,19 +204,21 @@
 
 <section class="bg-white py-16">
   <div class="max-w-5xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">
-      Ersatzfilter & Zubehör
-    </h2>
+    <div class="reveal bg-white rounded-3xl p-8 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <h2 class="text-3xl font-bold mb-6">
+        Ersatzfilter & Zubehör
+      </h2>
 
-    <p class="text-zinc-600 max-w-2xl mx-auto mb-8">
-      Neben kompletten Wasserfilteranlagen können auch passende Ersatzfilter
-      und Zubehör für die regelmäßige Wartung angefragt werden.
-    </p>
+      <p class="text-zinc-600 max-w-2xl mx-auto mb-8">
+        Neben kompletten Wasserfilteranlagen können auch passende Ersatzfilter
+        und Zubehör für die regelmäßige Wartung angefragt werden.
+      </p>
 
-    <a href="index.html#kontakt"
-       class="inline-block border border-cyan-700 text-cyan-700 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-50 transition">
-      Zubehör anfragen
-    </a>
+      <a href="index.html#kontakt"
+         class="inline-block border border-cyan-700 text-cyan-700 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-50 transition">
+        Zubehör anfragen
+      </a>
+    </div>
   </div>
 </section>
 
@@ -214,9 +246,16 @@
 
       <div>
         <h5 class="font-semibold text-white mb-4">Kontakt</h5>
-        <p class="text-sm">
-          Anfrage über das Kontaktformular
+        <p class="text-sm mb-4">
+          E-Mail: info@hahn-wasserfilter.de<br>
+          Oder direkt per WhatsApp
         </p>
+
+        <a href="https://wa.me/491624012037"
+           target="_blank"
+           class="inline-block bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-2xl text-sm font-semibold transition">
+          WhatsApp schreiben
+        </a>
       </div>
 
       <div>
@@ -234,6 +273,34 @@
     </div>
   </div>
 </footer>
+
+<a href="https://wa.me/491624012037"
+   target="_blank"
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg z-50 transition"
+   aria-label="WhatsApp schreiben">
+  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 5 5.13-1.34A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.13l-.3-.18-3.04.8.82-2.96-.2-.3A8 8 0 1 1 12 20zm4.36-6.27c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.22-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.24 1.04.38 1.4.48.58.18 1.1.16 1.52.1.46-.06 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
+  </svg>
+</a>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    items.forEach(item => observer.observe(item));
+  });
+</script>
 
 </body>
 </html>
