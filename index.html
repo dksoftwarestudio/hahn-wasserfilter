@@ -26,7 +26,6 @@
 
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
-<!-- HEADER -->
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="tail-container px-6 py-4 flex justify-between items-center gap-6">
 
@@ -47,20 +46,21 @@
       <a href="#kontakt" class="hover:text-cyan-700 transition">Kontakt</a>
     </nav>
 
-    <a href="https://wa.me/491624012037"
-   target="_blank"
-   class="hidden md:inline-block border border-green-500 text-green-600 px-6 py-2.5 rounded-2xl font-medium hover:bg-green-50 transition">
-  WhatsApp
-</a>
-    <a href="#kontakt"
-       class="hidden md:inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2.5 rounded-2xl font-medium transition">
-      Beratung anfragen
-    </a>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="https://wa.me/491624012037" target="_blank"
+         class="border border-green-500 text-green-600 px-6 py-2.5 rounded-2xl font-medium hover:bg-green-50 transition">
+        WhatsApp
+      </a>
+
+      <a href="#kontakt"
+         class="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2.5 rounded-2xl font-medium transition">
+        Beratung anfragen
+      </a>
+    </div>
 
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero-bg min-h-screen flex items-center text-white py-20">
   <div class="tail-container px-6">
     <div class="max-w-3xl">
@@ -104,7 +104,6 @@
   </div>
 </section>
 
-<!-- WARUM -->
 <section id="vorteile" class="py-20 bg-white">
   <div class="tail-container px-6">
 
@@ -140,7 +139,6 @@
   </div>
 </section>
 
-<!-- SYSTEME -->
 <section class="py-20 bg-[#F5F5F5]">
   <div class="tail-container px-6">
 
@@ -188,7 +186,6 @@
   </div>
 </section>
 
-<!-- SO FUNKTIONIERTS -->
 <section class="py-20 bg-white">
   <div class="tail-container px-6">
 
@@ -224,7 +221,6 @@
   </div>
 </section>
 
-<!-- KONTAKT -->
 <section id="kontakt" class="py-20 bg-cyan-700 text-white">
   <div class="tail-container px-6 max-w-3xl mx-auto">
 
@@ -237,10 +233,10 @@
       </p>
     </div>
 
-   <div class="bg-white text-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
-  <form action="https://formspree.io/f/xlgzgddg" method="POST" class="space-y-5">
-    <input type="hidden" name="_redirect" value="https://hahn-wasserfilter.de/danke.html">
-    <input type="hidden" name="source" value="hahn-wasserfilter.de">
+    <div class="bg-white text-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
+      <form action="https://formspree.io/f/xlgzgddg" method="POST" class="space-y-5">
+        <input type="hidden" name="_redirect" value="https://hahn-wasserfilter.de/danke.html">
+        <input type="hidden" name="source" value="hahn-wasserfilter.de">
 
         <div class="grid md:grid-cols-2 gap-5">
           <input type="text" name="name" placeholder="Vor- und Nachname" required autocomplete="name"
@@ -279,7 +275,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="bg-zinc-900 text-zinc-400 py-16">
   <div class="tail-container px-6">
     <div class="grid md:grid-cols-4 gap-10">
@@ -298,32 +293,33 @@
         <ul class="space-y-2 text-sm">
           <li><a href="index.html" class="hover:text-white">Start</a></li>
           <li><a href="produkte.html" class="hover:text-white">Produkte</a></li>
+          <li><a href="#vorteile" class="hover:text-white">Vorteile</a></li>
           <li><a href="#kontakt" class="hover:text-white">Kontakt</a></li>
         </ul>
       </div>
 
       <div>
         <h5 class="font-semibold text-white mb-4">Kontakt</h5>
-        <p class="text-sm">
+
+        <p class="text-sm mb-4">
           E-Mail: info@hahn-wasserfilter.de<br>
-          Anfrage über das Kontaktformular
+          Oder direkt per WhatsApp
         </p>
+
+        <a href="https://wa.me/491624012037"
+           target="_blank"
+           class="inline-block bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-2xl text-sm font-semibold transition">
+          WhatsApp schreiben
+        </a>
       </div>
 
       <div>
-  <h5 class="font-semibold text-white mb-4">Kontakt</h5>
-
-  <p class="text-sm mb-4">
-    E-Mail: info@hahn-wasserfilter.de<br>
-    Oder direkt per WhatsApp
-  </p>
-
-  <a href="https://wa.me/491624012037"
-     target="_blank"
-     class="inline-block bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-2xl text-sm font-semibold transition">
-    WhatsApp schreiben
-  </a>
-</div>
+        <h5 class="font-semibold text-white mb-4">Rechtliches</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="impressum.html" class="hover:text-white">Impressum</a></li>
+          <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
+        </ul>
+      </div>
 
     </div>
 
@@ -332,6 +328,15 @@
     </div>
   </div>
 </footer>
+
+<a href="https://wa.me/491624012037"
+   target="_blank"
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg z-50 transition"
+   aria-label="WhatsApp schreiben">
+  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 5 5.13-1.34A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.13l-.3-.18-3.04.8.82-2.96-.2-.3A8 8 0 1 1 12 20zm4.36-6.27c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.22-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.24 1.04.38 1.4.48.58.18 1.1.16 1.52.1.46-.06 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
+  </svg>
+</a>
 
 </body>
 </html>
