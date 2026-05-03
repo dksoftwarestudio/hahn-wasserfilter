@@ -90,13 +90,26 @@
   </div>
 </header>
 
-<section class="bg-white py-20">
-  <div class="max-w-4xl mx-auto px-6 text-center">
+<section class="relative py-24">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="hero-water.jpg"
+         alt="Wasser Hintergrund"
+         class="w-full h-full object-cover">
+  </div>
+
+  <!-- White Overlay -->
+  <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+
+  <!-- Content -->
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+
     <p class="text-sm font-semibold text-cyan-700 mb-3">
       Produkte & Preise
     </p>
 
-    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-zinc-900">
       Wasserfilter-Systeme einfach auswählen
     </h1>
 
@@ -104,6 +117,7 @@
       Drei klare Lösungen für sauberes Trinkwasser — mit transparenter Preisorientierung
       und persönlicher Beratung.
     </p>
+
   </div>
 </section>
 
