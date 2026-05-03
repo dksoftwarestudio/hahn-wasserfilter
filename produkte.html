@@ -33,43 +33,57 @@
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
 <header class="bg-white shadow-sm sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+  <div class="max-w-7xl mx-auto px-6 py-4">
 
-    <a href="index.html" class="flex items-center gap-4">
-      <div class="w-11 h-11 flex items-center justify-center bg-cyan-600 rounded-xl">
-        <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="currentColor">
-          <path d="M12 2C12 2 5 10 5 14a7 7 0 0 0 14 0c0-4-7-12-7-12z"/>
-          <text x="12" y="16" text-anchor="middle" font-size="8" font-family="serif" fill="white" font-weight="bold">H</text>
-        </svg>
-      </div>
+    <div class="flex justify-between items-center gap-6">
+      <a href="index.html" class="flex items-center gap-4">
+        <div class="w-11 h-11 flex items-center justify-center bg-cyan-600 rounded-xl">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="currentColor">
+            <path d="M12 2C12 2 5 10 5 14a7 7 0 0 0 14 0c0-4-7-12-7-12z"/>
+            <text x="12" y="16" text-anchor="middle" font-size="8" font-family="serif" fill="white" font-weight="bold">H</text>
+          </svg>
+        </div>
 
-     <div class="leading-tight">
-  <div class="font-serif text-2xl font-semibold tracking-wide text-[#0B2F5B]">
-    hahn-wasserfilter.de
-  </div>
-  <p class="text-xs tracking-[0.22em] uppercase text-cyan-700 mt-1">
-    Hof (Saale) · bundesweit
-  </p>
-</div>
-</a>
-
-<nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
-  <a href="index.html" class="hover:text-cyan-700 transition">Start</a>
-  <a href="produkte.html" class="text-cyan-700 font-semibold">Produkte</a>
-  <a href="index.html#kontakt" class="hover:text-cyan-700 transition">Kontakt</a>
-</nav>
-
-    <div class="hidden md:flex items-center gap-3">
-      <a href="https://wa.me/491624012037"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="border border-green-500 text-green-600 px-5 py-2 rounded-xl text-sm font-medium hover:bg-green-50 transition">
-        WhatsApp
+        <div class="leading-tight">
+          <div class="font-serif text-2xl font-semibold tracking-wide text-[#0B2F5B]">
+            hahn-wasserfilter.de
+          </div>
+          <p class="text-xs tracking-[0.22em] uppercase text-cyan-700 mt-1">
+            Hof (Saale) · bundesweit
+          </p>
+        </div>
       </a>
 
-      <a href="index.html#kontakt"
-         class="bg-cyan-600 hover:bg-cyan-700 text-white px-5 py-2 rounded-xl text-sm font-medium transition">
-        Beratung
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+        <a href="index.html" class="hover:text-cyan-700 transition">Start</a>
+        <a href="produkte.html" class="text-cyan-700 font-semibold">Produkte</a>
+        <a href="index.html#kontakt" class="hover:text-cyan-700 transition">Kontakt</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="https://wa.me/491624012037"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="border border-green-500 text-green-600 px-5 py-2 rounded-xl text-sm font-medium hover:bg-green-50 transition">
+          WhatsApp
+        </a>
+
+        <a href="index.html#kontakt"
+           class="bg-cyan-600 hover:bg-cyan-700 text-white px-5 py-2 rounded-xl text-sm font-medium transition">
+          Beratung
+        </a>
+      </div>
+    </div>
+
+    <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
+      <a href="index.html"
+         class="text-center bg-cyan-600 text-white py-3 rounded-2xl font-medium">
+        Start
+      </a>
+
+      <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
+         class="text-center bg-green-500 text-white py-3 rounded-2xl font-medium">
+        WhatsApp
       </a>
     </div>
 
@@ -96,7 +110,6 @@
 <section class="py-16">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
-    <!-- BASIC -->
     <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:scale-[1.02] hover:shadow-xl transition duration-300">
       <img src="ambient-basic.jpg" alt="LUXLABEL Ambient Wasserfilter"
            class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
@@ -127,7 +140,6 @@
       </a>
     </div>
 
-    <!-- KOMFORT -->
     <div class="reveal relative bg-white rounded-3xl p-8 border-2 border-cyan-600 shadow-xl md:scale-[1.03] hover:scale-[1.04] hover:shadow-2xl transition duration-300">
       <div class="absolute -top-4 left-8 bg-cyan-600 text-white text-xs font-semibold px-4 py-2 rounded-full">
         Beliebteste Lösung
@@ -162,7 +174,6 @@
       </a>
     </div>
 
-    <!-- PREMIUM -->
     <div class="reveal relative bg-white rounded-3xl p-8 border border-zinc-200 shadow-lg hover:scale-[1.02] hover:shadow-2xl transition duration-300">
       <div class="absolute top-4 right-4 bg-zinc-900 text-white text-xs font-semibold px-3 py-1 rounded-full">
         Premium
@@ -212,8 +223,8 @@
       Die wichtigsten technischen Unterschiede auf einen Blick.
     </p>
 
-    <div class="overflow-x-auto">
-      <table class="w-full text-sm border border-zinc-200 rounded-2xl overflow-hidden">
+    <div class="overflow-x-auto rounded-2xl border border-zinc-200">
+      <table class="w-full text-sm">
         <thead class="bg-[#F5F5F5] text-left">
           <tr>
             <th class="p-4 font-semibold">Technische Daten</th>
