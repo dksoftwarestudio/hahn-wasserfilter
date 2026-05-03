@@ -6,18 +6,8 @@
   <title>hahn-wasserfilter.de | Wasserfilter für Zuhause</title>
   <meta name="description" content="Wasserfilter und Umkehrosmose-Systeme für Ihr Zuhause. Beratung deutschlandweit – einfach, verständlich und unverbindlich.">
 
- <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6SJPMXTRV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-P6SJPMXTRV');
-</script>
-  
   <style>
     .hero-bg {
       background-color: #0B3F66;
@@ -70,20 +60,20 @@
         </div>
 
         <div class="leading-tight">
-  <div class="font-serif text-2xl font-semibold tracking-wide text-[#0B2F5B]">
-    hahn-wasserfilter.de
-  </div>
-  <p class="text-xs tracking-[0.22em] uppercase text-cyan-700 mt-1">
-    Hof (Saale) · bundesweit
-  </p>
-</div>
-</a>
+          <div class="font-serif text-2xl font-semibold tracking-wide text-[#0B2F5B]">
+            hahn-wasserfilter.de
+          </div>
+          <p class="text-xs tracking-[0.22em] uppercase text-cyan-700 mt-1">
+            Hof (Saale) · bundesweit
+          </p>
+        </div>
+      </a>
 
-<nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
-  <a href="index.html" class="text-cyan-700 font-semibold">Start</a>
-  <a href="produkte.html" class="hover:text-cyan-700 transition">Produkte</a>
-  <a href="#kontakt" class="hover:text-cyan-700 transition">Kontakt</a>
-</nav>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+        <a href="index.html" class="text-cyan-700 font-semibold">Start</a>
+        <a href="produkte.html" class="hover:text-cyan-700 transition">Produkte</a>
+        <a href="#kontakt" class="hover:text-cyan-700 transition">Kontakt</a>
+      </nav>
 
       <div class="hidden md:flex items-center gap-3">
         <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
@@ -92,9 +82,9 @@
         </a>
 
         <a href="index.html#kontakt"
-   class="block text-center bg-cyan-600 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-cyan-700 transition">
-  Jetzt beraten lassen
-</a>
+           class="block text-center bg-cyan-600 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-cyan-700 transition">
+          Jetzt beraten lassen
+        </a>
       </div>
 
     </div>
@@ -151,7 +141,6 @@
   </div>
 </section>
 
-<!-- WAS MACHT UNS BESSER -->
 <section class="py-20 bg-white">
   <div class="tail-container px-6">
 
@@ -222,7 +211,6 @@
   </div>
 </section>
 
-<!-- WAS WIRD GEFILTERT -->
 <section class="py-20 bg-white">
   <div class="tail-container px-6">
 
@@ -272,13 +260,12 @@
       </div>
 
       <div class="reveal bg-white p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
-  <h3 class="font-semibold text-xl mb-3">Untertisch-Systeme</h3>
-  <p class="text-zinc-600 text-sm mb-6">
-    Individuelle Lösungen auf Anfrage – ideal für feste Installation unter der Spüle.
-  </p>
-  <a href="#kontakt" class="text-cyan-700 font-semibold text-sm">
-    Beratung anfragen →</a>
-</div>
+        <h3 class="font-semibold text-xl mb-3">Untertisch-Systeme</h3>
+        <p class="text-zinc-600 text-sm mb-6">
+          Individuelle Lösungen auf Anfrage – ideal für feste Installation unter der Spüle.
+        </p>
+        <a href="#kontakt" class="text-cyan-700 font-semibold text-sm">Beratung anfragen →</a>
+      </div>
 
       <div class="reveal bg-white p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <h3 class="font-semibold text-xl mb-3">Beratung</h3>
@@ -325,7 +312,6 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="py-20 bg-[#F5F5F5]">
   <div class="tail-container px-6 max-w-4xl mx-auto">
 
@@ -498,8 +484,66 @@
   </svg>
 </a>
 
+<div id="cookieBanner" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-white shadow-xl border border-zinc-200 rounded-2xl px-6 py-4 w-[90%] max-w-xl z-50 hidden">
+  <p class="text-sm text-zinc-700 mb-4">
+    Diese Website verwendet Cookies für Analysezwecke.
+    Sie können selbst entscheiden, ob Sie zustimmen.
+  </p>
+
+  <div class="flex gap-3 justify-end">
+    <button id="cookieDecline"
+            class="px-4 py-2 rounded-xl text-sm border border-zinc-300 hover:bg-zinc-100 transition">
+      Ablehnen
+    </button>
+
+    <button id="cookieAccept"
+            class="px-4 py-2 rounded-xl text-sm bg-cyan-600 text-white hover:bg-cyan-700 transition">
+      Akzeptieren
+    </button>
+  </div>
+</div>
+
 <script>
+  function loadAnalytics() {
+    const script1 = document.createElement('script');
+    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-P6SJPMXTRV";
+    script1.async = true;
+    document.head.appendChild(script1);
+
+    const script2 = document.createElement('script');
+    script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P6SJPMXTRV');
+    `;
+    document.head.appendChild(script2);
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('cookieBanner');
+    const acceptBtn = document.getElementById('cookieAccept');
+    const declineBtn = document.getElementById('cookieDecline');
+
+    if (!localStorage.getItem('cookieConsent')) {
+      banner.classList.remove('hidden');
+    }
+
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+      loadAnalytics();
+    }
+
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'accepted');
+      banner.classList.add('hidden');
+      loadAnalytics();
+    });
+
+    declineBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'declined');
+      banner.classList.add('hidden');
+    });
+
     const items = document.querySelectorAll('.reveal');
 
     const observer = new IntersectionObserver((entries) => {
