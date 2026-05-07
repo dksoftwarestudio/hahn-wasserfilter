@@ -1,14 +1,13 @@
+Да, теперь правильно: на главной сразу реальные фильтры с фото и ценами. Замени index.html целиком:
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>hahn-wasserfilter.de | Wasserfilter & Umkehrosmose für Zuhause</title>
   <meta name="description" content="Wasserfilter und Umkehrosmose-Systeme für Zuhause. Persönliche Beratung, passende Systeme und einfache Anfrage per WhatsApp oder Formular." />
-
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
     html { scroll-behavior: smooth; }
     .tail-container {
@@ -18,7 +17,7 @@
     }
     .hero-bg {
       background:
-        linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.78)),
+        linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.68)),
         url("wasserfilter-hero.jpg");
       background-size: cover;
       background-position: center;
@@ -41,13 +40,10 @@
     }
   </style>
 </head>
-
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
-
 <header class="bg-white/95 backdrop-blur sticky top-0 z-50 border-b border-zinc-100">
   <div class="tail-container px-6 py-4">
     <div class="flex items-center justify-between gap-6">
-
       <a href="index.html" class="flex items-center gap-3 shrink-0 text-zinc-900 no-underline">
         <div class="w-12 h-12 rounded-2xl bg-[#1A53AD] text-white flex items-center justify-center font-bold text-2xl">
           H
@@ -57,15 +53,13 @@
           <div class="text-xs text-zinc-500">Hof (Saale) · bundesweit</div>
         </div>
       </a>
-
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
         <a href="index.html" class="text-[#1A53AD]">Start</a>
         <a href="#produkte" class="hover:text-[#1A53AD] transition">Produkte</a>
+        <a href="#beratung" class="hover:text-[#1A53AD] transition">Beratung</a>
         <a href="#vorteile" class="hover:text-[#1A53AD] transition">Vorteile</a>
-        <a href="#faq" class="hover:text-[#1A53AD] transition">FAQ</a>
         <a href="#kontakt" class="hover:text-[#1A53AD] transition">Kontakt</a>
       </nav>
-
       <div class="hidden md:flex items-center gap-3">
         <a href="https://wa.me/491624012037"
            target="_blank"
@@ -73,14 +67,12 @@
            class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-2xl font-semibold transition">
           WhatsApp
         </a>
-
         <a href="#kontakt"
            class="bg-[#1A53AD] hover:bg-[#163E82] text-white px-5 py-2.5 rounded-2xl font-semibold transition">
           Beratung anfragen
         </a>
       </div>
     </div>
-
     <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
       <a href="#produkte" class="text-center bg-zinc-100 text-zinc-800 py-3 rounded-2xl font-semibold">
         Produkte
@@ -94,137 +86,182 @@
     </div>
   </div>
 </header>
-
 <main>
-
 <section class="hero-bg min-h-[82vh] flex items-center text-white py-20">
   <div class="tail-container px-6">
     <div class="max-w-3xl">
-
       <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur px-4 py-2 rounded-full text-sm mb-6">
         Wasserfilter · Umkehrosmose · Beratung
       </div>
-
       <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-        Sauberes Trinkwasser direkt bei Ihnen zuhause
+        Hochwertige Wasserfilter für sauberes Trinkwasser
       </h1>
-
       <p class="text-xl md:text-2xl text-blue-50 mb-10 leading-relaxed">
         Moderne Wasserfilter und Umkehrosmose-Systeme für Küche und Haushalt —
         mit persönlicher Beratung und passender Lösung für Ihren Alltag.
       </p>
-
       <div class="flex flex-col sm:flex-row gap-4">
         <a href="#produkte"
            class="bg-white hover:bg-blue-50 text-[#1A53AD] text-lg px-9 py-4 rounded-3xl font-bold text-center transition">
           Produkte ansehen
         </a>
-
         <a href="#kontakt"
            class="border-2 border-white hover:bg-white hover:text-[#1A53AD] text-white text-lg px-9 py-4 rounded-3xl font-bold text-center transition">
           Beratung anfragen
         </a>
       </div>
-
       <div class="grid sm:grid-cols-3 gap-3 mt-10 text-sm">
         <div class="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">Persönliche Beratung</div>
-        <div class="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">Für Zuhause & Familie</div>
+        <div class="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">Produkte mit Preisorientierung</div>
         <div class="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">Unverbindlich anfragen</div>
       </div>
-
     </div>
   </div>
 </section>
-
 <section id="produkte" class="py-20 bg-white">
   <div class="tail-container px-6">
-
     <div class="text-center max-w-3xl mx-auto mb-14">
       <h2 class="text-4xl md:text-5xl font-bold mb-4">
-        Wasserfiltersysteme für Zuhause
+        Unsere Wasserfilter-Systeme
       </h2>
       <p class="text-zinc-600 text-lg leading-relaxed">
-        Direkt auf der Startseite sehen Sie die wichtigsten Lösungen.
-        In der Beratung klären wir, welches System zu Haushalt, Bedarf und Budget passt.
+        Drei klare Lösungen für unterschiedliche Haushalte — direkt auf der Startseite sichtbar.
       </p>
     </div>
-
     <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="reveal bg-[#F8FAFC] rounded-3xl p-7 border border-zinc-100 shadow-sm flex flex-col">
-        <div class="w-16 h-16 rounded-2xl bg-blue-100 text-[#1A53AD] flex items-center justify-center text-3xl mb-6">
-          💧
-        </div>
-        <h3 class="text-2xl font-bold mb-3">Umkehrosmose-System</h3>
-        <p class="text-zinc-600 leading-relaxed mb-6">
-          Feine Filterung für klares Trinkwasser direkt aus der Küche.
-          Geeignet für Alltag, Kochen, Kaffee und Tee.
+      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 shadow-sm flex flex-col">
+        <img src="ambient-basic.jpg" alt="LUXLABEL Ambient Wasserfilter"
+             class="w-full h-48 object-contain mb-6">
+        <p class="text-sm text-zinc-500 text-center mb-2">Für kleinere Haushalte</p>
+        <h3 class="text-2xl font-bold text-center mb-3">LUXLABEL Ambient</h3>
+        <p class="text-zinc-600 text-center mb-6">
+          Kompakte Einstiegslösung für Singles, Paare oder kleinere Küchen.
         </p>
-        <ul class="text-sm text-zinc-700 space-y-2 mb-7">
-          <li>✓ Für Küche und Haushalt</li>
-          <li>✓ Sehr feine Filtertechnologie</li>
-          <li>✓ Beratung zur passenden Lösung</li>
+        <p class="text-3xl font-bold text-[#1A53AD] text-center mb-2">
+          ab 1.600 €
+        </p>
+        <p class="text-xs text-zinc-400 text-center mb-6">
+          Montage optional: +357 €
+        </p>
+        <ul class="space-y-3 text-sm text-zinc-700 mb-8">
+          <li>✓ kompakt & platzsparend</li>
+          <li>✓ einfache Bedienung</li>
+          <li>✓ frisches Wasser auf Knopfdruck</li>
         </ul>
         <a href="#kontakt"
-           class="mt-auto text-center bg-[#1A53AD] text-white py-3 rounded-2xl font-semibold hover:bg-[#163E82] transition">
+           class="mt-auto block text-center bg-[#EEF2F8] text-[#1A53AD] px-6 py-4 rounded-2xl font-semibold hover:bg-[#E3EAF6] transition">
+          Anfrage stellen
+        </a>
+      </div>
+      <div class="reveal relative bg-white rounded-3xl p-8 border-2 border-[#1A53AD] shadow-lg flex flex-col">
+        <div class="absolute -top-4 left-8 bg-[#1A53AD] text-white text-xs font-semibold px-4 py-2 rounded-full">
+          Meist gewählt
+        </div>
+        <img src="nais-standard.jpg" alt="NAIS Standard Wasserfilter"
+             class="w-full h-48 object-contain mb-6">
+        <p class="text-sm text-zinc-500 text-center mb-2">Für Familien & Alltag</p>
+        <h3 class="text-2xl font-bold text-center mb-3">NAIS Standard</h3>
+        <p class="text-zinc-600 text-center mb-6">
+          Die ausgewogene Lösung für tägliche Nutzung, Küche und Familie.
+        </p>
+        <p class="text-3xl font-bold text-[#1A53AD] text-center mb-2">
+          ab 1.798 €
+        </p>
+        <p class="text-xs text-zinc-400 text-center mb-6">
+          Montage optional: +357 €
+        </p>
+        <ul class="space-y-3 text-sm text-zinc-700 mb-8">
+          <li>✓ heiß, kalt & lauwarm</li>
+          <li>✓ hohe Filterleistung</li>
+          <li>✓ gutes Verhältnis aus Preis & Komfort</li>
+        </ul>
+        <a href="#kontakt"
+           class="mt-auto block text-center bg-[#1A53AD] text-white px-6 py-4 rounded-2xl font-semibold hover:bg-[#163E82] transition">
           Beratung anfragen
         </a>
       </div>
-
-      <div class="reveal bg-[#F8FAFC] rounded-3xl p-7 border border-zinc-100 shadow-sm flex flex-col">
-        <div class="w-16 h-16 rounded-2xl bg-blue-100 text-[#1A53AD] flex items-center justify-center text-3xl mb-6">
-          🚰
+      <div class="reveal relative bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 shadow-sm flex flex-col">
+        <div class="absolute top-4 right-4 bg-zinc-900 text-white text-xs font-semibold px-3 py-1 rounded-full">
+          Premium
         </div>
-        <h3 class="text-2xl font-bold mb-3">Untertisch-Wasserfilter</h3>
-        <p class="text-zinc-600 leading-relaxed mb-6">
-          Diskrete Lösung unter der Spüle. Ideal, wenn das System fest in den Küchenalltag integriert werden soll.
+        <img src="nais-cafe.jpg" alt="NAIS CAFE Premium Wasserfilter"
+             class="w-full h-48 object-contain mb-6">
+        <p class="text-sm text-zinc-500 text-center mb-2">Für maximalen Komfort</p>
+        <h3 class="text-2xl font-bold text-center mb-3">NAIS CAFE Premium</h3>
+        <p class="text-zinc-600 text-center mb-6">
+          Premium-System für Wasser, Eis, Kaffee und Tee auf Knopfdruck.
         </p>
-        <ul class="text-sm text-zinc-700 space-y-2 mb-7">
-          <li>✓ Platzsparende Installation</li>
-          <li>✓ Komfortable Nutzung im Alltag</li>
-          <li>✓ Individuelle Einschätzung möglich</li>
+        <p class="text-3xl font-bold text-[#1A53AD] text-center mb-2">
+          ab 2.698 €
+        </p>
+        <p class="text-xs text-zinc-400 text-center mb-6">
+          Montage optional: +357 €
+        </p>
+        <ul class="space-y-3 text-sm text-zinc-700 mb-8">
+          <li>✓ heiß, kalt & Raumtemperatur</li>
+          <li>✓ Eiswürfel-Funktion</li>
+          <li>✓ Kaffee & Tee auf Knopfdruck</li>
         </ul>
         <a href="#kontakt"
-           class="mt-auto text-center bg-[#1A53AD] text-white py-3 rounded-2xl font-semibold hover:bg-[#163E82] transition">
-          System anfragen
+           class="mt-auto block text-center bg-[#1A53AD] text-white px-6 py-4 rounded-2xl font-semibold hover:bg-[#163E82] transition">
+          Beratung anfragen
         </a>
       </div>
-
-      <div class="reveal bg-[#F8FAFC] rounded-3xl p-7 border border-zinc-100 shadow-sm flex flex-col">
-        <div class="w-16 h-16 rounded-2xl bg-blue-100 text-[#1A53AD] flex items-center justify-center text-3xl mb-6">
-          ☕
-        </div>
-        <h3 class="text-2xl font-bold mb-3">Komfort-Systeme</h3>
-        <p class="text-zinc-600 leading-relaxed mb-6">
-          Je nach System gefiltertes Wasser für unterschiedliche Alltagssituationen:
-          trinken, kochen, Tee, Kaffee und mehr.
-        </p>
-        <ul class="text-sm text-zinc-700 space-y-2 mb-7">
-          <li>✓ Für Familien und Vielnutzer</li>
-          <li>✓ Mehr Komfort im Alltag</li>
-          <li>✓ Auswahl nach Bedarf</li>
-        </ul>
-        <a href="#kontakt"
-           class="mt-auto text-center bg-[#1A53AD] text-white py-3 rounded-2xl font-semibold hover:bg-[#163E82] transition">
-          Mehr erfahren
-        </a>
-      </div>
-
     </div>
-
     <div class="text-center mt-12">
       <a href="produkte.html"
          class="inline-block bg-zinc-100 hover:bg-zinc-200 text-[#1A53AD] px-8 py-3 rounded-2xl font-bold transition">
         Alle Produktdetails ansehen →
       </a>
     </div>
-
   </div>
 </section>
-
-<section id="vorteile" class="py-20 bg-[#F5F5F5]">
+<section id="beratung" class="py-20 bg-[#F5F5F5]">
   <div class="tail-container px-6">
-
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div class="reveal bg-white rounded-[2rem] overflow-hidden shadow-sm border border-zinc-100">
+        <img src="beratung.jpg" alt="Beratung zu Wasserfilter-Systemen"
+             class="w-full h-72 object-cover"
+             onerror="this.style.display='none'">
+        <div class="p-8">
+          <h2 class="text-3xl font-bold mb-4">
+            Kostenlose Beratung
+          </h2>
+          <p class="text-zinc-600 text-lg leading-relaxed mb-6">
+            Sie sind unsicher, welches System passt? Wir helfen Ihnen, die passende Lösung für Haushalt,
+            Küche und Budget verständlich einzugrenzen.
+          </p>
+          <a href="#kontakt"
+             class="inline-block bg-[#1A53AD] hover:bg-[#163E82] text-white px-8 py-4 rounded-2xl font-bold transition">
+            Beratung vereinbaren
+          </a>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-4xl font-bold mb-6">
+          Erst beraten lassen, dann entscheiden.
+        </h2>
+        <p class="text-zinc-600 text-lg leading-relaxed mb-6">
+          Kein anonymer Online-Shop und kein Verkaufsdruck. Sie bekommen eine verständliche Orientierung,
+          welches Wasserfilter-System zu Ihrem Alltag passt.
+        </p>
+        <div class="grid gap-4">
+          <div class="bg-white rounded-2xl p-5 border border-zinc-100">
+            ✓ Persönliche Einschätzung
+          </div>
+          <div class="bg-white rounded-2xl p-5 border border-zinc-100">
+            ✓ Preisorientierung vorab
+          </div>
+          <div class="bg-white rounded-2xl p-5 border border-zinc-100">
+            ✓ Anfrage per Formular oder WhatsApp
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="vorteile" class="py-20 bg-white">
+  <div class="tail-container px-6">
     <div class="text-center max-w-3xl mx-auto mb-14">
       <h2 class="text-4xl font-bold mb-4">
         Warum ein Wasserfiltersystem?
@@ -234,41 +271,33 @@
         ohne Kisten schleppen und ohne anonyme Online-Bestellung.
       </p>
     </div>
-
     <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="reveal bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm">
+      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 text-center border border-zinc-100 shadow-sm">
         <div class="text-5xl mb-5">🥤</div>
         <h3 class="font-bold text-xl mb-3">Besserer Geschmack</h3>
         <p class="text-zinc-600">
           Klares, frisches Wasser direkt aus dem eigenen Hahn.
         </p>
       </div>
-
-      <div class="reveal bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm">
+      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 text-center border border-zinc-100 shadow-sm">
         <div class="text-5xl mb-5">🏠</div>
         <h3 class="font-bold text-xl mb-3">Mehr Komfort</h3>
         <p class="text-zinc-600">
           Ideal für Trinken, Kochen, Kaffee, Tee und den täglichen Gebrauch.
         </p>
       </div>
-
-      <div class="reveal bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm">
+      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 text-center border border-zinc-100 shadow-sm">
         <div class="text-5xl mb-5">♻️</div>
         <h3 class="font-bold text-xl mb-3">Weniger Schleppen</h3>
         <p class="text-zinc-600">
           Weniger Flaschen, weniger Wege und mehr Flexibilität zuhause.
         </p>
       </div>
-
     </div>
-
   </div>
 </section>
-
-<section class="py-20 bg-white">
+<section class="py-20 bg-[#F5F5F5]">
   <div class="tail-container px-6">
-
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h2 class="text-4xl font-bold mb-5">
@@ -278,18 +307,16 @@
           Je nach System können verschiedene unerwünschte Stoffe im Wasser reduziert werden.
           Die genaue Filterleistung hängt vom gewählten System, der Wasserqualität und der Nutzung ab.
         </p>
-
         <div class="grid grid-cols-2 gap-3 text-sm">
-          <div class="bg-[#F5F5F5] rounded-2xl px-4 py-3">Chlor</div>
-          <div class="bg-[#F5F5F5] rounded-2xl px-4 py-3">Kalk</div>
-          <div class="bg-[#F5F5F5] rounded-2xl px-4 py-3">Mikroplastik</div>
-          <div class="bg-[#F5F5F5] rounded-2xl px-4 py-3">Schwermetalle</div>
-          <div class="bg-[#F5F5F5] rounded-2xl px-4 py-3">Bakterien</div>
-          <div class="bg-[#F5F5F5] rounded-2xl px-4 py-3">Rückstände</div>
+          <div class="bg-white rounded-2xl px-4 py-3">Chlor</div>
+          <div class="bg-white rounded-2xl px-4 py-3">Kalk</div>
+          <div class="bg-white rounded-2xl px-4 py-3">Mikroplastik</div>
+          <div class="bg-white rounded-2xl px-4 py-3">Schwermetalle</div>
+          <div class="bg-white rounded-2xl px-4 py-3">Bakterien</div>
+          <div class="bg-white rounded-2xl px-4 py-3">Rückstände</div>
         </div>
       </div>
-
-      <div class="bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 shadow-sm">
+      <div class="bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm">
         <h3 class="text-2xl font-bold mb-4">Wichtig</h3>
         <p class="text-zinc-600 leading-relaxed">
           Wir machen keine pauschalen Heil- oder Garantieversprechen.
@@ -297,13 +324,10 @@
         </p>
       </div>
     </div>
-
   </div>
 </section>
-
-<section class="py-20 bg-[#F5F5F5]">
+<section class="py-20 bg-white">
   <div class="tail-container px-6">
-
     <div class="text-center max-w-3xl mx-auto mb-14">
       <h2 class="text-4xl font-bold mb-4">
         So funktioniert’s
@@ -312,10 +336,8 @@
         Keine komplizierte Bestellung. Erst informieren, dann entscheiden.
       </p>
     </div>
-
     <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm text-center">
+      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 shadow-sm text-center">
         <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-blue-50 text-[#1A53AD] flex items-center justify-center text-2xl font-bold">
           01
         </div>
@@ -324,8 +346,7 @@
           Kurz beschreiben, welches System oder welche Beratung Sie suchen.
         </p>
       </div>
-
-      <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm text-center">
+      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 shadow-sm text-center">
         <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-blue-50 text-[#1A53AD] flex items-center justify-center text-2xl font-bold">
           02
         </div>
@@ -334,8 +355,7 @@
           Verständlich erklärt — ohne Verkaufsdruck und ohne unnötige Komplexität.
         </p>
       </div>
-
-      <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm text-center">
+      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 shadow-sm text-center">
         <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-blue-50 text-[#1A53AD] flex items-center justify-center text-2xl font-bold">
           03
         </div>
@@ -344,63 +364,50 @@
           Sie entscheiden in Ruhe, welches System zu Ihrem Zuhause passt.
         </p>
       </div>
-
     </div>
-
   </div>
 </section>
-
-<section id="faq" class="py-20 bg-white">
+<section id="faq" class="py-20 bg-[#F5F5F5]">
   <div class="tail-container px-6 max-w-4xl mx-auto">
-
     <div class="text-center mb-12">
       <h2 class="text-4xl font-bold mb-4">Häufige Fragen</h2>
       <p class="text-zinc-600">
         Kurze Antworten auf die wichtigsten Fragen.
       </p>
     </div>
-
     <div class="space-y-4">
-
-      <details class="bg-[#F8FAFC] rounded-2xl p-6 border border-zinc-100">
+      <details class="bg-white rounded-2xl p-6 border border-zinc-100">
         <summary class="font-bold text-lg cursor-pointer">Brauche ich wirklich einen Wasserfilter?</summary>
         <p class="text-zinc-600 mt-4 leading-relaxed">
           Das hängt von Ihrem Wasser, Geschmack und Alltag ab. Viele entscheiden sich für ein System,
           weil sie weniger Flaschen kaufen und jederzeit gefiltertes Wasser zuhause nutzen möchten.
         </p>
       </details>
-
-      <details class="bg-[#F8FAFC] rounded-2xl p-6 border border-zinc-100">
+      <details class="bg-white rounded-2xl p-6 border border-zinc-100">
         <summary class="font-bold text-lg cursor-pointer">Ist die Installation kompliziert?</summary>
         <p class="text-zinc-600 mt-4 leading-relaxed">
           Viele Systeme sind schnell einsatzbereit oder lassen sich unkompliziert installieren.
           Welche Lösung passt, klären wir in der Beratung.
         </p>
       </details>
-
-      <details class="bg-[#F8FAFC] rounded-2xl p-6 border border-zinc-100">
+      <details class="bg-white rounded-2xl p-6 border border-zinc-100">
         <summary class="font-bold text-lg cursor-pointer">Welches System passt zu meinem Haushalt?</summary>
         <p class="text-zinc-600 mt-4 leading-relaxed">
           Für kleinere Haushalte reicht oft ein kompaktes System.
           Familien profitieren meist von Komfort-Systemen mit höherer Nutzung.
         </p>
       </details>
-
-      <details class="bg-[#F8FAFC] rounded-2xl p-6 border border-zinc-100">
+      <details class="bg-white rounded-2xl p-6 border border-zinc-100">
         <summary class="font-bold text-lg cursor-pointer">Ist die Anfrage verbindlich?</summary>
         <p class="text-zinc-600 mt-4 leading-relaxed">
           Nein. Die Anfrage ist unverbindlich. Sie erhalten zuerst eine Beratung und entscheiden danach in Ruhe.
         </p>
       </details>
-
     </div>
-
   </div>
 </section>
-
 <section id="kontakt" class="py-20 bg-[#1A53AD] text-white">
   <div class="tail-container px-6 max-w-3xl mx-auto">
-
     <div class="text-center mb-10">
       <h2 class="text-4xl font-bold mb-4">
         Beratung unverbindlich anfragen
@@ -409,47 +416,37 @@
         Schreiben Sie kurz, wofür Sie einen Wasserfilter suchen.
       </p>
     </div>
-
     <div class="bg-white text-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
-
       <form action="mailto:info@hahn-wasserfilter.de" method="post" enctype="text/plain" class="space-y-5">
-
         <div class="grid md:grid-cols-2 gap-5">
           <input type="text" name="name" placeholder="Vor- und Nachname" required autocomplete="name"
                  class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
-
           <input type="tel" name="phone" placeholder="Telefonnummer" inputmode="tel" autocomplete="tel"
                  class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
         </div>
-
         <input type="email" name="email" placeholder="E-Mail" autocomplete="email"
                class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600">
-
         <select name="interest"
                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-blue-600">
           <option value="" disabled selected>Wofür interessieren Sie sich?</option>
-          <option value="Umkehrosmose-System">Umkehrosmose-System</option>
-          <option value="Untertisch-Wasserfilter">Untertisch-Wasserfilter</option>
-          <option value="Komfort-System">Komfort-System</option>
+          <option value="LUXLABEL Ambient">LUXLABEL Ambient</option>
+          <option value="NAIS Standard">NAIS Standard</option>
+          <option value="NAIS CAFE Premium">NAIS CAFE Premium</option>
           <option value="Beratung allgemein">Beratung allgemein</option>
           <option value="Noch unsicher">Ich bin noch unsicher</option>
         </select>
-
         <textarea name="message" rows="4" placeholder="Ihre Nachricht"
                   class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-blue-600"></textarea>
-
         <button type="submit"
                 class="w-full bg-[#1A53AD] text-white py-5 rounded-3xl font-semibold text-xl hover:bg-[#163E82] transition">
           Anfrage absenden
         </button>
       </form>
-
       <div class="mt-6 grid sm:grid-cols-3 gap-3 text-center text-sm text-zinc-600">
         <div>✓ Persönliche Beratung</div>
         <div>✓ Keine Verpflichtung</div>
         <div>✓ Schnelle Rückmeldung</div>
       </div>
-
       <div class="text-center mt-6">
         <a href="https://wa.me/491624012037"
            target="_blank"
@@ -458,18 +455,13 @@
           WhatsApp schreiben
         </a>
       </div>
-
     </div>
-
   </div>
 </section>
-
 </main>
-
 <footer class="bg-zinc-900 text-zinc-400 py-16">
   <div class="tail-container px-6">
     <div class="grid md:grid-cols-4 gap-10">
-
       <div>
         <div class="flex items-center gap-3 text-white mb-5">
           <div class="w-10 h-10 rounded-2xl bg-[#1A53AD] text-white flex items-center justify-center font-bold text-xl">
@@ -484,17 +476,15 @@
           Beratung und Anfrage für Wasserfilter-Systeme deutschlandweit.
         </p>
       </div>
-
       <div>
         <h5 class="font-semibold text-white mb-4">Navigation</h5>
         <ul class="space-y-2 text-sm">
           <li><a href="index.html" class="hover:text-white">Start</a></li>
           <li><a href="#produkte" class="hover:text-white">Produkte</a></li>
-          <li><a href="#vorteile" class="hover:text-white">Vorteile</a></li>
+          <li><a href="#beratung" class="hover:text-white">Beratung</a></li>
           <li><a href="#kontakt" class="hover:text-white">Kontakt</a></li>
         </ul>
       </div>
-
       <div>
         <h5 class="font-semibold text-white mb-4">Kontakt</h5>
         <p class="text-sm mb-2">
@@ -510,7 +500,6 @@
           </a>
         </p>
       </div>
-
       <div>
         <h5 class="font-semibold text-white mb-4">Rechtliches</h5>
         <ul class="space-y-2 text-sm">
@@ -518,15 +507,12 @@
           <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
         </ul>
       </div>
-
     </div>
-
     <div class="text-center text-xs mt-16 pt-8 border-t border-zinc-800">
       © 2026 hahn-wasserfilter.de
     </div>
   </div>
 </footer>
-
 <a href="https://wa.me/491624012037"
    target="_blank"
    rel="noopener noreferrer"
@@ -534,11 +520,9 @@
    aria-label="WhatsApp schreiben">
   ✆
 </a>
-
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.reveal');
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -547,10 +531,8 @@
         }
       });
     }, { threshold: 0.05 });
-
     items.forEach(item => observer.observe(item));
   });
 </script>
-
 </body>
 </html>
