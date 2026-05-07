@@ -1,25 +1,29 @@
+Да, теперь produkte.html лучше сделать как информационную страницу / подробное сравнение, потому что главная уже продаёт и показывает фильтры. Замени файл целиком:
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hahn-wasserfilter.de | Produkte & Preise</title>
-  <meta name="description" content="Wasserfilter und Umkehrosmose-Systeme: LUXLABEL Ambient, NAIS Standard und NAIS CAFE Premium. Preisorientierung und unverbindliche Beratung deutschlandweit.">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hahn-wasserfilter.de | Informationen zu Wasserfilter-Systemen</title>
+  <meta name="description" content="Informationen zu Wasserfilter- und Umkehrosmose-Systemen: Unterschiede, Einsatzbereiche, Technik, Vergleich und Beratung." />
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
+    html { scroll-behavior: smooth; }
+    .tail-container {
+      max-width: 1180px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .reveal {
       opacity: 0;
       transform: translateY(18px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transition: opacity .55s ease, transform .55s ease;
     }
-
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
     @media (prefers-reduced-motion: reduce) {
       .reveal {
         opacity: 1;
@@ -29,595 +33,383 @@
     }
   </style>
 </head>
-
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
-
-<header class="bg-white shadow-sm sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4">
-
-    <div class="flex justify-between items-center gap-6">
-      <a href="index.html" class="flex items-center gap-4">
-        <div class="w-11 h-11 flex items-center justify-center bg-cyan-600 rounded-xl">
-          <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="currentColor">
-            <path d="M12 2C12 2 5 10 5 14a7 7 0 0 0 14 0c0-4-7-12-7-12z"/>
-            <text x="12" y="16" text-anchor="middle" font-size="8" font-family="serif" fill="white" font-weight="bold">H</text>
-          </svg>
+<header class="bg-white/95 backdrop-blur sticky top-0 z-50 border-b border-zinc-100">
+  <div class="tail-container px-6 py-4">
+    <div class="flex items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-3 shrink-0 text-zinc-900 no-underline">
+        <div class="w-12 h-12 rounded-2xl bg-[#1A53AD] text-white flex items-center justify-center font-bold text-2xl">
+          H
         </div>
-
-        <div class="leading-tight">
-          <div class="font-serif text-2xl font-semibold tracking-wide text-[#0B2F5B]">
-            hahn-wasserfilter.de
-          </div>
-          <p class="text-xs tracking-[0.22em] uppercase text-cyan-700 mt-1">
-            Hof (Saale) · bundesweit
-          </p>
+        <div>
+          <div class="text-xl font-bold leading-tight">hahn-wasserfilter.de</div>
+          <div class="text-xs text-zinc-500">Hof (Saale) · bundesweit</div>
         </div>
       </a>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
-        <a href="index.html" class="hover:text-cyan-700 transition">Start</a>
-        <a href="produkte.html" class="text-cyan-700 font-semibold">Produkte</a>
-        <a href="index.html#kontakt" class="hover:text-cyan-700 transition">Kontakt</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+        <a href="index.html" class="hover:text-[#1A53AD] transition">Start</a>
+        <a href="produkte.html" class="text-[#1A53AD]">Informationen</a>
+        <a href="#vergleich" class="hover:text-[#1A53AD] transition">Vergleich</a>
+        <a href="#faq" class="hover:text-[#1A53AD] transition">FAQ</a>
+        <a href="index.html#kontakt" class="hover:text-[#1A53AD] transition">Kontakt</a>
       </nav>
-
       <div class="hidden md:flex items-center gap-3">
         <a href="https://wa.me/491624012037"
            target="_blank"
            rel="noopener noreferrer"
-           class="border border-green-500 text-green-600 px-5 py-2 rounded-xl text-sm font-medium hover:bg-green-50 transition">
+           class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-2xl font-semibold transition">
           WhatsApp
         </a>
-
         <a href="index.html#kontakt"
-   class="bg-cyan-600 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-cyan-700 transition">
-  Jetzt beraten lassen
-</a>
+           class="bg-[#1A53AD] hover:bg-[#163E82] text-white px-5 py-2.5 rounded-2xl font-semibold transition">
+          Beratung anfragen
+        </a>
       </div>
     </div>
-
     <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
-      <a href="index.html"
-         class="text-center bg-cyan-600 text-white py-3 rounded-2xl font-medium">
+      <a href="index.html" class="text-center bg-zinc-100 text-zinc-800 py-3 rounded-2xl font-semibold">
         Start
       </a>
-
-      <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
-         class="text-center bg-green-500 text-white py-3 rounded-2xl font-medium">
+      <a href="https://wa.me/491624012037"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="text-center bg-emerald-500 text-white py-3 rounded-2xl font-semibold">
         WhatsApp
       </a>
     </div>
-
   </div>
 </header>
-
-<section class="relative py-24">
-
-  <!-- Background Image -->
-  <div class="absolute inset-0">
-    <img src="water-hero1.jpg"
-     alt=""
-     aria-hidden="true"
-     class="w-full h-full object-cover">
-  </div>
-
-  <!-- Soft Overlay (balanced) -->
-  <div class="absolute inset-0 bg-white/60"></div>
-
-  <!-- Content -->
-  <div class="relative max-w-4xl mx-auto px-6 text-center">
-
-    <p class="text-base md:text-lg font-semibold text-cyan-800 mb-4">
-  Produkte & Preise
-</p>
-
-    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-zinc-900 drop-shadow-sm">
-  Wasserfilter-Systeme<br>
- <span class="text-cyan-700 whitespace-nowrap block mt-2 md:mt-3">
-  einfach auswählen
-</span>
-</h1>
-
-    <p class="text-lg text-zinc-800 max-w-2xl mx-auto">
-      Drei klare Lösungen für sauberes Trinkwasser — mit transparenter Preisorientierung
-      und persönlicher Beratung.
-    </p>
-
-  </div>
-</section>
-
-<section class="py-16">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-
-    <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:scale-[1.02] hover:shadow-xl transition duration-300">
-      <img src="ambient-basic.jpg" alt="LUXLABEL Ambient Wasserfilter"
-           class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
-
-      <h2 class="text-2xl font-bold mb-2 text-center">LUXLABEL Ambient</h2>
-
-      <p class="text-zinc-600 mb-6 text-center">
-        Kompakte Einstiegslösung für kleinere Haushalte.
-      </p>
-
-      <p class="text-3xl font-bold text-cyan-700 mb-2 text-center">
-        ab 1.600 €
-      </p>
-
-      <p class="text-xs text-zinc-400 text-center mb-6">
-        🔧 Montage optional (+357 €)
-      </p>
-
-      <ul class="space-y-3 text-sm text-zinc-700 mb-8 text-center">
-        <li>✓ Kompakt & platzsparend</li>
-        <li>✓ Frisches Wasser auf Knopfdruck</li>
-        <li>✓ Ideal für 1–2 Personen</li>
-      </ul>
-
-      <a href="index.html#kontakt"
-         class="block text-center border border-cyan-700 text-cyan-700 px-6 py-4 rounded-2xl font-semibold hover:bg-cyan-50 transition">
-        Anfrage stellen
-      </a>
-    </div>
-
-    <div class="reveal relative bg-white rounded-3xl p-8 border-2 border-cyan-600 shadow-xl md:scale-[1.03] hover:scale-[1.04] hover:shadow-2xl transition duration-300">
-      <div class="absolute -top-4 left-8 bg-cyan-600 text-white text-xs font-semibold px-4 py-2 rounded-full">
-  Meist gewählt ⭐
-</div>
-
-      <img src="nais-standard.jpg" alt="NAIS Standard Wasserfilter"
-           class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
-
-      <h2 class="text-2xl font-bold mb-2 text-center">NAIS Standard</h2>
-
-      <p class="text-zinc-600 mb-6 text-center">
-        Die ideale Lösung für Familien und den Alltag.
-      </p>
-
-      <p class="text-3xl font-bold text-cyan-700 mb-2 text-center">
-        ab 1.798 €
-      </p>
-
-      <p class="text-xs text-zinc-400 text-center mb-6">
-        🔧 Montage optional (+357 €)
-      </p>
-
-      <ul class="space-y-3 text-sm text-zinc-700 mb-8 text-center">
-        <li>✓ Heiß, kalt & lauwarm</li>
-        <li>✓ Hohe Filterleistung</li>
-        <li>✓ Perfekt für den täglichen Gebrauch</li>
-      </ul>
-
-      <a href="index.html#kontakt"
-         class="block text-center bg-cyan-600 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-cyan-700 transition">
-        Beratung anfragen
-      </a>
-    </div>
-
-    <div class="reveal relative bg-white rounded-3xl p-8 border border-zinc-200 shadow-lg hover:scale-[1.02] hover:shadow-2xl transition duration-300">
-      <div class="absolute top-4 right-4 bg-zinc-900 text-white text-xs font-semibold px-3 py-1 rounded-full">
-        Premium
+<main>
+<section class="py-20 md:py-28 bg-white">
+  <div class="tail-container px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 bg-blue-50 text-[#1A53AD] px-4 py-2 rounded-full text-sm font-semibold mb-6">
+        Informationen & Vergleich
       </div>
-
-      <img src="nais-cafe.jpg" alt="NAIS CAFE Premium Wasserfilter"
-           class="w-full h-48 object-contain mb-6 transition duration-300 hover:scale-105">
-
-      <h2 class="text-2xl font-bold mb-2 text-center">NAIS CAFE Premium</h2>
-
-      <p class="text-zinc-600 mb-6 text-center">
-        Maximale Ausstattung für höchsten Komfort.
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+        Welches Wasserfilter-System passt zu Ihrem Alltag?
+      </h1>
+      <p class="text-xl text-zinc-600 leading-relaxed mb-8">
+        Auf dieser Seite finden Sie eine einfache Orientierung zu unseren Wasserfilter-Systemen,
+        den wichtigsten Unterschieden und typischen Einsatzbereichen.
       </p>
-
-      <p class="text-3xl font-bold text-cyan-700 mb-2 text-center">
-        ab 2.698 €
-      </p>
-
-      <p class="text-xs text-zinc-400 text-center mb-6">
-        🔧 Montage optional (+357 €)
-      </p>
-
-      <ul class="space-y-3 text-sm text-zinc-700 mb-8 text-center">
-        <li>✓ Heiß, kalt & lauwarm</li>
-        <li>✓ Eiswürfel-Funktion</li>
-        <li>✓ Kaffee & Tee auf Knopfdruck</li>
-        <li>✓ Premium Design & Technik</li>
-      </ul>
-
-      <a href="index.html#kontakt"
-         class="block text-center bg-cyan-600 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-cyan-700 transition">
-        Beratung anfragen
-      </a>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#vergleich"
+           class="bg-[#1A53AD] hover:bg-[#163E82] text-white px-8 py-4 rounded-2xl font-bold text-center transition">
+          Systeme vergleichen
+        </a>
+        <a href="index.html#kontakt"
+           class="bg-[#EEF2F8] hover:bg-[#E3EAF6] text-[#1A53AD] px-8 py-4 rounded-2xl font-bold text-center transition">
+          Beratung anfragen
+        </a>
+      </div>
     </div>
-
+    <div class="bg-[#F5F5F5] rounded-[2rem] p-6 md:p-10 shadow-sm border border-zinc-100">
+      <img src="water-hero1.jpg"
+           alt="Wasserfilter Information"
+           class="w-full h-80 object-cover rounded-[1.5rem]"
+           onerror="this.style.display='none'">
+      <div class="bg-white rounded-3xl p-6 mt-5">
+        <h2 class="text-2xl font-bold mb-2">Kurz gesagt</h2>
+        <p class="text-zinc-600 leading-relaxed">
+          Kleine Haushalte brauchen oft eine kompakte Lösung. Familien profitieren meist von mehr Komfort.
+          Premium-Systeme bieten zusätzliche Funktionen wie Eis, Kaffee oder Heißwasser.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
-
- <section class="py-12">
-
-  <div class="max-w-7xl mx-auto px-6">
-
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm text-zinc-600">
-
-      <div class="reveal bg-white border border-zinc-100 rounded-2xl py-5 px-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md">
-
-        ✓ 2 Jahre Garantie
-
-      </div>
-
-      <div class="reveal bg-white border border-zinc-100 rounded-2xl py-5 px-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md">
-
-        ✓ Installation möglich
-
-      </div>
-
-      <div class="reveal bg-white border border-zinc-100 rounded-2xl py-5 px-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md">
-
-        ✓ Persönliche Beratung
-
-      </div>
-
-      <div class="reveal bg-white border border-zinc-100 rounded-2xl py-5 px-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md">
-
-        ✓ Deutschlandweit verfügbar
-
-      </div>
-
+<section class="py-20 bg-[#F5F5F5]">
+  <div class="tail-container px-6">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <h2 class="text-4xl font-bold mb-4">
+        Die drei System-Typen
+      </h2>
+      <p class="text-zinc-600 text-lg">
+        Eine einfache Orientierung ohne technische Überladung.
+      </p>
     </div>
-
-  </div>
-
-</section>
-
-<section class="py-20 bg-white">
-
-  <div class="max-w-6xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-center mb-4">
-
-      Warum unsere Systeme überzeugen
-
-    </h2>
-
-    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
-
-      Qualität, Technik und Erfahrung – darauf kommt es bei Wasserfiltern wirklich an.
-
-    </p>
-
     <div class="grid md:grid-cols-3 gap-8">
-
-      <!-- TRUST 1 -->
-
-      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-lg">
-
-        <div class="text-4xl mb-4">🔬</div>
-
-        <h3 class="font-semibold text-lg mb-2">Moderne Filtertechnologie</h3>
-
-        <p class="text-zinc-600 text-sm">
-
-          Hochwertige MEMBRAN- und Umkehrosmose-Systeme für sauberes, wohlschmeckendes Trinkwasser.
-
+      <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm">
+        <img src="ambient-basic.jpg" alt="LUXLABEL Ambient Wasserfilter"
+             class="w-full h-44 object-contain mb-6">
+        <h3 class="text-2xl font-bold mb-3 text-center">Ambient</h3>
+        <p class="text-zinc-600 text-center mb-6">
+          Kompakte Lösung für kleinere Haushalte, Singles oder Paare.
         </p>
-
+        <ul class="space-y-3 text-sm text-zinc-700">
+          <li>✓ platzsparend</li>
+          <li>✓ einfache Bedienung</li>
+          <li>✓ ideal als Einstieg</li>
+          <li>✓ Preisorientierung: ab 1.600 €</li>
+        </ul>
       </div>
-
-      <!-- TRUST 2 -->
-
-      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-lg">
-
-        <div class="text-4xl mb-4">🛡️</div>
-
-        <h3 class="font-semibold text-lg mb-2">Sicher & hygienisch</h3>
-
-        <p class="text-zinc-600 text-sm">
-
-          Systeme mit UV-Sterilisation, automatischer Reinigung und zuverlässigem Schutz vor Verunreinigungen.
-
+      <div class="reveal bg-white rounded-3xl p-8 border-2 border-[#1A53AD] shadow-lg relative">
+        <div class="absolute -top-4 left-8 bg-[#1A53AD] text-white text-xs font-semibold px-4 py-2 rounded-full">
+          Empfehlung
+        </div>
+        <img src="nais-standard.jpg" alt="NAIS Standard Wasserfilter"
+             class="w-full h-44 object-contain mb-6">
+        <h3 class="text-2xl font-bold mb-3 text-center">NAIS Standard</h3>
+        <p class="text-zinc-600 text-center mb-6">
+          Ausgewogene Lösung für Familien und tägliche Nutzung.
         </p>
-
+        <ul class="space-y-3 text-sm text-zinc-700">
+          <li>✓ heiß, kalt & lauwarm</li>
+          <li>✓ gute Alltagslösung</li>
+          <li>✓ geeignet für Familien</li>
+          <li>✓ Preisorientierung: ab 1.798 €</li>
+        </ul>
       </div>
-
-      <!-- TRUST 3 -->
-
-      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-lg">
-
-        <div class="text-4xl mb-4">👨‍🔧</div>
-
-        <h3 class="font-semibold text-lg mb-2">Persönliche Beratung</h3>
-
-        <p class="text-zinc-600 text-sm">
-
-          Kein anonymer Online-Shop – wir helfen Ihnen persönlich, die passende Lösung zu finden.
-
+      <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm">
+        <img src="nais-cafe.jpg" alt="NAIS CAFE Premium Wasserfilter"
+             class="w-full h-44 object-contain mb-6">
+        <h3 class="text-2xl font-bold mb-3 text-center">NAIS CAFE</h3>
+        <p class="text-zinc-600 text-center mb-6">
+          Premium-System für mehr Komfort und zusätzliche Funktionen.
         </p>
-
+        <ul class="space-y-3 text-sm text-zinc-700">
+          <li>✓ Eiswürfel-Funktion</li>
+          <li>✓ Kaffee & Tee</li>
+          <li>✓ Premium-Komfort</li>
+          <li>✓ Preisorientierung: ab 2.698 €</li>
+        </ul>
       </div>
-
     </div>
-
   </div>
-
 </section>
-
-<section class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-center mb-4">
-      Vergleich der Systeme
-    </h2>
-
-    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-10">
-      Die wichtigsten technischen Unterschiede auf einen Blick.
-    </p>
-
-    <div class="overflow-x-auto rounded-2xl border border-zinc-200">
+<section id="vergleich" class="py-20 bg-white">
+  <div class="tail-container px-6">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-4xl font-bold mb-4">
+        Einfacher Vergleich
+      </h2>
+      <p class="text-zinc-600 text-lg">
+        Die wichtigsten Unterschiede auf einen Blick.
+      </p>
+    </div>
+    <div class="overflow-x-auto rounded-3xl border border-zinc-200 shadow-sm">
       <table class="w-full text-sm">
         <thead class="bg-[#F5F5F5] text-left">
           <tr>
-            <th class="p-4 font-semibold">Technische Daten</th>
+            <th class="p-4 font-semibold">Merkmal</th>
             <th class="p-4 font-semibold text-center">Ambient</th>
             <th class="p-4 font-semibold text-center">NAIS Standard</th>
             <th class="p-4 font-semibold text-center">NAIS CAFE</th>
           </tr>
         </thead>
-
         <tbody class="bg-white">
           <tr class="border-t">
+            <td class="p-4 font-medium">Geeignet für</td>
+            <td class="p-4 text-center">Singles / Paare</td>
+            <td class="p-4 text-center">Familien / Alltag</td>
+            <td class="p-4 text-center">Premium-Komfort</td>
+          </tr>
+          <tr class="border-t">
             <td class="p-4 font-medium">Filtertyp</td>
-            <td class="p-4 text-center">MEMBRAN-Filtration</td>
-            <td class="p-4 text-center">MEMBRAN-Filtration</td>
-            <td class="p-4 text-center">Umkehrosmose (RO)</td>
+            <td class="p-4 text-center">MEMBRAN</td>
+            <td class="p-4 text-center">MEMBRAN</td>
+            <td class="p-4 text-center">Umkehrosmose</td>
           </tr>
-
           <tr class="border-t">
-            <td class="p-4 font-medium">Bauart</td>
-            <td class="p-4 text-center">Auftisch, mobil</td>
-            <td class="p-4 text-center">Stand-/Tischgerät</td>
-            <td class="p-4 text-center">Stand-/Tischgerät mit Eis- & Kaffee-Modul</td>
+            <td class="p-4 font-medium">Temperatur</td>
+            <td class="p-4 text-center">kalt</td>
+            <td class="p-4 text-center">kalt / lauwarm / heiß</td>
+            <td class="p-4 text-center">kalt / Raumtemperatur / heiß</td>
           </tr>
-
           <tr class="border-t">
-            <td class="p-4 font-medium">Wassertemperatur</td>
-            <td class="p-4 text-center">Kalt</td>
-            <td class="p-4 text-center">Kalt / lauwarm / heiß</td>
-            <td class="p-4 text-center">Kalt / Raumtemperatur / heiß</td>
+            <td class="p-4 font-medium">Zusatzfunktionen</td>
+            <td class="p-4 text-center">kompakt</td>
+            <td class="p-4 text-center">Heißwasser</td>
+            <td class="p-4 text-center">Eis / Kaffee / Tee</td>
           </tr>
-
           <tr class="border-t">
-            <td class="p-4 font-medium">Eisfunktion</td>
-            <td class="p-4 text-center">–</td>
-            <td class="p-4 text-center">–</td>
-            <td class="p-4 text-center">Ja, bis 0,5 kg</td>
+            <td class="p-4 font-medium">Preisorientierung</td>
+            <td class="p-4 text-center">ab 1.600 €</td>
+            <td class="p-4 text-center">ab 1.798 €</td>
+            <td class="p-4 text-center">ab 2.698 €</td>
           </tr>
-
           <tr class="border-t">
-            <td class="p-4 font-medium">Kaffee / Tee</td>
-            <td class="p-4 text-center">–</td>
-            <td class="p-4 text-center">–</td>
-            <td class="p-4 text-center">Cremesso-Kapselsystem</td>
-          </tr>
-
-          <tr class="border-t">
-            <td class="p-4 font-medium">Bedienung</td>
-            <td class="p-4 text-center">Touch-/Druckknopf</td>
-            <td class="p-4 text-center">Knopfdruck</td>
-            <td class="p-4 text-center">Knopfdruck + Display</td>
-          </tr>
-
-         <tr class="border-t">
-  <td class="p-4 font-medium">Leistung</td>
-  <td class="p-4 text-center">20 W</td>
-  <td class="p-4 text-center">120 W (Betrieb) / 1500 W (Heißwasser)</td>
-  <td class="p-4 text-center">bis 1800 W (Heißwasser & Zusatzfunktionen)</td>
-</tr>
-
-          <tr class="border-t">
-            <td class="p-4 font-medium">Gewicht</td>
-            <td class="p-4 text-center">8 kg</td>
-            <td class="p-4 text-center">26,1 kg</td>
-            <td class="p-4 text-center">20 kg</td>
-          </tr>
-
-          <tr class="border-t">
-            <td class="p-4 font-medium">Maße</td>
-            <td class="p-4 text-center">22 × 42 × 42,5 cm</td>
-            <td class="p-4 text-center">29 × 52 × 48 cm</td>
-            <td class="p-4 text-center">29 × 48 × 52 cm</td>
-          </tr>
-
-          <tr class="border-t">
-            <td class="p-4 font-medium">Besonderheiten</td>
-            <td class="p-4 text-center">Kompakt, mobil, stromsparend</td>
-            <td class="p-4 text-center">Heiß-, kalt- & lauwarm Wasser</td>
-            <td class="p-4 text-center">Eis, Kaffee, UV & Reinigungssystem</td>
+            <td class="p-4 font-medium">Montage</td>
+            <td class="p-4 text-center">optional</td>
+            <td class="p-4 text-center">optional</td>
+            <td class="p-4 text-center">optional</td>
           </tr>
         </tbody>
       </table>
     </div>
-
     <p class="text-sm text-zinc-500 mt-4 text-center">
-      *Technische Angaben basieren auf Herstellerinformationen.
+      *Preise und technische Angaben dienen zur Orientierung und basieren auf Herstellerinformationen.
     </p>
-
   </div>
 </section>
-
 <section class="py-20 bg-[#F5F5F5]">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-center mb-4">
-      Für wen ist welches System?
-    </h2>
-
-    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
-      Eine einfache Orientierung, damit Sie schneller die passende Lösung finden.
-    </p>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:scale-[1.02] hover:shadow-xl transition duration-300">
-        <h3 class="text-2xl font-bold mb-3 text-center">Ambient</h3>
-        <p class="text-zinc-600 text-center mb-6">
-          Für Singles, Paare oder kleinere Haushalte, die eine kompakte und einfache Lösung suchen.
+  <div class="tail-container px-6">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-4xl font-bold mb-5">
+          Was bedeutet Umkehrosmose?
+        </h2>
+        <p class="text-zinc-600 text-lg leading-relaxed mb-6">
+          Umkehrosmose ist ein sehr feines Filterverfahren. Dabei wird Wasser durch eine spezielle Membran geführt,
+          die viele unerwünschte Stoffe zurückhalten kann. Die genaue Leistung hängt vom jeweiligen System und der Wasserqualität ab.
         </p>
-        <ul class="space-y-3 text-sm text-zinc-700">
-          <li>✓ Wenig Platz in der Küche</li>
-          <li>✓ Frisches Wasser ohne Flaschen</li>
-          <li>✓ Einfache Bedienung</li>
+        <p class="text-zinc-600 text-lg leading-relaxed">
+          Für viele Haushalte ist nicht nur die Technik wichtig, sondern vor allem der Alltag:
+          Geschmack, Komfort, weniger Flaschen und einfache Bedienung.
+        </p>
+      </div>
+      <div class="bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm">
+        <h3 class="text-2xl font-bold mb-5">Mögliche Vorteile</h3>
+        <ul class="space-y-4 text-zinc-700">
+          <li>✓ besserer Geschmack</li>
+          <li>✓ weniger Flaschen schleppen</li>
+          <li>✓ Wasser direkt zuhause verfügbar</li>
+          <li>✓ praktisch für Kochen, Tee und Kaffee</li>
+          <li>✓ Lösung passend zum Haushalt wählbar</li>
         </ul>
       </div>
-
-      <div class="reveal bg-white rounded-3xl p-8 border-2 border-cyan-600 shadow-xl md:scale-[1.03] hover:scale-[1.04] hover:shadow-2xl transition duration-300">
-        <div class="text-center mb-4">
-          <span class="inline-block bg-cyan-600 text-white text-xs font-semibold px-4 py-2 rounded-full">
-            Empfehlung
-          </span>
-        </div>
-
-        <h3 class="text-2xl font-bold mb-3 text-center">NAIS Standard</h3>
-        <p class="text-zinc-600 text-center mb-6">
-          Für Familien und Haushalte, die täglich heißes, kaltes oder lauwarmes Wasser nutzen möchten.
-        </p>
-        <ul class="space-y-3 text-sm text-zinc-700">
-          <li>✓ Für den täglichen Gebrauch</li>
-          <li>✓ Heißwasser für Tee & Küche</li>
-          <li>✓ Gute Balance aus Preis und Leistung</li>
-        </ul>
-      </div>
-
-      <div class="reveal bg-white rounded-3xl p-8 border border-zinc-200 shadow-lg hover:scale-[1.02] hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-bold mb-3 text-center">NAIS CAFE</h3>
-        <p class="text-zinc-600 text-center mb-6">
-          Für alle, die maximale Ausstattung wünschen – mit Eiswürfeln, Kaffee- und Teefunktion.
-        </p>
-        <ul class="space-y-3 text-sm text-zinc-700">
-          <li>✓ Höchster Komfort</li>
-          <li>✓ Eiswürfel auf Knopfdruck</li>
-          <li>✓ Kaffee & Tee direkt aus dem System</li>
-        </ul>
-      </div>
-
     </div>
-
   </div>
 </section>
-
 <section class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-center mb-4">
-      Mehr als ein einfacher Tischfilter
-    </h2>
-
-    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
-      Unsere Systeme sind für Menschen gedacht, die Komfort, gefiltertes Wasser und einfache Bedienung dauerhaft im Alltag nutzen möchten.
-    </p>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 text-center hover:scale-[1.02] hover:shadow-xl transition duration-300">
-        <div class="text-5xl mb-4">💧</div>
-        <h3 class="font-semibold text-xl mb-2">Direkt verfügbar</h3>
-        <p class="text-zinc-600 text-sm">
-          Gefiltertes Wasser sofort auf Knopfdruck – ohne Kannenfilter und ohne Wartezeit.
-        </p>
-      </div>
-
-      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 text-center hover:scale-[1.02] hover:shadow-xl transition duration-300">
-        <div class="text-5xl mb-4">🔥</div>
-        <h3 class="font-semibold text-xl mb-2">Mehr Komfort</h3>
-        <p class="text-zinc-600 text-sm">
-          Je nach Modell kaltes, lauwarmes oder heißes Wasser direkt aus dem System.
-        </p>
-      </div>
-
-      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 text-center hover:scale-[1.02] hover:shadow-xl transition duration-300">
-        <div class="text-5xl mb-4">🏠</div>
-        <h3 class="font-semibold text-xl mb-2">Für Alltag & Büro</h3>
-        <p class="text-zinc-600 text-sm">
-          Ideal für Küche, Büro oder Familienhaushalt – weniger Flaschen, weniger Schleppen.
-        </p>
-      </div>
-
+  <div class="tail-container px-6">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <h2 class="text-4xl font-bold mb-4">
+        Worauf sollte man achten?
+      </h2>
+      <p class="text-zinc-600 text-lg">
+        Nicht jedes System passt zu jedem Haushalt. Diese Punkte helfen bei der Orientierung.
+      </p>
     </div>
-
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 shadow-sm">
+        <div class="text-5xl mb-5">👨‍👩‍👧</div>
+        <h3 class="font-bold text-xl mb-3">Haushaltsgröße</h3>
+        <p class="text-zinc-600">
+          Kleine Haushalte brauchen oft weniger Leistung als Familien mit täglicher Nutzung.
+        </p>
+      </div>
+      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 shadow-sm">
+        <div class="text-5xl mb-5">🏠</div>
+        <h3 class="font-bold text-xl mb-3">Platz in der Küche</h3>
+        <p class="text-zinc-600">
+          Je nach Küche kann ein kompaktes Gerät oder ein größeres Komfort-System sinnvoller sein.
+        </p>
+      </div>
+      <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 border border-zinc-100 shadow-sm">
+        <div class="text-5xl mb-5">☕</div>
+        <h3 class="font-bold text-xl mb-3">Nutzung im Alltag</h3>
+        <p class="text-zinc-600">
+          Wer viel Tee, Kaffee oder heißes Wasser nutzt, profitiert eher von Komfort-Funktionen.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
-
-<section class="pb-16 bg-white">
-  <div class="max-w-4xl mx-auto px-6">
-    <div class="reveal bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm hover:scale-[1.02] hover:shadow-xl transition duration-300">
-
-      <h2 class="text-2xl font-bold mb-4">
+<section id="faq" class="py-20 bg-[#F5F5F5]">
+  <div class="tail-container px-6 max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">
+        Häufige Fragen
+      </h2>
+    </div>
+    <div class="space-y-4">
+      <details class="bg-white rounded-2xl p-6 border border-zinc-100">
+        <summary class="font-bold text-lg cursor-pointer">Ist ein Wasserfilter für jeden Haushalt sinnvoll?</summary>
+        <p class="text-zinc-600 mt-4 leading-relaxed">
+          Das hängt vom Alltag, Geschmack, Verbrauch und den persönlichen Erwartungen ab.
+          Deshalb ist eine kurze Beratung oft sinnvoll.
+        </p>
+      </details>
+      <details class="bg-white rounded-2xl p-6 border border-zinc-100">
+        <summary class="font-bold text-lg cursor-pointer">Kann man sofort ein System auswählen?</summary>
+        <p class="text-zinc-600 mt-4 leading-relaxed">
+          Ja, eine erste Orientierung ist möglich. Die endgültige Empfehlung hängt aber von Haushalt,
+          Platz und gewünschtem Komfort ab.
+        </p>
+      </details>
+      <details class="bg-white rounded-2xl p-6 border border-zinc-100">
+        <summary class="font-bold text-lg cursor-pointer">Ist die Montage immer notwendig?</summary>
+        <p class="text-zinc-600 mt-4 leading-relaxed">
+          Nicht immer. Je nach System und Situation kann Montage optional oder sinnvoll sein.
+        </p>
+      </details>
+      <details class="bg-white rounded-2xl p-6 border border-zinc-100">
+        <summary class="font-bold text-lg cursor-pointer">Ist die Beratung verbindlich?</summary>
+        <p class="text-zinc-600 mt-4 leading-relaxed">
+          Nein. Die Beratung ist unverbindlich und dient dazu, die passende Lösung besser einzugrenzen.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+<section class="py-20 bg-white">
+  <div class="tail-container px-6 max-w-4xl mx-auto">
+    <div class="bg-[#1A53AD] text-white rounded-[2rem] p-8 md:p-12 text-center shadow-lg">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
         Nicht sicher, welches System passt?
       </h2>
-
-      <p class="text-zinc-600 mb-6">
-        Wir helfen Ihnen, die passende Lösung für Ihren Haushalt zu finden – einfach, verständlich und ohne Verkaufsdruck.
+      <p class="text-blue-100 max-w-2xl mx-auto mb-8">
+        Schreiben Sie kurz, wie viele Personen im Haushalt leben und wofür Sie das Wasser hauptsächlich nutzen möchten.
       </p>
-
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="https://wa.me/491624012037"
-           target="_blank" rel="noopener noreferrer"
-           class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-2xl font-semibold transition">
+           target="_blank"
+           rel="noopener noreferrer"
+           class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-2xl font-semibold transition">
           WhatsApp Beratung
         </a>
-
         <a href="index.html#kontakt"
-           class="border border-cyan-700 text-cyan-700 px-6 py-3 rounded-2xl font-semibold hover:bg-cyan-50 transition">
+           class="bg-white hover:bg-blue-50 text-[#1A53AD] px-8 py-4 rounded-2xl font-semibold transition">
           Anfrage stellen
         </a>
       </div>
-
     </div>
   </div>
 </section>
-
+</main>
 <footer class="bg-zinc-900 text-zinc-400 py-16">
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="tail-container px-6">
     <div class="grid md:grid-cols-4 gap-10">
-
       <div>
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-xl">
-            <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="currentColor">
-              <path d="M12 2C12 2 5 10 5 14a7 7 0 0 0 14 0c0-4-7-12-7-12z"/>
-              <text x="12" y="16" text-anchor="middle" font-size="7" font-family="serif" fill="white" font-weight="bold">H</text>
-            </svg>
+        <div class="flex items-center gap-3 text-white mb-5">
+          <div class="w-10 h-10 rounded-2xl bg-[#1A53AD] text-white flex items-center justify-center font-bold text-xl">
+            H
           </div>
-
-          <div class="font-serif text-lg text-white tracking-wide">
-            hahn-wasserfilter.de
+          <div>
+            <div class="text-xl font-bold leading-tight">hahn-wasserfilter.de</div>
+            <div class="text-xs text-zinc-400">Hof (Saale) · bundesweit</div>
           </div>
         </div>
-
-        <p class="text-sm">
+        <p class="text-sm leading-relaxed">
           Beratung und Anfrage für Wasserfilter-Systeme deutschlandweit.
         </p>
       </div>
-
       <div>
         <h5 class="font-semibold text-white mb-4">Navigation</h5>
         <ul class="space-y-2 text-sm">
           <li><a href="index.html" class="hover:text-white">Start</a></li>
-          <li><a href="produkte.html" class="hover:text-white">Produkte</a></li>
+          <li><a href="produkte.html" class="hover:text-white">Informationen</a></li>
+          <li><a href="#vergleich" class="hover:text-white">Vergleich</a></li>
           <li><a href="index.html#kontakt" class="hover:text-white">Kontakt</a></li>
         </ul>
       </div>
-
       <div>
         <h5 class="font-semibold text-white mb-4">Kontakt</h5>
-        <p class="text-sm mb-4">
-          E-Mail: info@hahn-wasserfilter.de<br>
-          WhatsApp: +49 162 4012037
+        <p class="text-sm mb-2">
+          E-Mail:
+          <a href="mailto:info@hahn-wasserfilter.de" class="text-blue-300 hover:text-white">
+            info@hahn-wasserfilter.de
+          </a>
         </p>
-
-        <a href="https://wa.me/491624012037"
-           target="_blank" rel="noopener noreferrer"
-           class="inline-block bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-2xl text-sm font-semibold transition">
-          WhatsApp schreiben
-        </a>
+        <p class="text-sm">
+          WhatsApp:
+          <a href="https://wa.me/491624012037" class="text-blue-300 hover:text-white">
+            +49 162 4012037
+          </a>
+        </p>
       </div>
-
       <div>
         <h5 class="font-semibold text-white mb-4">Rechtliches</h5>
         <ul class="space-y-2 text-sm">
@@ -625,86 +417,70 @@
           <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
         </ul>
       </div>
-
     </div>
-
     <div class="text-center text-xs mt-16 pt-8 border-t border-zinc-800">
       © 2026 hahn-wasserfilter.de
     </div>
   </div>
 </footer>
-
 <a href="https://wa.me/491624012037"
-   target="_blank" rel="noopener noreferrer"
-   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg z-50 transition"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg z-50 transition"
    aria-label="WhatsApp schreiben">
-  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 5 5.13-1.34A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.13l-.3-.18-3.04.8.82-2.96-.2-.3A8 8 0 1 1 12 20zm4.36-6.27c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.22-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.24 1.04.38 1.4.48.58.18 1.1.16 1.52.1.46-.06 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
-  </svg>
+  ✆
 </a>
-
 <div id="cookieBanner" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-white shadow-xl border border-zinc-200 rounded-2xl px-6 py-4 w-[90%] max-w-xl z-50 hidden">
   <p class="text-sm text-zinc-700 mb-4">
     Diese Website verwendet Cookies für Analysezwecke.
     Sie können selbst entscheiden, ob Sie zustimmen.
   </p>
-
   <div class="flex gap-3 justify-end">
     <button id="cookieDecline"
             class="px-4 py-2 rounded-xl text-sm border border-zinc-300 hover:bg-zinc-100 transition">
       Ablehnen
     </button>
-
     <button id="cookieAccept"
-            class="px-4 py-2 rounded-xl text-sm bg-cyan-600 text-white hover:bg-cyan-700 transition">
+            class="px-4 py-2 rounded-xl text-sm bg-[#1A53AD] text-white hover:bg-[#163E82] transition">
       Akzeptieren
     </button>
   </div>
 </div>
-
 <script>
   function loadAnalytics() {
     const script1 = document.createElement('script');
     script1.src = "https://www.googletagmanager.com/gtag/js?id=G-P6SJPMXTRV";
     script1.async = true;
     document.head.appendChild(script1);
-
     const script2 = document.createElement('script');
     script2.innerHTML = `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-P6SJPMXTRV');
+      gtag('config', 'G-P6SJPMXTRV', { anonymize_ip: true });
     `;
     document.head.appendChild(script2);
   }
-
   document.addEventListener('DOMContentLoaded', () => {
     const banner = document.getElementById('cookieBanner');
     const acceptBtn = document.getElementById('cookieAccept');
     const declineBtn = document.getElementById('cookieDecline');
-
     if (!localStorage.getItem('cookieConsent')) {
       banner.classList.remove('hidden');
     }
-
     if (localStorage.getItem('cookieConsent') === 'accepted') {
       loadAnalytics();
     }
-
     acceptBtn.addEventListener('click', () => {
       localStorage.setItem('cookieConsent', 'accepted');
       banner.classList.add('hidden');
       loadAnalytics();
     });
-
     declineBtn.addEventListener('click', () => {
       localStorage.setItem('cookieConsent', 'declined');
       banner.classList.add('hidden');
     });
-
     const items = document.querySelectorAll('.reveal');
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -712,13 +488,9 @@
           observer.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0.05
-    });
-
+    }, { threshold: 0.05 });
     items.forEach(item => observer.observe(item));
   });
 </script>
-
 </body>
 </html>
