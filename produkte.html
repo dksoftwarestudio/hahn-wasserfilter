@@ -6,6 +6,26 @@
   <title>hahn-wasserfilter.de | Wasserfilter erklärt</title>
   <meta name="description" content="Premium Wasserfilter-Systeme einfach erklärt. Vorteile, Filterleistung, Systeme und Beratung deutschlandweit.">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>
 </head>
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 <header class="bg-white shadow-sm sticky top-0 z-50">
@@ -89,21 +109,21 @@
       und dabei helfen, weniger Flaschen zu kaufen oder zu tragen.
     </p>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-5xl mb-4">💧</div>
         <h3 class="font-semibold text-xl mb-3">Klarer Geschmack</h3>
         <p class="text-zinc-600 text-sm">
           Gefiltertes Wasser kann angenehmer schmecken – ideal für Trinken, Tee, Kaffee und Kochen.
         </p>
       </div>
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-5xl mb-4">🏠</div>
         <h3 class="font-semibold text-xl mb-3">Mehr Komfort</h3>
         <p class="text-zinc-600 text-sm">
           Je nach System erhalten Sie kaltes, heißes oder lauwarmes Wasser direkt auf Knopfdruck.
         </p>
       </div>
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <div class="text-5xl mb-4">♻️</div>
         <h3 class="font-semibold text-xl mb-3">Weniger Flaschen</h3>
         <p class="text-zinc-600 text-sm">
@@ -139,7 +159,7 @@
       Nicht jeder Haushalt braucht dieselbe Lösung. Entscheidend sind Bedarf, Platz, Nutzung und Komfortwunsch.
     </p>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <h3 class="font-semibold text-xl mb-3">Umkehrosmose</h3>
         <p class="text-zinc-600 text-sm mb-6">
           Sehr feine Filterung für klares Trinkwasser. Besonders interessant, wenn Sie Wert auf hohe Filterleistung legen.
@@ -148,7 +168,7 @@
           Produkte ansehen →
         </a>
       </div>
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <h3 class="font-semibold text-xl mb-3">Untertisch-Systeme</h3>
         <p class="text-zinc-600 text-sm mb-6">
           Individuelle Lösungen für feste Installation unter der Spüle – unauffällig und praktisch im Alltag.
@@ -158,7 +178,7 @@
         </a>
       </div>
 
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
         <h3 class="font-semibold text-xl mb-3">Beratung</h3>
         <p class="text-zinc-600 text-sm mb-6">
           Wir helfen einzuschätzen, welche Lösung zu Ihrem Haushalt, Budget und Nutzungsverhalten passt.
@@ -205,34 +225,34 @@
   <div class="max-w-4xl mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-10">Häufige Fragen</h2>
     <div class="space-y-5">
-      <div class="bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
+      <div class="reveal bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
         <h3 class="font-semibold text-lg mb-2">Kann ich zuerst beraten werden?</h3>
         <p class="text-zinc-600 text-sm">
           Ja. Die Anfrage ist unverbindlich. Sie erhalten zuerst eine Einschätzung und entscheiden danach in Ruhe.
         </p>
       </div>
-      <div class="bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
+      <div class="reveal bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
         <h3 class="font-semibold text-lg mb-2">Brauche ich wirklich einen Wasserfilter?</h3>
         <p class="text-zinc-600 text-sm">
           Das hängt von Ihrem Wasser, Geschmack und Alltag ab. Viele entscheiden sich für ein System,
           weil sie weniger Flaschen kaufen und jederzeit gefiltertes Wasser zuhause nutzen möchten.
         </p>
       </div>
-      <div class="bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
+      <div class="reveal bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
         <h3 class="font-semibold text-lg mb-2">Ist die Installation kompliziert?</h3>
         <p class="text-zinc-600 text-sm">
           Viele Systeme sind schnell einsatzbereit oder lassen sich unkompliziert installieren.
           Welche Lösung passt, klären wir in der Beratung.
         </p>
       </div>
-      <div class="bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
+      <div class="reveal bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
         <h3 class="font-semibold text-lg mb-2">Welches System passt zu meinem Haushalt?</h3>
         <p class="text-zinc-600 text-sm">
           Für kleinere Haushalte reicht oft ein kompaktes System. Familien profitieren meist von Komfort-Systemen
           mit heißem, kaltem oder lauwarmem Wasser.
         </p>
       </div>
-      <div class="bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
+      <div class="reveal bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
         <h3 class="font-semibold text-lg mb-2">Ist die Anfrage verbindlich?</h3>
         <p class="text-zinc-600 text-sm">
           Nein. Die Anfrage ist unverbindlich. Sie erhalten zuerst eine Beratung und entscheiden danach in Ruhe.
@@ -323,5 +343,23 @@
     <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 5 5.13-1.34A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.13l-.3-.18-3.04.8.82-2.96-.2-.3A8 8 0 1 1 12 20zm4.36-6.27c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.22-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.24 1.04.38 1.4.48.58.18 1.1.16 1.52.1.46-.06 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
   </svg>
 </a>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.08
+    });
+
+    items.forEach(item => observer.observe(item));
+  });
+</script>
 </body>
 </html>
