@@ -1,390 +1,261 @@
+Да, вот полный produkte.html целиком:
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hahn-wasserfilter.de | Wasserfilter einfach erklärt</title>
-  <meta name="description" content="Wasserfilter und Umkehrosmose-Systeme einfach erklärt. Vorteile, Filterleistung, Systeme und Beratung deutschlandweit.">
-
+  <title>hahn-wasserfilter.de | Wasserfilter erklärt</title>
+  <meta name="description" content="Premium Wasserfilter-Systeme einfach erklärt. Vorteile, Filterleistung, Systeme und Beratung deutschlandweit.">
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    .hero-bg {
-      background-color: #0B3F66;
-      background-image: linear-gradient(rgba(11,63,102,0.45), rgba(11,63,102,0.55)),
-                        url('water-hero1.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    .tail-container {
-      max-width: 1280px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-    }
-  </style>
 </head>
-
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
-
-<header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
-  <div class="tail-container px-6 py-4">
-
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4">
     <div class="flex justify-between items-center gap-6">
-
-      <a href="index.html" class="flex items-center gap-4">
+      <a href="index.html" class="flex items-center gap-3">
         <div class="w-11 h-11 flex items-center justify-center bg-cyan-600 rounded-xl">
           <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="currentColor">
             <path d="M12 2C12 2 5 10 5 14a7 7 0 0 0 14 0c0-4-7-12-7-12z"/>
             <text x="12" y="16" text-anchor="middle" font-size="8" font-family="serif" fill="white" font-weight="bold">H</text>
           </svg>
         </div>
-
         <div class="leading-tight">
-          <div class="font-serif text-2xl font-semibold tracking-wide text-[#0B2F5B]">
+          <div class="font-serif text-xl md:text-2xl font-semibold tracking-wide text-[#0B2F5B]">
             hahn-wasserfilter.de
           </div>
-          <p class="text-xs tracking-[0.22em] uppercase text-cyan-700 mt-1">
+          <p class="hidden sm:block text-xs tracking-[0.22em] uppercase text-cyan-700 mt-1">
             Hof (Saale) · bundesweit
           </p>
         </div>
       </a>
-
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
         <a href="index.html" class="hover:text-cyan-700 transition">Start</a>
         <a href="produkte.html" class="text-cyan-700 font-semibold">Produkte</a>
         <a href="index.html#kontakt" class="hover:text-cyan-700 transition">Kontakt</a>
       </nav>
-
       <div class="hidden md:flex items-center gap-3">
         <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
-           class="border border-green-500 text-green-600 px-6 py-2.5 rounded-2xl font-medium hover:bg-green-50 transition">
+           class="border border-green-500 text-green-600 px-5 py-3 rounded-2xl font-medium hover:bg-green-50 transition">
           WhatsApp
         </a>
-
         <a href="index.html#kontakt"
-           class="bg-cyan-600 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-cyan-700 transition">
+           class="bg-cyan-600 text-white px-6 py-3 rounded-2xl font-semibold hover:bg-cyan-700 transition">
           Jetzt beraten lassen
         </a>
       </div>
-
     </div>
-
     <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
       <a href="index.html"
          class="text-center bg-cyan-600 text-white py-3 rounded-2xl font-medium">
         Start
       </a>
-
       <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
          class="text-center bg-green-500 text-white py-3 rounded-2xl font-medium">
         WhatsApp
       </a>
     </div>
-
   </div>
 </header>
-
-<section class="hero-bg min-h-screen flex items-center text-white py-20">
-  <div class="tail-container px-6">
-    <div class="max-w-3xl">
-
-      <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-        Sauberes Trinkwasser –<br>
-        <span class="text-cyan-200 block mt-2 md:mt-3">
-          einfach erklärt
-        </span>
-      </h1>
-
-      <p class="text-xl md:text-2xl mb-10 text-cyan-50">
-        Welche Wasserfilter gibt es, worauf kommt es an und welches System passt zu Ihrem Zuhause?
-      </p>
-
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="index.html#produkte"
-           class="bg-white hover:bg-cyan-50 text-cyan-700 text-xl px-10 py-5 rounded-3xl font-semibold text-center transition">
-          Produkte ansehen
-        </a>
-
-        <a href="index.html#kontakt"
-           class="border-2 border-white hover:bg-white hover:text-cyan-700 text-white text-xl px-10 py-5 rounded-3xl font-semibold text-center transition">
-          Beratung anfragen
-        </a>
-      </div>
-
-      <div class="grid sm:grid-cols-3 gap-3 mt-10 text-sm">
-        <div class="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">Persönliche Beratung</div>
-        <div class="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">Für Zuhause & Familie</div>
-        <div class="bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">Unverbindlich anfragen</div>
-      </div>
-
+<section class="relative py-24 bg-[#0B3F66] text-white text-center">
+  <div class="max-w-4xl mx-auto px-6">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+      Sauberes Trinkwasser.<br>
+      <span class="text-cyan-200 block mt-2">Einfach erklärt.</span>
+    </h1>
+    <p class="text-lg text-cyan-50 max-w-2xl mx-auto">
+      Welche Systeme gibt es, was wird gefiltert und welche Lösung passt zu Ihrem Zuhause?
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="index.html#produkte"
+         class="bg-white text-cyan-700 text-lg px-8 py-4 rounded-3xl font-semibold hover:bg-cyan-50 transition">
+        Produkte ansehen
+      </a>
+      <a href="index.html#kontakt"
+         class="border border-white text-white text-lg px-8 py-4 rounded-3xl font-semibold hover:bg-white hover:text-cyan-700 transition">
+        Beratung anfragen
+      </a>
     </div>
   </div>
 </section>
-
 <section class="py-20 bg-white">
-  <div class="tail-container px-6">
-
-    <h2 class="text-4xl font-bold text-center mb-4">
-      Was macht unsere Wasserfilter besonders?
-    </h2>
-
-    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
-      Keine anonyme Online-Bestellung, sondern verständliche Beratung und passende Systeme für Ihren Alltag.
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Warum Wasser filtern?</h2>
+    <p class="text-zinc-600 max-w-2xl mx-auto mb-12">
+      Ein gutes Wasserfiltersystem kann den Geschmack verbessern, den Alltag erleichtern
+      und dabei helfen, weniger Flaschen zu kaufen oder zu tragen.
     </p>
-
     <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center border border-zinc-100 hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-5xl mb-4">🤝</div>
-        <h3 class="font-semibold text-xl mb-2">Persönliche Beratung</h3>
-        <p class="text-zinc-600">Wir helfen, das passende System für Haushalt, Bedarf und Budget zu finden.</p>
-      </div>
-
-      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center border border-zinc-100 hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-5xl mb-4">⚙️</div>
-        <h3 class="font-semibold text-xl mb-2">Moderne Filtersysteme</h3>
-        <p class="text-zinc-600">Membran- und Umkehrosmose-Technologie für sauberes Trinkwasser zuhause.</p>
-      </div>
-
-      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center border border-zinc-100 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm">
         <div class="text-5xl mb-4">💧</div>
-        <h3 class="font-semibold text-xl mb-2">Komfort im Alltag</h3>
-        <p class="text-zinc-600">Wasser trinken, Tee kochen oder Eiswürfel nutzen – je nach System direkt auf Knopfdruck.</p>
+        <h3 class="font-semibold text-xl mb-3">Klarer Geschmack</h3>
+        <p class="text-zinc-600 text-sm">
+          Gefiltertes Wasser kann angenehmer schmecken – ideal für Trinken, Tee, Kaffee und Kochen.
+        </p>
       </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="vorteile" class="py-20 bg-[#F5F5F5]">
-  <div class="tail-container px-6">
-
-    <h2 class="text-4xl font-bold text-center mb-4">
-      Warum Wasser filtern?
-    </h2>
-
-    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
-      Ein gutes Wasserfiltersystem kann den Geschmack verbessern und den Alltag einfacher machen – ohne Kisten schleppen.
-    </p>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="reveal bg-white p-8 rounded-3xl text-center border border-zinc-100 hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-5xl mb-4">💧</div>
-        <h3 class="font-semibold text-xl mb-2">Besserer Geschmack</h3>
-        <p class="text-zinc-600">Klares, frisches Wasser direkt aus dem eigenen Hahn.</p>
-      </div>
-
-      <div class="reveal bg-white p-8 rounded-3xl text-center border border-zinc-100 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm">
         <div class="text-5xl mb-4">🏠</div>
-        <h3 class="font-semibold text-xl mb-2">Für den Alltag</h3>
-        <p class="text-zinc-600">Ideal für Trinken, Kochen, Kaffee und Tee.</p>
+        <h3 class="font-semibold text-xl mb-3">Mehr Komfort</h3>
+        <p class="text-zinc-600 text-sm">
+          Je nach System erhalten Sie kaltes, heißes oder lauwarmes Wasser direkt auf Knopfdruck.
+        </p>
       </div>
-
-      <div class="reveal bg-white p-8 rounded-3xl text-center border border-zinc-100 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm">
         <div class="text-5xl mb-4">♻️</div>
-        <h3 class="font-semibold text-xl mb-2">Weniger Flaschen</h3>
-        <p class="text-zinc-600">Weniger Plastik, weniger Schleppen, mehr Komfort.</p>
+        <h3 class="font-semibold text-xl mb-3">Weniger Flaschen</h3>
+        <p class="text-zinc-600 text-sm">
+          Weniger Kisten schleppen, weniger Plastikflaschen und mehr Bequemlichkeit im Alltag.
+        </p>
       </div>
-
     </div>
   </div>
 </section>
-
-<section class="py-20 bg-white">
-  <div class="tail-container px-6">
-
-    <h2 class="text-4xl font-bold text-center mb-4">
-      Was wird gefiltert?
-    </h2>
-
-    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
-      Je nach System können verschiedene unerwünschte Stoffe im Wasser reduziert werden.
-    </p>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
-
-      <div class="reveal bg-[#F8FAFC] p-5 rounded-2xl border border-zinc-100 text-center hover:-translate-y-1 hover:shadow-md transition duration-300">Chlor</div>
-      <div class="reveal bg-[#F8FAFC] p-5 rounded-2xl border border-zinc-100 text-center hover:-translate-y-1 hover:shadow-md transition duration-300">Kalk</div>
-      <div class="reveal bg-[#F8FAFC] p-5 rounded-2xl border border-zinc-100 text-center hover:-translate-y-1 hover:shadow-md transition duration-300">Mikroplastik</div>
-      <div class="reveal bg-[#F8FAFC] p-5 rounded-2xl border border-zinc-100 text-center hover:-translate-y-1 hover:shadow-md transition duration-300">Schwermetalle</div>
-      <div class="reveal bg-[#F8FAFC] p-5 rounded-2xl border border-zinc-100 text-center hover:-translate-y-1 hover:shadow-md transition duration-300">Bakterien</div>
-      <div class="reveal bg-[#F8FAFC] p-5 rounded-2xl border border-zinc-100 text-center hover:-translate-y-1 hover:shadow-md transition duration-300">Medikamentenreste</div>
-
-    </div>
-
-    <p class="text-center text-xs text-zinc-500 max-w-2xl mx-auto mt-8">
-      Die genaue Filterleistung hängt vom gewählten System, Wasserqualität und Nutzung ab.
-    </p>
-
-  </div>
-</section>
-
 <section class="py-20 bg-[#F5F5F5]">
-  <div class="tail-container px-6">
-
-    <h2 class="text-4xl font-bold text-center mb-4">
-      Welche Systeme gibt es?
-    </h2>
-
-    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
-      Je nach Haushalt, Wasserqualität und Bedarf gibt es unterschiedliche Lösungen.
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Was wird gefiltert?</h2>
+    <p class="text-zinc-600 max-w-2xl mx-auto mb-12">
+      Je nach Modell und Wasserqualität können verschiedene Stoffe im Wasser reduziert werden.
     </p>
-
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+      <div class="bg-white p-5 rounded-2xl border border-zinc-100 shadow-sm">Chlor</div>
+      <div class="bg-white p-5 rounded-2xl border border-zinc-100 shadow-sm">Kalk</div>
+      <div class="bg-white p-5 rounded-2xl border border-zinc-100 shadow-sm">Mikroplastik</div>
+      <div class="bg-white p-5 rounded-2xl border border-zinc-100 shadow-sm">Schwermetalle</div>
+      <div class="bg-white p-5 rounded-2xl border border-zinc-100 shadow-sm">Bakterien</div>
+      <div class="bg-white p-5 rounded-2xl border border-zinc-100 shadow-sm">Medikamentenreste</div>
+    </div>
+    <p class="text-xs text-zinc-500 max-w-2xl mx-auto mt-6">
+      *Die genaue Filterleistung hängt vom gewählten System, der Wasserqualität und der Nutzung ab.
+    </p>
+  </div>
+</section>
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Welche Systeme gibt es?</h2>
+    <p class="text-zinc-600 max-w-2xl mx-auto mb-12">
+      Nicht jeder Haushalt braucht dieselbe Lösung. Entscheidend sind Bedarf, Platz, Nutzung und Komfortwunsch.
+    </p>
     <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="reveal bg-white p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm">
         <h3 class="font-semibold text-xl mb-3">Umkehrosmose</h3>
-        <p class="text-zinc-600 text-sm mb-6">Sehr feine Filterung für besonders klares Trinkwasser.</p>
-        <a href="index.html#produkte" class="text-cyan-700 font-semibold text-sm">Produkte ansehen →</a>
+        <p class="text-zinc-600 text-sm mb-6">
+          Sehr feine Filterung für klares Trinkwasser. Besonders interessant, wenn Sie Wert auf hohe Filterleistung legen.
+        </p>
+        <a href="index.html#produkte" class="text-cyan-700 font-semibold text-sm">
+          Produkte ansehen →
+        </a>
       </div>
-
-      <div class="reveal bg-white p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm">
         <h3 class="font-semibold text-xl mb-3">Untertisch-Systeme</h3>
         <p class="text-zinc-600 text-sm mb-6">
-          Individuelle Lösungen auf Anfrage – ideal für feste Installation unter der Spüle.
+          Individuelle Lösungen für feste Installation unter der Spüle – unauffällig und praktisch im Alltag.
         </p>
-        <a href="index.html#kontakt" class="text-cyan-700 font-semibold text-sm">Beratung anfragen →</a>
+        <a href="index.html#kontakt" class="text-cyan-700 font-semibold text-sm">
+          Jetzt beraten lassen →
+        </a>
       </div>
-
-      <div class="reveal bg-white p-8 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100 shadow-sm">
         <h3 class="font-semibold text-xl mb-3">Beratung</h3>
-        <p class="text-zinc-600 text-sm mb-6">Wir helfen einzuschätzen, welche Lösung zu Ihrem Zuhause passt.</p>
-        <a href="index.html#kontakt" class="text-cyan-700 font-semibold text-sm">Beratung anfragen →</a>
+        <p class="text-zinc-600 text-sm mb-6">
+          Wir helfen einzuschätzen, welche Lösung zu Ihrem Haushalt, Budget und Nutzungsverhalten passt.
+        </p>
+        <a href="index.html#kontakt" class="text-cyan-700 font-semibold text-sm">
+          Jetzt beraten lassen →
+        </a>
       </div>
-
     </div>
   </div>
 </section>
-
-<section class="py-20 bg-white">
-  <div class="tail-container px-6">
-
-    <h2 class="text-4xl font-bold text-center mb-4">
-      So funktioniert’s
-    </h2>
-
-    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-12">
-      Keine komplizierte Bestellung. Erst informieren, dann entscheiden.
+<section class="py-20 bg-[#F5F5F5]">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">So funktioniert’s</h2>
+    <p class="text-zinc-600 max-w-2xl mx-auto mb-12">
+      Keine automatische Bestellung, kein komplizierter Prozess. Erst informieren, dann ruhig entscheiden.
     </p>
-
     <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center border border-zinc-100 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="bg-white p-8 rounded-3xl border border-zinc-100 shadow-sm">
         <div class="text-cyan-700 font-bold text-3xl mb-4">01</div>
         <h3 class="font-semibold text-xl mb-2">Anfrage stellen</h3>
-        <p class="text-zinc-600">Kurz beschreiben, was Sie suchen.</p>
+        <p class="text-zinc-600 text-sm">
+          Schreiben Sie kurz, welches System Sie interessiert oder wofür Sie eine Lösung suchen.
+        </p>
       </div>
-
-      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center border border-zinc-100 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="bg-white p-8 rounded-3xl border border-zinc-100 shadow-sm">
         <div class="text-cyan-700 font-bold text-3xl mb-4">02</div>
         <h3 class="font-semibold text-xl mb-2">Beratung erhalten</h3>
-        <p class="text-zinc-600">Verständlich erklärt, ohne Verkaufsdruck.</p>
+        <p class="text-zinc-600 text-sm">
+          Sie erhalten eine verständliche Einschätzung – ohne Verkaufsdruck und ohne Fachchinesisch.
+        </p>
       </div>
-
-      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center border border-zinc-100 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <div class="bg-white p-8 rounded-3xl border border-zinc-100 shadow-sm">
         <div class="text-cyan-700 font-bold text-3xl mb-4">03</div>
         <h3 class="font-semibold text-xl mb-2">Lösung wählen</h3>
-        <p class="text-zinc-600">Sie entscheiden in Ruhe, was passt.</p>
+        <p class="text-zinc-600 text-sm">
+          Danach entscheiden Sie in Ruhe, welches System zu Ihnen passt.
+        </p>
       </div>
-
     </div>
   </div>
 </section>
-
-<section class="py-20 bg-[#F5F5F5]">
-  <div class="tail-container px-6 max-w-4xl mx-auto">
-
-    <h2 class="text-4xl font-bold text-center mb-10">
-      Häufige Fragen
-    </h2>
-
+<section class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Häufige Fragen</h2>
     <div class="space-y-5">
-
-      <div class="reveal bg-white p-6 rounded-3xl border border-zinc-100 hover:-translate-y-1 hover:shadow-md transition duration-300">
+      <div class="bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100">
         <h3 class="font-semibold text-lg mb-2">Brauche ich wirklich einen Wasserfilter?</h3>
         <p class="text-zinc-600 text-sm">
-          Das hängt von Ihrem Wasser, Geschmack und Alltag ab. Viele entscheiden sich für ein System, weil sie weniger Flaschen kaufen und jederzeit gefiltertes Wasser zuhause nutzen möchten.
+          Das hängt von Ihrem Wasser, Geschmack und Alltag ab. Viele entscheiden sich für ein System,
+          weil sie weniger Flaschen kaufen und jederzeit gefiltertes Wasser zuhause nutzen möchten.
         </p>
       </div>
-
-      <div class="reveal bg-white p-6 rounded-3xl border border-zinc-100 hover:-translate-y-1 hover:shadow-md transition duration-300">
+      <div class="bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100">
         <h3 class="font-semibold text-lg mb-2">Ist die Installation kompliziert?</h3>
         <p class="text-zinc-600 text-sm">
-          Viele Systeme sind schnell einsatzbereit oder lassen sich unkompliziert installieren. Welche Lösung passt, klären wir in der Beratung.
+          Viele Systeme sind schnell einsatzbereit oder lassen sich unkompliziert installieren.
+          Welche Lösung passt, klären wir in der Beratung.
         </p>
       </div>
-
-      <div class="reveal bg-white p-6 rounded-3xl border border-zinc-100 hover:-translate-y-1 hover:shadow-md transition duration-300">
+      <div class="bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100">
         <h3 class="font-semibold text-lg mb-2">Welches System passt zu meinem Haushalt?</h3>
         <p class="text-zinc-600 text-sm">
-          Für kleinere Haushalte reicht oft ein kompaktes System. Familien profitieren meist von Komfort-Systemen mit heißem, kaltem oder lauwarmem Wasser.
+          Für kleinere Haushalte reicht oft ein kompaktes System. Familien profitieren meist von Komfort-Systemen
+          mit heißem, kaltem oder lauwarmem Wasser.
         </p>
       </div>
-
-      <div class="reveal bg-white p-6 rounded-3xl border border-zinc-100 hover:-translate-y-1 hover:shadow-md transition duration-300">
+      <div class="bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100">
         <h3 class="font-semibold text-lg mb-2">Ist die Anfrage verbindlich?</h3>
         <p class="text-zinc-600 text-sm">
           Nein. Die Anfrage ist unverbindlich. Sie erhalten zuerst eine Beratung und entscheiden danach in Ruhe.
         </p>
       </div>
-
     </div>
   </div>
 </section>
-
-<section class="pb-16 bg-[#F5F5F5]">
+<section class="py-16 bg-[#F5F5F5]">
   <div class="max-w-4xl mx-auto px-6">
-    <div class="reveal bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm hover:scale-[1.02] hover:shadow-xl transition duration-300">
-
-      <h2 class="text-2xl font-bold mb-4">
+    <div class="bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">
         Bereit für die passende Lösung?
       </h2>
-
-      <p class="text-zinc-600 mb-6">
-        Auf der Startseite finden Sie die aktuellen Systeme und eine unverbindliche Anfrage.
+      <p class="text-zinc-600 max-w-2xl mx-auto mb-6">
+        Auf der Startseite finden Sie die aktuellen Systeme, Preisorientierung und die Möglichkeit zur unverbindlichen Anfrage.
       </p>
-
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="index.html#produkte"
            class="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-2xl font-semibold transition">
           Produkte ansehen
         </a>
-
         <a href="index.html#kontakt"
            class="border border-cyan-700 text-cyan-700 px-6 py-3 rounded-2xl font-semibold hover:bg-cyan-50 transition">
-          Anfrage stellen
+          Beratung anfragen
         </a>
       </div>
-
     </div>
   </div>
 </section>
-
 <footer class="bg-zinc-900 text-zinc-400 py-16">
   <div class="max-w-7xl mx-auto px-6">
     <div class="grid md:grid-cols-4 gap-10">
-
       <div>
         <div class="flex items-center gap-3 mb-4">
           <div class="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-xl">
@@ -393,17 +264,14 @@
               <text x="12" y="16" text-anchor="middle" font-size="7" font-family="serif" fill="white" font-weight="bold">H</text>
             </svg>
           </div>
-
           <div class="font-serif text-lg text-white tracking-wide">
             hahn-wasserfilter.de
           </div>
         </div>
-
         <p class="text-sm">
           Beratung und Anfrage für Wasserfilter-Systeme deutschlandweit.
         </p>
       </div>
-
       <div>
         <h5 class="font-semibold text-white mb-4">Navigation</h5>
         <ul class="space-y-2 text-sm">
@@ -412,22 +280,18 @@
           <li><a href="index.html#kontakt" class="hover:text-white">Kontakt</a></li>
         </ul>
       </div>
-
       <div>
         <h5 class="font-semibold text-white mb-4">Kontakt</h5>
-
         <p class="text-sm mb-4">
           E-Mail: info@hahn-wasserfilter.de<br>
           WhatsApp: +49 162 4012037
         </p>
-
         <a href="https://wa.me/491624012037"
            target="_blank" rel="noopener noreferrer"
            class="inline-block bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-2xl text-sm font-semibold transition">
           WhatsApp schreiben
         </a>
       </div>
-
       <div>
         <h5 class="font-semibold text-white mb-4">Rechtliches</h5>
         <ul class="space-y-2 text-sm">
@@ -435,15 +299,12 @@
           <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
         </ul>
       </div>
-
     </div>
-
     <div class="text-center text-xs mt-16 pt-8 border-t border-zinc-800">
       © 2026 hahn-wasserfilter.de
     </div>
   </div>
 </footer>
-
 <a href="https://wa.me/491624012037"
    target="_blank" rel="noopener noreferrer"
    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg z-50 transition"
@@ -452,25 +313,5 @@
     <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 5 5.13-1.34A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.13l-.3-.18-3.04.8.82-2.96-.2-.3A8 8 0 1 1 12 20zm4.36-6.27c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.22-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.24 1.04.38 1.4.48.58.18 1.1.16 1.52.1.46-.06 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
   </svg>
 </a>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.reveal');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.05
-    });
-
-    items.forEach(item => observer.observe(item));
-  });
-</script>
-
 </body>
 </html>
