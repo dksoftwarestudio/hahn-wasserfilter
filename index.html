@@ -94,12 +94,17 @@
 }
 
   @media (prefers-reduced-motion: reduce) {
-    .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
+
+  .bubbles span {
+    animation: none;
+    display: none;
+  }
+}
 </style>
 </head>
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
