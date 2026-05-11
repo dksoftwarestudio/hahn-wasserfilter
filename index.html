@@ -17,6 +17,81 @@
     opacity: 1;
     transform: translateY(0);
   }
+  
+  .bubbles span{
+  position:absolute;
+  bottom:-120px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.18);
+  backdrop-filter:blur(2px);
+  animation:rise linear infinite;
+}
+
+.bubbles span:nth-child(1){
+  left:8%;
+  width:14px;
+  height:14px;
+  animation-duration:18s;
+}
+
+.bubbles span:nth-child(2){
+  left:22%;
+  width:26px;
+  height:26px;
+  animation-duration:24s;
+}
+
+.bubbles span:nth-child(3){
+  left:38%;
+  width:10px;
+  height:10px;
+  animation-duration:16s;
+}
+
+.bubbles span:nth-child(4){
+  left:55%;
+  width:18px;
+  height:18px;
+  animation-duration:21s;
+}
+
+.bubbles span:nth-child(5){
+  left:72%;
+  width:12px;
+  height:12px;
+  animation-duration:17s;
+}
+
+.bubbles span:nth-child(6){
+  left:84%;
+  width:22px;
+  height:22px;
+  animation-duration:26s;
+}
+
+.bubbles span:nth-child(7){
+  left:93%;
+  width:9px;
+  height:9px;
+  animation-duration:15s;
+}
+
+@keyframes rise{
+  0%{
+    transform:translateY(0) scale(1);
+    opacity:0;
+  }
+
+  10%{
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(-120vh) scale(1.3);
+    opacity:0;
+  }
+}
 
   @media (prefers-reduced-motion: reduce) {
     .reveal {
