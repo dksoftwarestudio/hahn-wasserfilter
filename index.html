@@ -1,211 +1,439 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <title>Hahn Wasserfilter – Premium Water</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hahn-wasserfilter.de | Premium Wasserfilter</title>
+  <meta name="description" content="Premium Wasserfilter-Systeme: Bestseller und Untertisch-Lösungen. Klare Preise, persönliche Beratung deutschlandweit.">
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
-    :root {
-      --c-deep: #0E0D15;
-      --c-navy: #182346;
-      --c-blue: #3D5387;
-      --c-lilac: #7C83AD;
-      --c-rose: #BFA9BA;
-    }
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
 
-    .glass {
-      backdrop-filter: blur(22px) saturate(180%);
-      -webkit-backdrop-filter: blur(22px) saturate(180%);
-      background: rgba(255, 255, 255, 0.55);
-      border: 1px solid rgba(255, 255, 255, 0.35);
-    }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .bubbles span{
+  position:absolute;
+  bottom:-120px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.18);
+  backdrop-filter:blur(2px);
+  animation:rise linear infinite;
+}
 
-    .soft-bg {
-      background: linear-gradient(160deg, #f5f6fa 0%, #e7e9f3 40%, #d8d9e6 100%);
-    }
+.bubbles span:nth-child(1){
+  left:8%;
+  width:14px;
+  height:14px;
+  animation-duration:18s;
+}
 
-    .soft-glow {
-      box-shadow:
-        0 0 80px rgba(191,169,186,0.25),
-        0 0 40px rgba(124,131,173,0.25),
-        inset 0 0 40px rgba(255,255,255,0.2);
-    }
-  </style>
+.bubbles span:nth-child(2){
+  left:22%;
+  width:26px;
+  height:26px;
+  animation-duration:24s;
+}
+
+.bubbles span:nth-child(3){
+  left:38%;
+  width:10px;
+  height:10px;
+  animation-duration:16s;
+}
+
+.bubbles span:nth-child(4){
+  left:55%;
+  width:18px;
+  height:18px;
+  animation-duration:21s;
+}
+
+.bubbles span:nth-child(5){
+  left:72%;
+  width:12px;
+  height:12px;
+  animation-duration:17s;
+}
+
+.bubbles span:nth-child(6){
+  left:84%;
+  width:22px;
+  height:22px;
+  animation-duration:26s;
+}
+
+.bubbles span:nth-child(7){
+  left:93%;
+  width:9px;
+  height:9px;
+  animation-duration:15s;
+}
+
+@keyframes rise{
+  0%{
+    transform:translateY(0) scale(1);
+    opacity:0;
+  }
+
+  10%{
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(-120vh) scale(1.3);
+    opacity:0;
+  }
+}
+
+  @media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .bubbles span {
+    animation: none;
+    display: none;
+  }
+}
+</style>
 </head>
-
-<body class="soft-bg text-slate-800 antialiased">
-
-<!-- NAV -->
-<header class="fixed inset-x-0 top-0 z-40 glass py-3">
-  <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
-    <div class="flex items-center gap-2">
-      <div class="h-8 w-8 rounded-full bg-white/70 flex items-center justify-center text-xs tracking-[0.2em] text-slate-700">
-        HW
+<body class="bg-[#F5F5F5] text-zinc-800 font-sans">
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4">
+    <div class="flex justify-between items-center gap-6">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-11 h-11 flex items-center justify-center bg-cyan-600 rounded-xl">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="currentColor">
+            <path d="M12 2C12 2 5 10 5 14a7 7 0 0 0 14 0c0-4-7-12-7-12z"/>
+            <text x="12" y="16" text-anchor="middle" font-size="8" font-family="serif" fill="white" font-weight="bold">H</text>
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <div class="font-serif text-xl md:text-2xl font-semibold tracking-wide text-[#0B2F5B]">
+            hahn-wasserfilter.de
+          </div>
+          <p class="hidden sm:block text-xs tracking-[0.22em] uppercase text-cyan-700 mt-1">
+            Hof (Saale) · bundesweit
+          </p>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+        <a href="index.html" class="text-cyan-700 font-semibold">Start</a>
+        <a href="produkte.html" class="hover:text-cyan-700 transition">Vorteile</a>
+        <a href="#kontakt" class="hover:text-cyan-700 transition">Kontakt</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#kontakt"
+           class="bg-cyan-600 text-white px-6 py-3 rounded-2xl font-semibold hover:bg-cyan-700 transition">
+          Jetzt beraten lassen
+        </a>
       </div>
-      <span class="text-xs tracking-[0.25em] uppercase text-slate-600">Hahn Wasserfilter</span>
     </div>
-
-    <nav class="hidden md:flex items-center gap-8 text-xs tracking-[0.2em] uppercase text-slate-500">
-      <a href="#produkte" class="hover:text-slate-800 transition">Produkte</a>
-      <a href="#warum" class="hover:text-slate-800 transition">Warum</a>
-      <a href="#kontakt" class="hover:text-slate-800 transition">Kontakt</a>
-    </nav>
-
-    <a href="#kontakt"
-       class="hidden sm:inline-flex rounded-full px-4 py-1.5 text-xs tracking-[0.2em] uppercase bg-white/70 hover:bg-white transition text-slate-700">
-      Beratung
-    </a>
+    <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
+      <a href="produkte.html"
+         class="text-center bg-cyan-600 text-white py-3 rounded-2xl font-medium">
+        Vorteile
+      </a>
+      <a href="#kontakt"
+         class="text-center bg-white border border-cyan-600 text-cyan-700 py-3 rounded-2xl font-medium">
+        Kontakt
+      </a>
+    </div>
   </div>
 </header>
-
-<!-- HERO -->
-<section class="pt-32 pb-32 relative overflow-hidden">
-
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,#BFA9BA55,transparent_70%)] blur-3xl"></div>
-
-  <div class="max-w-6xl mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
-
-    <!-- TEXT -->
-    <div>
-      <h1 class="text-5xl sm:text-6xl font-semibold tracking-tight text-slate-900 mb-6 leading-[1.05]">
-        Reines Wasser.<br />
-        Leicht. Modern. Premium.
-      </h1>
-
-      <p class="text-lg text-slate-600 max-w-md mb-10">
-        Ein Filtersystem, das sich wie moderne Technologie anfühlt – hell, elegant und intuitiv.
-      </p>
-
-      <div class="flex gap-4">
-        <a href="#kontakt"
-           class="rounded-full bg-[var(--c-rose)] text-white px-6 py-2 text-xs tracking-[0.25em] uppercase font-semibold hover:bg-slate-900 transition">
-          Beratung
-        </a>
-        <a href="#produkte"
-           class="rounded-full border border-slate-300 px-6 py-2 text-xs tracking-[0.25em] uppercase hover:bg-white transition">
-          Modelle
-        </a>
-      </div>
-    </div>
-
-    <!-- DEVICE -->
-    <div class="relative flex justify-center">
-      <div class="absolute -inset-20 bg-[radial-gradient(circle,#7C83AD33,transparent_70%)] blur-3xl"></div>
-
-      <div class="relative h-[420px] w-[260px] rounded-[2.5rem] glass soft-glow border-white/40 flex flex-col justify-between p-6">
-        <div class="h-1.5 w-24 bg-white/50 rounded-full mx-auto"></div>
-
-        <div class="flex flex-col items-center gap-4">
-          <div class="h-20 w-20 rounded-full bg-white/40 border border-white/60"></div>
-          <p class="text-[11px] tracking-[0.3em] uppercase text-slate-600">Hahn Filter</p>
-        </div>
-
-        <div class="flex gap-2 justify-center">
-          <span class="h-1.5 w-1.5 rounded-full bg-slate-400"></span>
-          <span class="h-1.5 w-1.5 rounded-full bg-slate-500"></span>
-          <span class="h-1.5 w-1.5 rounded-full bg-slate-600"></span>
-        </div>
-      </div>
-    </div>
-
+<section class="relative py-24 overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="water-hero.jpg"
+         alt=""
+         class="w-full h-full object-cover">
   </div>
-</section>
+  
+  <div class="bubbles absolute inset-0 pointer-events-none">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
-<!-- WHY -->
-<section id="warum" class="py-28">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl sm:text-4xl font-semibold mb-12 text-slate-900">Warum Kunden wechseln</h2>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="glass p-6 rounded-3xl">
-        <p class="text-xs tracking-[0.25em] uppercase text-slate-500 mb-2">Kein Kalk</p>
-        <p class="text-sm text-slate-700">Saubere Geräte, klarer Geschmack.</p>
+  <div class="relative max-w-4xl mx-auto px-6 text-center text-white">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
+      Sauberes Wasser.<br>
+      <span class="text-cyan-200 block mt-2">
+        Einfach zuhause.
+      </span>
+    </h1>
+    <p class="text-lg text-white max-w-2xl mx-auto drop-shadow-md">
+      Drei Systeme. Klare Preise.<br>
+      Persönliche Beratung.
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#produkte"
+         class="bg-cyan-600 text-white text-lg px-8 py-4 rounded-3xl font-semibold hover:bg-cyan-700 transition">
+        Produkte ansehen
+      </a>
+      <a href="#kontakt"
+         class="bg-white/90 text-cyan-700 text-lg px-8 py-4 rounded-3xl font-semibold hover:bg-white transition">
+        Jetzt beraten lassen
+      </a>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-3 mt-10 text-sm max-w-3xl mx-auto">
+      <div class="bg-white/12 backdrop-blur-[3px] border border-white/15 rounded-2xl px-4 py-3">
+        ✓ Persönliche Beratung
       </div>
-      <div class="glass p-6 rounded-3xl">
-        <p class="text-xs tracking-[0.25em] uppercase text-slate-500 mb-2">Besserer Geschmack</p>
-        <p class="text-sm text-slate-700">Weiches, frisches Wasser.</p>
+      <div class="bg-white/12 backdrop-blur-[3px] border border-white/15 rounded-2xl px-4 py-3">
+        ✓ Klare Preise
       </div>
-      <div class="glass p-6 rounded-3xl">
-        <p class="text-xs tracking-[0.25em] uppercase text-slate-500 mb-2">Keine Flaschen</p>
-        <p class="text-sm text-slate-700">Weniger Schleppen, weniger Müll.</p>
-      </div>
-      <div class="glass p-6 rounded-3xl">
-        <p class="text-xs tracking-[0.25em] uppercase text-slate-500 mb-2">Sicher</p>
-        <p class="text-sm text-slate-700">Gefiltert direkt aus dem Hahn.</p>
+      <div class="bg-white/12 backdrop-blur-[3px] border border-white/15 rounded-2xl px-4 py-3">
+        ✓ Unverbindliche Anfrage
       </div>
     </div>
   </div>
 </section>
-
-<!-- PRODUCTS -->
-<section id="produkte" class="py-28">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl sm:text-4xl font-semibold mb-12 text-slate-900">Modelle</h2>
-
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="glass rounded-3xl p-6 hover:bg-white/70 transition">
-        <p class="text-xs tracking-[0.25em] uppercase text-slate-500 mb-2">Modell A</p>
-        <h3 class="text-xl font-semibold mb-3 text-slate-900">Für Familien</h3>
-        <p class="text-sm text-slate-600 mb-4">Heiß, kalt, still – leise und zuverlässig.</p>
-        <button class="text-xs tracking-[0.25em] uppercase text-[var(--c-blue)] hover:text-slate-900 transition">
-          Details
-        </button>
-      </div>
-
-      <div class="glass rounded-3xl p-6 hover:bg-white/70 transition">
-        <p class="text-xs tracking-[0.25em] uppercase text-slate-500 mb-2">Modell B</p>
-        <h3 class="text-xl font-semibold mb-3 text-slate-900">Für Büros</h3>
-        <p class="text-sm text-slate-600 mb-4">Hohe Kapazität, Eis & Heißwasser.</p>
-        <button class="text-xs tracking-[0.25em] uppercase text-[var(--c-blue)] hover:text-slate-900 transition">
-          Details
-        </button>
-      </div>
-
-      <div class="glass rounded-3xl p-6 hover:bg-white/70 transition">
-        <p class="text-xs tracking-[0.25em] uppercase text-slate-500 mb-2">Modell C</p>
-        <h3 class="text-xl font-semibold mb-3 text-slate-900">Für kleine Küchen</h3>
-        <p class="text-sm text-slate-600 mb-4">Kompakt, leise, effizient.</p>
-        <button class="text-xs tracking-[0.25em] uppercase text-[var(--c-blue)] hover:text-slate-900 transition">
-          Details
-        </button>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="kontakt" class="py-28">
-  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
-
-    <div>
-      <h2 class="text-3xl sm:text-4xl font-semibold mb-6 text-slate-900">Bereit für besseres Wasser</h2>
-      <p class="text-slate-600 mb-6">Kurze Nachricht genügt – wir melden uns innerhalb von 1–3 Stunden.</p>
-      <ul class="text-sm text-slate-500 space-y-2">
-        <li>• Persönliche Beratung</li>
-        <li>• Keine Verpflichtung</li>
-        <li>• Techniker statt Callcenter</li>
+<section id="produkte" class="py-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+    <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <img src="ambient-basic.jpg" alt="LUXLABEL Ambient" class="w-full h-48 object-contain mb-6">
+      <h2 class="text-2xl font-bold mb-2 text-center">LUXLABEL Ambient</h2>
+      <p class="text-zinc-600 mb-6 text-center">Kompakt. Frisch. Für 1–2 Personen.</p>
+      <p class="text-3xl font-bold text-cyan-700 mb-2 text-center">ab 1.600 €</p>
+      <p class="text-xs text-zinc-400 text-center mb-6">🔧 Montage optional (+357 €)</p>
+      <ul class="space-y-3 text-sm text-zinc-700 mb-8 text-center">
+        <li>✓ Kompakt & platzsparend</li>
+        <li>✓ Frisches Wasser auf Knopfdruck</li>
+        <li>✓ Ideal für kleinere Haushalte</li>
       </ul>
+      <a href="#kontakt"
+         class="block text-center bg-cyan-600 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-cyan-700 transition">
+        Jetzt beraten lassen
+      </a>
     </div>
-
-    <form class="glass rounded-3xl p-6 space-y-4">
-      <input class="w-full rounded-2xl bg-white/60 border border-white/80 px-4 py-2 text-sm focus:ring-1 focus:ring-[var(--c-blue)]"
-             placeholder="Name" />
-      <input class="w-full rounded-2xl bg-white/60 border border-white/80 px-4 py-2 text-sm focus:ring-1 focus:ring-[var(--c-blue)]"
-             placeholder="Telefon" />
-      <textarea rows="4"
-                class="w-full rounded-2xl bg-white/60 border border-white/80 px-4 py-2 text-sm focus:ring-1 focus:ring-[var(--c-blue)]"
-                placeholder="Nachricht"></textarea>
-      <button class="w-full rounded-full bg-[var(--c-blue)] text-white py-2 text-xs tracking-[0.25em] uppercase font-semibold hover:bg-slate-900 transition">
-        Senden
-      </button>
-    </form>
-
+    <div class="reveal relative bg-white rounded-3xl p-8 border-2 border-cyan-600 shadow-xl hover:-translate-y-1 hover:shadow-2xl transition duration-300">
+      <div class="absolute -top-4 left-8 bg-cyan-600 text-white text-xs font-semibold px-4 py-2 rounded-full">
+        Bestseller
+      </div>
+      <img src="nais-standard.jpg" alt="NAIS Standard" class="w-full h-48 object-contain mb-6">
+      <h2 class="text-2xl font-bold mb-2 text-center">NAIS Standard</h2>
+      <p class="text-zinc-600 mb-6 text-center">Familienlösung. Heiß & kalt.</p>
+      <p class="text-3xl font-bold text-cyan-700 mb-2 text-center">ab 1.798 €</p>
+      <p class="text-xs text-zinc-400 text-center mb-6">🔧 Montage optional (+357 €)</p>
+      <ul class="space-y-3 text-sm text-zinc-700 mb-8 text-center">
+        <li>✓ Heißes, kaltes & lauwarmes Wasser</li>
+        <li>✓ Ideal für Familien</li>
+        <li>✓ Sehr gute Alltagslösung</li>
+      </ul>
+      <a href="#kontakt"
+         class="block text-center bg-cyan-600 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-cyan-700 transition">
+        Jetzt beraten lassen
+      </a>
+    </div>
+    <div class="reveal relative bg-white rounded-3xl p-8 border border-zinc-200 shadow-lg hover:-translate-y-1 hover:shadow-2xl transition duration-300">
+      <div class="absolute top-4 right-4 bg-zinc-900 text-white text-xs font-semibold px-3 py-1 rounded-full">
+        Premium
+      </div>
+      <img src="nais-cafe.jpg" alt="NAIS CAFE Premium" class="w-full h-48 object-contain mb-6">
+      <h2 class="text-2xl font-bold mb-2 text-center">NAIS CAFE Premium</h2>
+      <p class="text-zinc-600 mb-6 text-center">Komfort. Eiswürfel. Kaffee & Tee.</p>
+      <p class="text-3xl font-bold text-cyan-700 mb-2 text-center">ab 2.698 €</p>
+      <p class="text-xs text-zinc-400 text-center mb-6">🔧 Montage optional (+357 €)</p>
+      <ul class="space-y-3 text-sm text-zinc-700 mb-8 text-center">
+        <li>✓ Eiswürfel-Funktion</li>
+        <li>✓ Kaffee & Tee auf Knopfdruck</li>
+        <li>✓ Premium Design & Technik</li>
+      </ul>
+      <a href="#kontakt"
+         class="block text-center bg-cyan-600 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-cyan-700 transition">
+        Jetzt beraten lassen
+      </a>
+    </div>
   </div>
 </section>
 
+<section class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Weitere Modelle auf Anfrage</h2>
+    <p class="text-zinc-600 max-w-2xl mx-auto">
+      Untertisch-Systeme und individuelle Lösungen für Küche, Haushalt oder Büro – einfach unverbindlich anfragen.
+    </p>
+    <a href="#kontakt"
+       class="mt-6 inline-block bg-cyan-600 text-white px-6 py-3 rounded-2xl font-semibold hover:bg-cyan-700 transition">
+      Jetzt beraten lassen
+    </a>
+  </div>
+</section>
+<section class="py-16 bg-[#F5F5F5]">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm text-zinc-600">
+    <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      ✓ Persönliche Beratung
+    </div>
+    <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      ✓ Installation möglich
+    </div>
+    <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      ✓ Klare Preisorientierung
+    </div>
+    <div class="reveal bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      ✓ Deutschlandweit verfügbar
+    </div>
+  </div>
+</section>
+<section id="kontakt" class="py-20 bg-cyan-700 text-white">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold mb-4">
+        Unverbindliche Beratung anfragen
+      </h2>
+      <p class="text-cyan-100">
+        Schnelle Rückmeldung per WhatsApp oder E-Mail.
+      </p>
+      <div class="text-center text-sm text-cyan-100 mt-6">
+        ✓ Persönliche Beratung &nbsp; ✓ Keine Verpflichtung &nbsp; ✓ Schnelle Rückmeldung
+      </div>
+    </div>
+    <div class="reveal bg-white text-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
+      <form action="https://formspree.io/f/xlgzgddg" method="POST" class="space-y-5">
+        <input type="hidden" name="_redirect" value="https://hahn-wasserfilter.de/danke.html">
+        <input type="hidden" name="source" value="hahn-wasserfilter.de">
+        <div class="grid md:grid-cols-2 gap-5">
+          <input type="text"
+                 name="name"
+                 placeholder="Vor- und Nachname"
+                 required
+                 autocomplete="name"
+                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-cyan-600">
+          <input type="tel"
+                 name="phone"
+                 placeholder="Telefonnummer"
+                 required
+                 autocomplete="tel"
+                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-cyan-600">
+        </div>
+        <input type="email"
+               name="email"
+               placeholder="E-Mail-Adresse"
+               required
+               autocomplete="email"
+               class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-cyan-600">
+        <select name="interest"
+                required
+                class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-cyan-600">
+          <option value="" disabled selected>Wofür interessieren Sie sich?</option>
+          <option value="LUXLABEL Ambient">LUXLABEL Ambient</option>
+          <option value="NAIS Standard">NAIS Standard</option>
+          <option value="NAIS CAFE Premium">NAIS CAFE Premium</option>
+          <option value="Untertisch-System">Untertisch-System</option>
+          <option value="Ich bin noch unsicher">Ich bin noch unsicher</option>
+        </select>
+        <textarea name="message"
+                  rows="4"
+                  placeholder="Ihre Nachricht"
+                  class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-cyan-600"></textarea>
+        <button type="submit"
+                class="w-full bg-cyan-600 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-cyan-700 transition">
+          Anfrage absenden
+        </button>
+      </form>
+      <p class="text-center text-zinc-500 text-sm mt-4">
+        Persönlich. Unverbindlich.
+      </p>
+    </div>
+  </div>
+</section>
+<footer class="bg-zinc-900 text-zinc-400 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-xl">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="currentColor">
+              <path d="M12 2C12 2 5 10 5 14a7 7 0 0 0 14 0c0-4-7-12-7-12z"/>
+              <text x="12" y="16" text-anchor="middle" font-size="7" font-family="serif" fill="white" font-weight="bold">H</text>
+            </svg>
+          </div>
+          <div class="font-serif text-lg text-white tracking-wide">
+            hahn-wasserfilter.de
+          </div>
+        </div>
+        <p class="text-sm">
+          Beratung und Anfrage für Wasserfilter-Systeme deutschlandweit.
+        </p>
+      </div>
+      <div>
+        <h5 class="font-semibold text-white mb-4">Navigation</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-white">Start</a></li>
+          <li><a href="produkte.html" class="hover:text-white">Vorteile</a></li>
+          <li><a href="#kontakt" class="hover:text-white">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold text-white mb-4">Kontakt</h5>
+        <p class="text-sm mb-4">
+          E-Mail: info@hahn-wasserfilter.de<br>
+          WhatsApp: +49 162 4012037
+        </p>
+        <a href="https://wa.me/491624012037"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="inline-block bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-2xl text-sm font-semibold transition">
+          WhatsApp schreiben
+        </a>
+      </div>
+      <div>
+        <h5 class="font-semibold text-white mb-4">Rechtliches</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="impressum.html" class="hover:text-white">Impressum</a></li>
+          <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-xs mt-16 pt-8 border-t border-zinc-800">
+      © 2026 hahn-wasserfilter.de
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/491624012037"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg z-50 transition"
+   aria-label="WhatsApp schreiben">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="26"
+       height="26"
+       fill="currentColor"
+       viewBox="0 0 24 24">
+    <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 5 5.13-1.34A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.13l-.3-.18-3.04.8.82-2.96-.2-.3A8 8 0 1 1 12 20zm4.36-6.27c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.22-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.24 1.04.38 1.4.48.58.18 1.1.16 1.52.1.46-.06 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
+  </svg>
+</a>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.08
+    });
+
+    items.forEach(item => observer.observe(item));
+  });
+</script>
 </body>
 </html>
