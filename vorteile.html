@@ -38,12 +38,13 @@
     }
 
     .hero-bg {
-      background:
-        linear-gradient(rgba(8, 15, 28, 0.58), rgba(8, 15, 28, 0.74)),
-        url('water-hero1.jpg');
-      background-size: cover;
-      background-position: center;
-    }
+  background-color: #111827;
+  background:
+    linear-gradient(rgba(8, 15, 28, 0.58), rgba(8, 15, 28, 0.74)),
+    url('water-hero1.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
     @media (prefers-reduced-motion: reduce) {
       .reveal,
@@ -91,15 +92,26 @@
   </div>
 
   <div class="md:hidden grid grid-cols-2 gap-3 px-6 pb-4">
-    <a href="index.html"
-       class="text-center bg-[#3D5387] text-white py-3 rounded-2xl font-medium">
-      Start
-    </a>
-    <a href="index.html#kontakt"
-       class="text-center bg-white border border-[#3D5387] text-[#3D5387] py-3 rounded-2xl font-medium">
-      Kontakt
-    </a>
-  </div>
+  <a href="index.html"
+     class="text-center bg-white border border-[#3D5387] text-[#3D5387] py-3 rounded-2xl font-medium">
+    Start
+  </a>
+
+  <a href="vorteile.html"
+     class="text-center bg-[#3D5387] text-white py-3 rounded-2xl font-medium">
+    Vorteile
+  </a>
+
+  <a href="index.html#produkte"
+     class="text-center bg-white border border-[#3D5387] text-[#3D5387] py-3 rounded-2xl font-medium">
+    Produkte
+  </a>
+
+  <a href="index.html#kontakt"
+     class="text-center bg-white border border-[#3D5387] text-[#3D5387] py-3 rounded-2xl font-medium">
+    Kontakt
+  </a>
+</div>
 </header>
 
 <section class="hero-bg min-h-[72vh] flex items-center text-white relative overflow-hidden">
@@ -169,10 +181,10 @@
         </div>
       </div>
 
-      <div class="reveal image-hover rounded-[2rem] overflow-hidden shadow-2xl">
-        <img src="water-kitchen.jpg"
-             alt="Wasserfilter in moderner Küche"
-             class="w-full h-[460px] object-cover">
+      <img src="water-kitchen.jpg"
+     alt="Wasserfilter in moderner Küche"
+     onerror="this.style.background='#e2e8f0';this.style.opacity='0.4'"
+     class="w-full h-[460px] object-cover">
       </div>
 
     </div>
@@ -309,10 +321,10 @@
 
     <div class="grid lg:grid-cols-2 gap-16 items-center">
 
-      <div class="reveal image-hover rounded-[2rem] overflow-hidden shadow-2xl">
-        <img src="water-detail.jpg"
-             alt="Wasser im Glas"
-             class="w-full h-[460px] object-cover">
+      <img src="water-detail.jpg"
+     alt="Wasser im Glas"
+     onerror="this.style.background='#e2e8f0';this.style.opacity='0.4'"
+     class="w-full h-[460px] object-cover">
       </div>
 
       <div class="reveal">
