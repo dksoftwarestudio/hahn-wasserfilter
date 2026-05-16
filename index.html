@@ -1,454 +1,475 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <title>Hahn Wasserfilter – Reines Wasser ohne Kompromisse</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DK Software Studio | Websites & Apps aus Hof</title>
+  <meta name="description" content="DK Software Studio entwickelt einfache Websites, Landingpages und funktionale Apps für lokale Projekte, kleine Unternehmen und Selbstständige.">
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
   <style>
     :root {
-      --c-deep: #0E0D15;
-      --c-navy: #182346;
-      --c-blue: #3D5387;
-      --c-lilac: #7C83AD;
-      --c-rose: #BFA9BA;
+      --blue: #1A53AD;
+      --blue-dark: #163E82;
+      --bg: #F5F5F5;
+      --text: #2F3440;
     }
-    .bg-hero {
-      background: radial-gradient(circle at top left, #3D5387 0, #0E0D15 45%, #0E0D15 100%);
+
+    .hero-bg {
+      position: relative;
+      isolation: isolate;
+      background:
+        linear-gradient(rgba(14, 22, 38, 0.62), rgba(14, 22, 38, 0.78)),
+        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2200&q=85');
+      background-size: cover;
+      background-position: center;
     }
-    .bg-smooth-navy {
-      background: linear-gradient(135deg, #0E0D15 0, #182346 60%, #3D5387 100%);
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
-    .bg-soft-lilac {
-      background: linear-gradient(135deg, #7C83AD 0, #BFA9BA 100%);
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .app-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .app-icon:hover {
+      transform: scale(1.05);
+    }
+
+    .image-hover img {
+      transition: transform 0.8s ease;
+    }
+
+    .image-hover:hover img {
+      transform: scale(1.04);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .app-icon,
+      .image-hover img {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
     }
   </style>
 </head>
-<body class="bg-[var(--c-deep)] text-slate-100 antialiased">
 
-  <!-- Page wrapper -->
-  <div class="min-h-screen flex flex-col">
+<body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
-    <!-- NAV -->
-    <header class="fixed inset-x-0 top-0 z-30 bg-[rgba(14,13,21,0.9)] backdrop-blur border-b border-white/5">
-      <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <div class="h-8 w-8 rounded-full bg-slate-100/5 border border-white/10 flex items-center justify-center">
-            <span class="text-xs tracking-[0.2em] uppercase text-slate-200">HW</span>
-          </div>
-          <span class="text-sm font-medium tracking-[0.18em] uppercase text-slate-200">
-            Hahn Wasserfilter
-          </span>
-        </div>
-        <nav class="hidden md:flex items-center gap-8 text-xs font-medium tracking-[0.18em] uppercase text-slate-300">
-          <a href="#produkte" class="hover:text-white transition">Produkte</a>
-          <a href="#warum" class="hover:text-white transition">Warum wechseln</a>
-          <a href="#installationen" class="hover:text-white transition">Installationen</a>
-          <a href="#stimmen" class="hover:text-white transition">Stimmen</a>
-          <a href="#kontakt" class="hover:text-white transition">Kontakt</a>
-        </nav>
-        <a href="#kontakt"
-           class="hidden sm:inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-[0.18em] uppercase text-slate-50 hover:bg-white/10 transition">
-          Beratung
+<header class="bg-white/95 backdrop-blur-md border-b sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="dk-icon.png" alt="DK Software Studio" class="w-12 h-12 app-icon">
+      <div>
+        <span class="font-semibold text-xl md:text-2xl tracking-tight text-zinc-900">
+          DK Software Studio
+        </span>
+        <p class="text-xs text-zinc-500 -mt-1">Hof (Saale)</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="de/about.html" class="hover:text-[#1A53AD] transition">Über mich</a>
+      <a href="de/projects.html" class="hover:text-[#1A53AD] transition">Projekte</a>
+      <a href="de/contact.html" class="hover:text-[#1A53AD] transition">Kontakt</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a href="de/contact.html"
+         class="hidden md:block px-6 py-3 bg-[#1A53AD] text-white text-sm font-semibold rounded-2xl hover:bg-[#163E82] hover:-translate-y-0.5 hover:shadow-lg transition">
+        Projekt anfragen
+      </a>
+
+      <button id="menuButton"
+              class="md:hidden text-4xl leading-none text-zinc-700 hover:text-zinc-900 transition-colors"
+              aria-label="Menü öffnen">
+        ☰
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-lg">
+    <div class="px-6 py-8 flex flex-col gap-6 text-lg font-medium">
+      <a href="de/about.html" class="py-3 hover:text-[#1A53AD] transition">Über mich</a>
+      <a href="de/projects.html" class="py-3 hover:text-[#1A53AD] transition">Projekte</a>
+      <a href="de/contact.html" class="py-3 hover:text-[#1A53AD] transition">Kontakt</a>
+      <a href="de/contact.html"
+         class="mt-2 bg-[#1A53AD] text-white text-center py-4 rounded-2xl font-semibold">
+        Projekt anfragen
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero-bg min-h-screen flex items-center text-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 w-full py-24 relative z-10">
+    <div class="max-w-3xl reveal">
+
+      <p class="text-sm tracking-[0.28em] uppercase text-blue-100 mb-6">
+        Websites & Apps aus Hof
+      </p>
+
+      <h1 class="text-5xl md:text-7xl font-semibold leading-tight tracking-tight mb-8">
+        Digitale Lösungen,<br>
+        die einfach bleiben.
+      </h1>
+
+      <p class="text-xl md:text-2xl text-blue-50/90 max-w-2xl leading-relaxed mb-10">
+        Klare Websites, schlanke Landingpages und funktionale Apps —
+        persönlich entwickelt, verständlich aufgebaut und mobil optimiert.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="de/contact.html"
+           class="bg-white text-[#1A53AD] px-10 py-5 rounded-3xl font-semibold text-lg text-center hover:bg-blue-50 hover:-translate-y-1 hover:shadow-2xl transition">
+          Unverbindlich anfragen
+        </a>
+
+        <a href="de/projects.html"
+           class="border border-white/40 bg-white/10 backdrop-blur-md text-white px-10 py-5 rounded-3xl font-semibold text-lg text-center hover:bg-white hover:text-[#1A53AD] hover:-translate-y-1 hover:shadow-2xl transition">
+          Projekte ansehen
         </a>
       </div>
-    </header>
 
-    <!-- MAIN -->
-    <main class="flex-1">
+    </div>
+  </div>
+</section>
 
-      <!-- HERO -->
-      <section class="bg-hero pt-28 pb-24">
-        <div class="mx-auto max-w-6xl px-4 grid gap-12 lg:grid-cols-[1.1fr,0.9fr] items-center">
-          <!-- Text -->
-          <div>
-            <p class="text-xs font-medium tracking-[0.3em] uppercase text-slate-400 mb-4">
-              Premium Wasserfilter · Für Zuhause & Büro
-            </p>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-50 mb-6">
-              Reines Wasser.<br />
-              Ohne Kompromisse.
-            </h1>
-            <p class="text-sm sm:text-base text-slate-300 max-w-xl mb-8">
-              Hochwertige Filtersysteme, die sich nahtlos in Ihre Küche einfügen, den Alltag erleichtern
-              und Wasser so selbstverständlich machen wie Lichtschalter.
-            </p>
-            <div class="flex flex-wrap items-center gap-4 mb-10">
-              <a href="#kontakt"
-                 class="inline-flex items-center rounded-full bg-[var(--c-rose)] px-6 py-2 text-xs font-semibold tracking-[0.2em] uppercase text-[var(--c-deep)] hover:bg-white transition">
-                Jetzt beraten lassen
-              </a>
-              <a href="#produkte"
-                 class="inline-flex items-center rounded-full border border-white/15 bg-white/0 px-6 py-2 text-xs font-semibold tracking-[0.2em] uppercase text-slate-100 hover:bg-white/5 transition">
-                Modelle ansehen
-              </a>
-            </div>
-            <div class="flex flex-wrap gap-6 text-[11px] text-slate-400">
-              <div class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-[var(--c-rose)]"></span>
-                <span>Installationen in ganz Deutschland</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-[var(--c-blue)]"></span>
-                <span>Persönliche Beratung statt Callcenter</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-[var(--c-lilac)]"></span>
-                <span>2 Jahre Garantie auf Geräte</span>
-              </div>
-            </div>
-          </div>
+<section class="py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
 
-          <!-- Visual -->
-          <div class="relative">
-            <div class="absolute -inset-10 bg-[radial-gradient(circle_at_top,#3D5387_0,transparent_55%)] opacity-60 blur-3xl"></div>
-            <div class="relative rounded-3xl border border-white/10 bg-[rgba(14,13,21,0.85)]/80 shadow-[0_40px_120px_rgba(0,0,0,0.8)] overflow-hidden">
-              <div class="aspect-[4/5] flex flex-col justify-between">
-                <!-- Mock device / hero image placeholder -->
-                <div class="flex-1 flex items-center justify-center">
-                  <div class="relative h-64 w-40 sm:h-80 sm:w-52 rounded-[2rem] bg-gradient-to-b from-slate-100 to-slate-300 shadow-[0_40px_80px_rgba(0,0,0,0.7)] flex flex-col items-center justify-between py-6">
-                    <div class="w-24 h-1 rounded-full bg-slate-300/70 mt-1"></div>
-                    <div class="flex flex-col items-center gap-3">
-                      <div class="w-16 h-16 rounded-full bg-slate-900/5 border border-slate-400/40 flex items-center justify-center">
-                        <div class="w-10 h-10 rounded-full bg-slate-900/10 border border-slate-500/60"></div>
-                      </div>
-                      <p class="text-[10px] tracking-[0.25em] uppercase text-slate-600">
-                        Hahn&nbsp;Filter
-                      </p>
-                    </div>
-                    <div class="flex gap-2 mb-1">
-                      <span class="h-1.5 w-1.5 rounded-full bg-slate-500/70"></span>
-                      <span class="h-1.5 w-1.5 rounded-full bg-slate-400/70"></span>
-                      <span class="h-1.5 w-1.5 rounded-full bg-slate-300/70"></span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Bottom info -->
-                <div class="border-t border-white/10 px-5 py-4 flex items-center justify-between text-[11px] text-slate-300">
-                  <div>
-                    <p class="uppercase tracking-[0.2em] text-slate-400">Täglicher Komfort</p>
-                    <p class="text-xs mt-1">Heiß, kalt & still – direkt aus einem Gerät.</p>
-                  </div>
-                  <div class="text-right">
-                    <p class="uppercase tracking-[0.2em] text-slate-400">Filterwechsel</p>
-                    <p class="text-xs mt-1">Alle 6 Monate · Erinnerung inklusive.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-center">
 
-        </div>
-      </section>
+      <div class="reveal">
+        <p class="text-sm tracking-[0.24em] uppercase text-[#1A53AD] font-semibold mb-6">
+          Was ich mache
+        </p>
 
-      <!-- WARUM KUNDEN WECHSELN -->
-      <section id="warum" class="bg-smooth-navy py-20">
-        <div class="mx-auto max-w-6xl px-4 grid gap-12 lg:grid-cols-2 items-center">
-          <div>
-            <p class="text-xs font-medium tracking-[0.3em] uppercase text-slate-300 mb-4">
-              Warum Kunden wechseln
-            </p>
-            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-50 mb-5">
-              Wasser, das man gerne trinkt.
-            </h2>
-            <p class="text-sm sm:text-base text-slate-200/90 mb-8 max-w-lg">
-              Der Unterschied ist sofort spürbar: Geschmack, Klarheit und das Gefühl, etwas Gutes
-              für den eigenen Alltag getan zu haben. Ohne Kisten, ohne Kompromisse.
-            </p>
-            <div class="grid gap-4 sm:grid-cols-2 text-sm text-slate-100/90">
-              <div class="rounded-2xl border border-white/10 bg-white/5/10 p-4">
-                <p class="text-xs tracking-[0.2em] uppercase text-slate-300 mb-2">Kein Kalk</p>
-                <p class="text-sm text-slate-100/90">
-                  Wasserkocher, Kaffeemaschine und Armaturen bleiben länger sauber.
-                </p>
-              </div>
-              <div class="rounded-2xl border border-white/10 bg-white/5/10 p-4">
-                <p class="text-xs tracking-[0.2em] uppercase text-slate-300 mb-2">Besserer Geschmack</p>
-                <p class="text-sm text-slate-100/90">
-                  Weiches, klares Wasser – für Kaffee, Tee und pur.
-                </p>
-              </div>
-              <div class="rounded-2xl border border-white/10 bg-white/5/10 p-4">
-                <p class="text-xs tracking-[0.2em] uppercase text-slate-300 mb-2">Keine Flaschen</p>
-                <p class="text-sm text-slate-100/90">
-                  Kein Schleppen, kein Plastik, weniger Müll im Alltag.
-                </p>
-              </div>
-              <div class="rounded-2xl border border-white/10 bg-white/5/10 p-4">
-                <p class="text-xs tracking-[0.2em] uppercase text-slate-300 mb-2">Sicher für Kinder</p>
-                <p class="text-sm text-slate-100/90">
-                  Gefiltertes Wasser direkt aus dem Hahn – jederzeit verfügbar.
-                </p>
-              </div>
-            </div>
-          </div>
+        <h2 class="text-4xl md:text-5xl font-semibold text-zinc-900 leading-tight mb-8">
+          Weniger Oberfläche.<br>
+          Mehr Nutzen.
+        </h2>
 
-          <!-- Before / After visual -->
-          <div class="relative">
-            <div class="absolute -inset-8 bg-[radial-gradient(circle_at_top,#7C83AD_0,transparent_55%)] opacity-60 blur-3xl"></div>
-            <div class="relative grid gap-6 sm:grid-cols-2">
-              <div class="rounded-3xl border border-white/10 bg-[rgba(14,13,21,0.85)] p-5 flex flex-col justify-between">
-                <div class="mb-4">
-                  <p class="text-xs tracking-[0.25em] uppercase text-slate-400 mb-2">Vorher</p>
-                  <p class="text-sm text-slate-200/90">
-                    Kalkränder im Wasserkocher, flacher Geschmack, Plastikflaschen im Vorratsraum.
-                  </p>
-                </div>
-                <div class="h-28 rounded-2xl bg-gradient-to-b from-slate-500/40 to-slate-800/80 flex items-end justify-center pb-3">
-                  <div class="w-10 h-16 rounded-full bg-slate-200/40 border border-slate-400/60"></div>
-                </div>
-              </div>
-              <div class="rounded-3xl border border-white/10 bg-[rgba(24,35,70,0.95)] p-5 flex flex-col justify-between">
-                <div class="mb-4">
-                  <p class="text-xs tracking-[0.25em] uppercase text-[var(--c-rose)] mb-2">Nachher</p>
-                  <p class="text-sm text-slate-50/95">
-                    Klarer Geschmack, weniger Ablagerungen, Wasser wie aus der Glasflasche – direkt aus dem Hahn.
-                  </p>
-                </div>
-                <div class="h-28 rounded-2xl bg-gradient-to-b from-slate-100/80 to-slate-300 flex items-end justify-center pb-3">
-                  <div class="w-10 h-16 rounded-full bg-slate-50 border border-slate-200"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- PRODUKTE -->
-      <section id="produkte" class="bg-[var(--c-deep)] py-20">
-        <div class="mx-auto max-w-6xl px-4">
-          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-            <div>
-              <p class="text-xs font-medium tracking-[0.3em] uppercase text-slate-400 mb-3">
-                Modelle
-              </p>
-              <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-50">
-                Wählen Sie Ihr System.
-              </h2>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-400 max-w-md">
-              Alle Systeme basieren auf derselben hochwertigen Filtertechnologie – der Unterschied liegt in Kapazität,
-              Komfort und Design.
-            </p>
-          </div>
-
-          <div class="grid gap-6 md:grid-cols-3">
-            <!-- Modell A -->
-            <article class="group rounded-3xl border border-white/10 bg-[rgba(24,35,70,0.9)] p-5 flex flex-col justify-between hover:border-[var(--c-rose)]/60 transition">
-              <div>
-                <p class="text-[11px] tracking-[0.25em] uppercase text-slate-300 mb-2">Modell A</p>
-                <h3 class="text-lg font-semibold text-slate-50 mb-2">Für Familien</h3>
-                <p class="text-sm text-slate-300 mb-4">
-                  Ideal für Haushalte mit regelmäßigem Verbrauch – leise, zuverlässig und alltagstauglich.
-                </p>
-                <ul class="space-y-2 text-sm text-slate-200/90">
-                  <li>• Heiß, kalt & Raumtemperatur</li>
-                  <li>• 3‑stufige Filtration</li>
-                  <li>• Dezentes Design für moderne Küchen</li>
-                </ul>
-              </div>
-              <div class="mt-6 flex items-center justify-between">
-                <p class="text-xs text-slate-400">Empfohlen für 2–5 Personen</p>
-                <button class="text-[11px] tracking-[0.2em] uppercase text-[var(--c-rose)] group-hover:text-white transition">
-                  Details
-                </button>
-              </div>
-            </article>
-
-            <!-- Modell B -->
-            <article class="group rounded-3xl border border-white/10 bg-[rgba(14,13,21,0.95)] p-5 flex flex-col justify-between hover:border-[var(--c-rose)]/60 transition">
-              <div>
-                <p class="text-[11px] tracking-[0.25em] uppercase text-slate-300 mb-2">Modell B</p>
-                <h3 class="text-lg font-semibold text-slate-50 mb-2">Für Büros</h3>
-                <p class="text-sm text-slate-300 mb-4">
-                  Für Teams, Wartebereiche und Besprechungsräume – hohe Kapazität bei ruhiger Präsenz.
-                </p>
-                <ul class="space-y-2 text-sm text-slate-200/90">
-                  <li>• Hohe Durchflussmenge</li>
-                  <li>• Eis & Heißwasser auf Knopfdruck</li>
-                  <li>• Intuitives Touch‑Panel</li>
-                </ul>
-              </div>
-              <div class="mt-6 flex items-center justify-between">
-                <p class="text-xs text-slate-400">Empfohlen für Büros & Praxen</p>
-                <button class="text-[11px] tracking-[0.2em] uppercase text-[var(--c-rose)] group-hover:text-white transition">
-                  Details
-                </button>
-              </div>
-            </article>
-
-            <!-- Modell C -->
-            <article class="group rounded-3xl border border-white/10 bg-[rgba(24,35,70,0.9)] p-5 flex flex-col justify-between hover:border-[var(--c-rose)]/60 transition">
-              <div>
-                <p class="text-[11px] tracking-[0.25em] uppercase text-slate-300 mb-2">Modell C</p>
-                <h3 class="text-lg font-semibold text-slate-50 mb-2">Für kleine Küchen</h3>
-                <p class="text-sm text-slate-300 mb-4">
-                  Kompakt, unaufdringlich und effizient – wenn Platz kostbar ist.
-                </p>
-                <ul class="space-y-2 text-sm text-slate-200/90">
-                  <li>• Schlanke Bauform</li>
-                  <li>• Leiser Betrieb</li>
-                  <li>• Einfache Installation</li>
-                </ul>
-              </div>
-              <div class="mt-6 flex items-center justify-between">
-                <p class="text-xs text-slate-400">Empfohlen für Singles & Paare</p>
-                <button class="text-[11px] tracking-[0.2em] uppercase text-[var(--c-rose)] group-hover:text-white transition">
-                  Details
-                </button>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- INSTALLATIONEN -->
-      <section id="installationen" class="bg-[var(--c-navy)] py-20">
-        <div class="mx-auto max-w-6xl px-4">
-          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-            <div>
-              <p class="text-xs font-medium tracking-[0.3em] uppercase text-slate-300 mb-3">
-                Echte Installationen
-            </p>
-              <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-50">
-                So sieht es bei unseren Kunden aus.
-              </h2>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-300 max-w-md">
-              Keine Renderings, keine Stockfotos – reale Küchen, reale Büros, reale Geräte im Einsatz.
-            </p>
-          </div>
-
-          <div class="grid gap-4 sm:grid-cols-3">
-            <!-- Platzhalter für echte Fotos -->
-            <div class="rounded-3xl border border-white/10 bg-[rgba(14,13,21,0.9)] h-52 flex flex-col justify-between p-4">
-              <div class="rounded-2xl bg-gradient-to-br from-slate-500/40 to-slate-900/80 flex-1"></div>
-              <p class="mt-3 text-[11px] text-slate-300">Familienküche · Nürnberg</p>
-            </div>
-            <div class="rounded-3xl border border-white/10 bg-[rgba(14,13,21,0.9)] h-52 flex flex-col justify-between p-4">
-              <div class="rounded-2xl bg-gradient-to-br from-slate-400/40 to-slate-800/80 flex-1"></div>
-              <p class="mt-3 text-[11px] text-slate-300">Büroinstallation · München</p>
-            </div>
-            <div class="rounded-3xl border border-white/10 bg-[rgba(14,13,21,0.9)] h-52 flex flex-col justify-between p-4">
-              <div class="rounded-2xl bg-gradient-to-br from-slate-500/40 to-slate-900/80 flex-1"></div>
-              <p class="mt-3 text-[11px] text-slate-300">Praxis · Hof</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TESTIMONIALS -->
-      <section id="stimmen" class="bg-soft-lilac py-20">
-        <div class="mx-auto max-w-6xl px-4">
-          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-            <div>
-              <p class="text-xs font-medium tracking-[0.3em] uppercase text-slate-800/70 mb-3">
-                Stimmen
-              </p>
-              <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900">
-                Was Kunden sagen.
-              </h2>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-800/80 max-w-md">
-              Kurze, ehrliche Rückmeldungen aus dem Alltag – ohne Marketingfloskeln.
-            </p>
-          </div>
-
-          <div class="grid gap-6 md:grid-cols-3">
-            <article class="rounded-3xl bg-white/70 border border-white/80 p-5 flex flex-col justify-between">
-              <p class="text-sm text-slate-900 mb-4">
-                „Wasser schmeckt wie aus der Glasflasche. Unsere Kinder trinken jetzt freiwillig mehr.“
-              </p>
-              <p class="text-[11px] text-slate-600">Familie R. · Regensburg</p>
-            </article>
-            <article class="rounded-3xl bg-white/70 border border-white/80 p-5 flex flex-col justify-between">
-              <p class="text-sm text-slate-900 mb-4">
-                „Im Büro ist das Gerät nicht mehr wegzudenken. Kein Schleppen, kein Bestellen, einfach da.“
-              </p>
-              <p class="text-[11px] text-slate-600">Agentur · München</p>
-            </article>
-            <article class="rounded-3xl bg-white/70 border border-white/80 p-5 flex flex-col justify-between">
-              <p class="text-sm text-slate-900 mb-4">
-                „Installation war unkompliziert, Optik dezent. Genau so wollten wir es.“
-              </p>
-              <p class="text-[11px] text-slate-600">Praxis · Hof</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- KONTAKT -->
-      <section id="kontakt" class="bg-[var(--c-deep)] py-20">
-        <div class="mx-auto max-w-6xl px-4 grid gap-10 lg:grid-cols-[1.1fr,0.9fr] items-start">
-          <div>
-            <p class="text-xs font-medium tracking-[0.3em] uppercase text-slate-400 mb-3">
-              Beratung
-            </p>
-            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-50 mb-4">
-              Bereit für besseres Wasser?
-            </h2>
-            <p class="text-sm sm:text-base text-slate-300 mb-6 max-w-lg">
-              Schreiben Sie uns kurz, wie Sie Wasser aktuell nutzen – wir melden uns mit einer
-              Empfehlung, die wirklich zu Ihrem Alltag passt.
-            </p>
-            <ul class="space-y-2 text-sm text-slate-300 mb-6">
-              <li>• Antwort in der Regel innerhalb von 1–3 Stunden</li>
-              <li>• Persönliche Beratung durch Techniker</li>
-              <li>• Unverbindlich, ohne versteckte Kosten</li>
-            </ul>
-          </div>
-
-          <div class="rounded-3xl border border-white/10 bg-[rgba(24,35,70,0.95)] p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
-            <form class="space-y-4">
-              <div>
-                <label class="block text-xs font-medium tracking-[0.2em] uppercase text-slate-300 mb-1">
-                  Name
-                </label>
-                <input type="text"
-                       class="w-full rounded-2xl border border-white/15 bg-black/20 px-3 py-2 text-sm text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-[var(--c-rose)]" />
-              </div>
-              <div>
-                <label class="block text-xs font-medium tracking-[0.2em] uppercase text-slate-300 mb-1">
-                  Telefon
-                </label>
-                <input type="tel"
-                       class="w-full rounded-2xl border border-white/15 bg-black/20 px-3 py-2 text-sm text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-[var(--c-rose)]" />
-              </div>
-              <div>
-                <label class="block text-xs font-medium tracking-[0.2em] uppercase text-slate-300 mb-1">
-                  Nachricht
-                </label>
-                <textarea rows="4"
-                          class="w-full rounded-2xl border border-white/15 bg-black/20 px-3 py-2 text-sm text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-[var(--c-rose)]"
-                          placeholder="Kurz: Haushalt / Büro, Personenanzahl, aktuelle Situation."></textarea>
-              </div>
-              <button type="submit"
-                      class="w-full inline-flex items-center justify-center rounded-full bg-[var(--c-rose)] px-6 py-2 text-xs font-semibold tracking-[0.2em] uppercase text-[var(--c-deep)] hover:bg-white transition">
-                Anfrage senden
-              </button>
-              <p class="text-[11px] text-slate-400 mt-2">
-                Alternativ per WhatsApp – Link im Footer.
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="border-t border-white/10 bg-[var(--c-deep)] py-6">
-      <div class="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
-        <p>© Hahn Wasserfilter · {{ Jahr }}</p>
-        <div class="flex items-center gap-4">
-          <a href="#" class="hover:text-slate-300 transition">Impressum</a>
-          <a href="#" class="hover:text-slate-300 transition">Datenschutz</a>
-          <a href="#" class="hover:text-slate-300 transition">WhatsApp</a>
-        </div>
+        <p class="text-zinc-600 text-lg leading-9 max-w-xl">
+          Nicht jedes Projekt braucht eine große Agentur. Oft reicht eine klare,
+          stabile und gut gepflegte Lösung — sauber aufgebaut, schnell verstanden
+          und im Alltag wirklich nutzbar.
+        </p>
       </div>
-    </footer>
+
+      <div class="reveal image-hover rounded-[2rem] overflow-hidden shadow-2xl">
+        <img src="img/dk-workspace.jpg"
+             alt="Arbeitsplatz und digitale Projekte"
+             class="w-full h-[420px] object-cover object-[center_70%]">
+      </div>
+
+    </div>
 
   </div>
+</section>
+
+<section class="py-28 bg-[#F5F5F5]">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-16 reveal">
+      <p class="text-sm tracking-[0.24em] uppercase text-[#1A53AD] font-semibold mb-5">
+        Projekte
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-semibold text-zinc-900 mb-6">
+        Aktuelle Web-Projekte
+      </h2>
+
+      <p class="text-zinc-600 max-w-2xl mx-auto text-lg leading-8">
+        Reale Plattformen und Landingpages aus dem Umfeld von DK Software Studio.
+      </p>
+    </div>
+
+    <div class="space-y-16">
+
+      <a href="https://hof-reinigung.de"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="grid lg:grid-cols-2 gap-10 items-center group reveal">
+
+        <div class="image-hover rounded-[2rem] overflow-hidden shadow-xl">
+          <img src="img/hof-reinigung-preview.jpg"
+               alt="hof-reinigung.de"
+               class="w-full h-[360px] object-cover">
+        </div>
+
+        <div>
+          <p class="text-sm text-[#1A53AD] font-semibold mb-4">Lokale Plattform</p>
+          <h3 class="text-3xl md:text-4xl font-semibold text-zinc-900 mb-5">
+            hof-reinigung.de
+          </h3>
+          <p class="text-zinc-600 text-lg leading-8 mb-6">
+            Plattform für Reinigungsfirmen und Kundenanfragen in Hof und Umgebung.
+          </p>
+          <span class="text-[#1A53AD] font-semibold group-hover:gap-3 inline-flex items-center gap-2 transition-all">
+            Website ansehen →
+          </span>
+        </div>
+      </a>
+
+      <a href="https://hof-gartenservice.de"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="grid lg:grid-cols-2 gap-10 items-center group reveal">
+
+        <div class="lg:order-2 image-hover rounded-[2rem] overflow-hidden shadow-xl">
+          <img src="img/hof-gartenservice-preview.jpg"
+               alt="hof-gartenservice.de"
+               class="w-full h-[360px] object-cover">
+        </div>
+
+        <div class="lg:order-1">
+          <p class="text-sm text-green-600 font-semibold mb-4">Lokale Plattform</p>
+          <h3 class="text-3xl md:text-4xl font-semibold text-zinc-900 mb-5">
+            hof-gartenservice.de
+          </h3>
+          <p class="text-zinc-600 text-lg leading-8 mb-6">
+            Übersicht für Gartenpflege, Objektpflege und Außenanlagen in der Region.
+          </p>
+          <span class="text-[#1A53AD] font-semibold group-hover:gap-3 inline-flex items-center gap-2 transition-all">
+            Website ansehen →
+          </span>
+        </div>
+      </a>
+
+      <a href="https://hof-handwerker.de"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="grid lg:grid-cols-2 gap-10 items-center group reveal">
+
+        <div class="image-hover rounded-[2rem] overflow-hidden shadow-xl">
+          <img src="img/hof-handwerker-preview.jpg"
+               alt="hof-handwerker.de"
+               class="w-full h-[360px] object-cover">
+        </div>
+
+        <div>
+          <p class="text-sm text-orange-500 font-semibold mb-4">Lokale Plattform</p>
+          <h3 class="text-3xl md:text-4xl font-semibold text-zinc-900 mb-5">
+            hof-handwerker.de
+          </h3>
+          <p class="text-zinc-600 text-lg leading-8 mb-6">
+            Regionale Plattform für Handwerker, Servicebetriebe und direkte Anfragen.
+          </p>
+          <span class="text-[#1A53AD] font-semibold group-hover:gap-3 inline-flex items-center gap-2 transition-all">
+            Website ansehen →
+          </span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-16 reveal">
+      <a href="de/projects.html"
+         class="inline-flex items-center gap-2 border border-[#1A53AD] text-[#1A53AD] px-8 py-3 rounded-2xl font-semibold hover:bg-blue-50 transition">
+        Weitere Projekte ansehen →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-20 items-start">
+
+      <div class="reveal">
+        <p class="text-sm tracking-[0.24em] uppercase text-[#1A53AD] font-semibold mb-6">
+          Leistungen
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-semibold text-zinc-900 leading-tight mb-8">
+          Klar umgesetzt.<br>
+          Ohne unnötige Schichten.
+        </h2>
+
+        <p class="text-zinc-600 text-lg leading-9 max-w-xl">
+          Der Fokus liegt auf schlanken Websites, kleinen digitalen Projekten
+          und pragmatischer Beratung — direkt, ruhig und verständlich.
+        </p>
+      </div>
+
+      <div class="reveal space-y-10">
+
+        <div class="pb-8 border-b border-zinc-200">
+          <h3 class="text-2xl font-semibold text-zinc-900 mb-3">Websites</h3>
+          <p class="text-zinc-600 leading-8">
+            Schnelle und mobilfreundliche Seiten für lokale Unternehmen und Selbstständige.
+          </p>
+        </div>
+
+        <div class="pb-8 border-b border-zinc-200">
+          <h3 class="text-2xl font-semibold text-zinc-900 mb-3">Landingpages</h3>
+          <p class="text-zinc-600 leading-8">
+            Klare Seiten für Angebote, Produkte, Services und direkte Anfragen.
+          </p>
+        </div>
+
+        <div class="pb-8 border-b border-zinc-200">
+          <h3 class="text-2xl font-semibold text-zinc-900 mb-3">Android Apps</h3>
+          <p class="text-zinc-600 leading-8">
+            Kleine funktionale Apps mit sauberem Design und einfacher Bedienung.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold text-zinc-900 mb-3">Ehrliche Einschätzung</h3>
+          <p class="text-zinc-600 leading-8">
+            Direkte Rückmeldung, ob eine Idee sinnvoll, machbar und langfristig verständlich bleibt.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-28 bg-[#F5F5F5]">
+  <div class="max-w-5xl mx-auto px-6 text-center reveal">
+
+    <p class="text-sm tracking-[0.24em] uppercase text-[#1A53AD] font-semibold mb-6">
+      Warum DK
+    </p>
+
+    <h2 class="text-4xl md:text-5xl font-semibold text-zinc-900 mb-8">
+      Einfach. Klar. Funktional.
+    </h2>
+
+    <p class="text-zinc-600 max-w-3xl mx-auto leading-9 text-xl mb-16">
+      Gute digitale Lösungen müssen nicht laut sein. Sie müssen verstanden,
+      genutzt und gepflegt werden können.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-10 text-left">
+
+      <div>
+        <p class="text-[#1A53AD] font-semibold mb-4 text-lg">Direkt</p>
+        <p class="text-zinc-600 leading-8">
+          Direkte Abstimmung ohne unnötige Zwischenstationen.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-[#1A53AD] font-semibold mb-4 text-lg">Verständlich</p>
+        <p class="text-zinc-600 leading-8">
+          Klare Sprache statt komplizierter Technik-Begriffe.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-[#1A53AD] font-semibold mb-4 text-lg">Pragmatisch</p>
+        <p class="text-zinc-600 leading-8">
+          Kleine Schritte, saubere Struktur und Fokus auf echten Nutzen.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-24 bg-[#1A53AD] text-white">
+  <div class="max-w-4xl mx-auto px-6 text-center reveal">
+
+    <h2 class="text-4xl md:text-5xl font-semibold mb-6">
+      Sie brauchen eine einfache Website oder eine kleine App?
+    </h2>
+
+    <p class="text-blue-100 mb-10 max-w-xl mx-auto leading-7">
+      Schreiben Sie kurz, worum es geht. Ich gebe eine ehrliche Einschätzung,
+      ob und wie ich helfen kann.
+    </p>
+
+    <a href="de/contact.html"
+       class="inline-block bg-white text-[#1A53AD] px-12 py-5 rounded-3xl font-semibold text-lg hover:bg-blue-50 hover:-translate-y-1 hover:shadow-2xl transition">
+      Kontakt aufnehmen
+    </a>
+
+  </div>
+</section>
+
+<footer class="bg-zinc-900 text-zinc-400 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+
+      <div class="flex items-center gap-3">
+        <img src="dk-icon.png" alt="DK Software Studio" class="w-8 h-8">
+        <span class="text-white font-semibold">DK Software Studio</span>
+      </div>
+
+      <div class="text-sm">
+        © 2026 DK Software Studio • Hof (Saale)
+      </div>
+
+      <div class="flex gap-6 text-sm">
+        <a href="de/impressum.html" class="hover:text-white transition">Impressum</a>
+        <a href="de/datenschutz.html" class="hover:text-white transition">Datenschutz</a>
+        <a href="de/contact.html" class="hover:text-white transition">Kontakt</a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuButton.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+      });
+
+      document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuButton.textContent = '☰';
+        });
+      });
+    }
+
+    const heroReveal = document.querySelector('.hero-bg .reveal');
+    if (heroReveal) {
+      requestAnimationFrame(() => heroReveal.classList.add('visible'));
+    }
+
+    const items = document.querySelectorAll('.reveal:not(.visible)');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    items.forEach(item => observer.observe(item));
+  });
+</script>
+
 </body>
 </html>
