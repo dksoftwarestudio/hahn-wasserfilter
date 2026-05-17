@@ -537,25 +537,26 @@
 </a>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.reveal:not(.visible)');
+ document.addEventListener('DOMContentLoaded', () => {
+  const heroReveal = document.querySelector('.hero-bg .reveal');
 
-    const heroReveal = document.querySelector('.hero-bg .reveal');
-if (heroReveal) {
-  requestAnimationFrame(() => heroReveal.classList.add('visible'));
-}
+  if (heroReveal) {
+    requestAnimationFrame(() => heroReveal.classList.add('visible'));
+  }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
+  const items = document.querySelectorAll('.reveal:not(.visible)');
 
-    items.forEach(item => observer.observe(item));
-  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  items.forEach(item => observer.observe(item));
+});
 </script>
 
 </body>
