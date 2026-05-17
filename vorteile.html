@@ -40,8 +40,14 @@
    .hero-bg {
   background-color: #111827;
   background:
-    linear-gradient(rgba(8, 15, 28, 0.28), rgba(8, 15, 28, 0.46)),
+    linear-gradient(
+      90deg,
+      rgba(8, 15, 28, 0.52) 0%,
+      rgba(8, 15, 28, 0.34) 42%,
+      rgba(8, 15, 28, 0.10) 100%
+    ),
     url('water-hero1.jpg');
+
   background-size: 115%;
   background-position: 58% 70%;
 }
@@ -106,7 +112,7 @@
 <section class="hero-bg min-h-[72vh] flex items-center text-white relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 w-full py-24">
 
-    <div class="max-w-2xl reveal ml-auto pr-6 lg:pr-16">
+    <div class="max-w-2xl reveal ml-auto lg:mr-32 xl:mr-52 pr-6">
       <p class="text-sm tracking-[0.28em] uppercase text-slate-200 mb-6">
         Wasserfilter einfach erklärt
       </p>
