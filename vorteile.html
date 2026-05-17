@@ -54,10 +54,16 @@
 }
 
    @media (max-width: 768px) {
-  .hero-text-panel {
-    padding: 0;
-    background: none;
-    backdrop-filter: none;
+  .hero-bg {
+    min-height: 78vh;
+    background:
+      linear-gradient(
+        rgba(8, 15, 28, 0.58),
+        rgba(8, 15, 28, 0.72)
+      ),
+      url('water-hero1.jpg');
+    background-size: cover;
+    background-position: 35% center;
   }
 }
   </style>
@@ -114,17 +120,17 @@
 <section class="hero-bg min-h-[72vh] flex items-center text-white relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 w-full py-24">
 
-    <div class="max-w-xl reveal ml-auto pr-0">
+    <div class="max-w-xl reveal">
       <p class="text-sm tracking-[0.28em] uppercase text-slate-200 mb-6">
         Wasserfilter einfach erklärt
       </p>
 
-      <h1 class="text-5xl md:text-7xl font-semibold leading-tight tracking-tight mb-8">
+      <h1 class="text-4xl md:text-7xl font-semibold leading-tight tracking-tight mb-6">
         Besseres Wasser.<br>
         Ruhig erklärt.
       </h1>
 
-      <p class="text-xl md:text-2xl text-slate-200 max-w-2xl leading-relaxed mb-10">
+      <p class="text-lg md:text-2xl text-slate-200 max-w-2xl leading-relaxed mb-8">
         Welche Vorteile Wasserfilter bieten können, welche Systeme es gibt
         und worauf es bei der Auswahl wirklich ankommt.
       </p>
