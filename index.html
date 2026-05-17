@@ -40,20 +40,22 @@
     .hero-bg {
   background-color: #111827;
   background:
-    linear-gradient(rgba(8, 15, 28, 0.22), rgba(8, 15, 28, 0.38)),
-    url('water-hero2.jpg');
+    linear-gradient(
+      90deg,
+      rgba(8, 15, 28, 0.78) 0%,
+      rgba(8, 15, 28, 0.58) 42%,
+      rgba(8, 15, 28, 0.18) 100%
+    ),
+    url('water-hero.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 68% center;
 }
 
-    @media (prefers-reduced-motion: reduce) {
-      .reveal,
-      .image-hover img {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-    }
+   @media (max-width: 768px) {
+  .hero-bg {
+    background-position: 72% center;
+  }
+}
   </style>
 </head>
 
