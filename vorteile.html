@@ -256,8 +256,20 @@
   </div>
 </section>
 
-<section class="py-28 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
+<section class="py-28 relative overflow-hidden">
+
+  <!-- Background -->
+  <div class="absolute inset-0">
+    <img src="img/water-kitchen2.jpg"
+         alt="Premium Wasserfilter Küche"
+         class="w-full h-full object-cover">
+
+    <!-- White overlay -->
+    <div class="absolute inset-0 bg-white/78 backdrop-blur-[1px]"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative max-w-7xl mx-auto px-6">
 
     <div class="text-center mb-16 reveal">
       <p class="text-sm tracking-[0.24em] uppercase text-[#3D5387] font-semibold mb-5">
@@ -268,51 +280,106 @@
         Welche Lösung passt?
       </h2>
 
-      <p class="text-slate-600 max-w-2xl mx-auto text-lg leading-8">
-        Nicht jeder Haushalt braucht dasselbe System. Entscheidend sind Nutzung,
-        Platz, Komfortwunsch und Budget.
+      <p class="text-slate-700 max-w-2xl mx-auto text-lg leading-8">
+        Nicht jeder Haushalt braucht dasselbe System.
+        Entscheidend sind Nutzung, Platz,
+        Komfort und gewünschte Funktionen.
       </p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
 
-      <div class="reveal bg-[#F5F6FA] rounded-[2rem] p-8 border border-slate-100 shadow-sm">
-        <p class="text-sm text-[#3D5387] font-semibold mb-4">Kompakt</p>
-        <h3 class="text-2xl font-semibold text-slate-900 mb-4">
-          Für kleinere Haushalte
-        </h3>
-        <p class="text-slate-600 leading-8 mb-6">
-          Eine einfache Lösung, wenn Platz wichtig ist und regelmäßig gefiltertes Wasser genutzt wird.
-        </p>
-        <a href="index.html#produkte" class="text-[#3D5387] font-semibold">
-          Produkte ansehen →
-        </a>
+      <!-- Ambient -->
+      <div class="reveal bg-white/88 backdrop-blur-md rounded-[2rem] overflow-hidden border border-white/60 shadow-xl hover:shadow-2xl transition">
+
+        <div class="relative overflow-hidden bg-white">
+          <img src="img/ambient-basic.jpg"
+               alt="LUXLABEL Ambient"
+               class="w-full h-[240px] object-contain p-6 transition duration-700 hover:scale-105">
+        </div>
+
+        <div class="p-8">
+          <p class="text-sm text-[#3D5387] font-semibold mb-4">
+            Kompakt
+          </p>
+
+          <h3 class="text-2xl font-semibold text-slate-900 mb-4">
+            Für kleinere Haushalte
+          </h3>
+
+          <p class="text-slate-600 leading-8 mb-6">
+            Eine einfache Lösung für alle,
+            die regelmäßig gefiltertes Wasser nutzen
+            und dabei Platz sparen möchten.
+          </p>
+
+          <a href="index.html#produkte"
+             class="text-[#3D5387] font-semibold hover:text-[#111827] transition">
+            Produkte ansehen →
+          </a>
+        </div>
       </div>
 
-      <div class="reveal bg-[#F5F6FA] rounded-[2rem] p-8 border border-slate-100 shadow-sm">
-        <p class="text-sm text-[#3D5387] font-semibold mb-4">Familie</p>
-        <h3 class="text-2xl font-semibold text-slate-900 mb-4">
-          Für den Alltag
-        </h3>
-        <p class="text-slate-600 leading-8 mb-6">
-          Praktisch, wenn mehrere Personen täglich Wasser für Trinken, Tee, Kaffee oder Kochen nutzen.
-        </p>
-        <a href="index.html#produkte" class="text-[#3D5387] font-semibold">
-          Produkte ansehen →
-        </a>
+      <!-- Standard -->
+      <div class="reveal bg-white/88 backdrop-blur-md rounded-[2rem] overflow-hidden border border-white/60 shadow-xl hover:shadow-2xl transition">
+
+        <div class="relative overflow-hidden bg-white">
+          <img src="img/nais-standard.jpg"
+               alt="NAIS Standard"
+               class="w-full h-[240px] object-contain p-6 transition duration-700 hover:scale-105">
+        </div>
+
+        <div class="p-8">
+          <p class="text-sm text-[#3D5387] font-semibold mb-4">
+            Familie
+          </p>
+
+          <h3 class="text-2xl font-semibold text-slate-900 mb-4">
+            Für den Alltag
+          </h3>
+
+          <p class="text-slate-600 leading-8 mb-6">
+            Praktisch für Familien und Haushalte,
+            die täglich Wasser für Kaffee, Tee,
+            Kochen und Trinken nutzen.
+          </p>
+
+          <a href="index.html#produkte"
+             class="text-[#3D5387] font-semibold hover:text-[#111827] transition">
+            Produkte ansehen →
+          </a>
+        </div>
       </div>
 
-      <div class="reveal bg-[#F5F6FA] rounded-[2rem] p-8 border border-slate-100 shadow-sm">
-        <p class="text-sm text-[#3D5387] font-semibold mb-4">Premium</p>
-        <h3 class="text-2xl font-semibold text-slate-900 mb-4">
-          Für mehr Komfort
-        </h3>
-        <p class="text-slate-600 leading-8 mb-6">
-          Für alle, die zusätzliche Funktionen wie heißes Wasser, gekühltes Wasser oder Eiswürfel wünschen.
-        </p>
-        <a href="index.html#kontakt" class="text-[#3D5387] font-semibold">
-          Beratung anfragen →
-        </a>
+      <!-- Premium -->
+      <div class="reveal bg-white/88 backdrop-blur-md rounded-[2rem] overflow-hidden border border-white/60 shadow-xl hover:shadow-2xl transition">
+
+        <div class="relative overflow-hidden bg-white">
+          <img src="img/nais-cafe.jpg"
+               alt="NAIS CAFE Premium"
+               class="w-full h-[240px] object-contain p-6 transition duration-700 hover:scale-105">
+        </div>
+
+        <div class="p-8">
+          <p class="text-sm text-[#3D5387] font-semibold mb-4">
+            Premium
+          </p>
+
+          <h3 class="text-2xl font-semibold text-slate-900 mb-4">
+            Für mehr Komfort
+          </h3>
+
+          <p class="text-slate-600 leading-8 mb-6">
+            Für alle, die zusätzliche Funktionen
+            wie heißes Wasser, gekühltes Wasser
+            oder Eiswürfel möchten.
+          </p>
+
+          <a href="index.html#kontakt"
+             class="text-[#3D5387] font-semibold hover:text-[#111827] transition">
+            Beratung anfragen →
+          </a>
+        </div>
       </div>
 
     </div>
