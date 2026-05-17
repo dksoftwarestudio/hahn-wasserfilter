@@ -42,18 +42,16 @@
   background:
     linear-gradient(rgba(8, 15, 28, 0.22), rgba(8, 15, 28, 0.38)),
     url('water-hero1.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: 115%;
+background-position: 58% center;
 }
 
-    @media (prefers-reduced-motion: reduce) {
-      .reveal,
-      .image-hover img {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-    }
+    @media (max-width: 768px) {
+  .hero-bg {
+    background-size: cover;
+    background-position: 62% center;
+  }
+}
   </style>
 </head>
 
