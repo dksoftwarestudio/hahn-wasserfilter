@@ -37,6 +37,17 @@
       transform: scale(1.04);
     }
 
+    .hero-text-panel {
+  padding: 36px;
+  border-radius: 32px;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 15, 28, 0.58),
+    rgba(8, 15, 28, 0.32)
+  );
+  backdrop-filter: blur(2px);
+}
+
    .hero-bg {
   background-color: #111827;
   background:
@@ -52,10 +63,11 @@
   background-position: 58% 70%;
 }
 
-    @media (max-width: 768px) {
-  .hero-bg {
-    background-size: cover;
-    background-position: 62% center;
+   @media (max-width: 768px) {
+  .hero-text-panel {
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
   }
 }
   </style>
@@ -112,7 +124,7 @@
 <section class="hero-bg min-h-[72vh] flex items-center text-white relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 w-full py-24">
 
-    <div class="max-w-2xl reveal ml-auto lg:mr-24 xl:mr-40 pr-6">
+    <div class="max-w-xl reveal ml-auto lg:mr-10 xl:mr-20 pr-6 hero-text-panel">
       <p class="text-sm tracking-[0.28em] uppercase text-slate-200 mb-6">
         Wasserfilter einfach erklärt
       </p>
