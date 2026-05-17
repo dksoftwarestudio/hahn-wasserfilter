@@ -54,7 +54,15 @@
 
    @media (max-width: 768px) {
   .hero-bg {
-    background-position: 72% center;
+    min-height: 78vh;
+    background:
+      linear-gradient(
+        rgba(8, 15, 28, 0.62),
+        rgba(8, 15, 28, 0.72)
+      ),
+      url('water-hero.jpg');
+    background-size: cover;
+    background-position: 58% center;
   }
 }
   </style>
@@ -119,17 +127,17 @@
 <section class="hero-bg min-h-[86vh] flex items-center text-white relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 w-full py-24">
 
-    <div class="max-w-2xl reveal -ml-8">
+    <div class="max-w-2xl reveal md:-ml-8">
       <p class="text-sm tracking-[0.28em] uppercase text-slate-200 mb-6">
         Premium Wasserfilter
       </p>
 
-      <h1 class="text-5xl md:text-6xl font-semibold leading-tight tracking-tight mb-8">
+      <h1 class="text-4xl md:text-6xl font-semibold leading-tight tracking-tight mb-6">
         Gefiltertes Wasser.<br>
         Direkt zuhause.
       </h1>
 
-      <p class="text-xl md:text-2xl text-slate-200 max-w-2xl leading-relaxed mb-10">
+      <p class="text-lg md:text-2xl text-slate-200 max-w-2xl leading-relaxed mb-8">
   Moderne Wasserfilter-Systeme<br>
   für Küche, Haushalt und Büro.
 </p>
