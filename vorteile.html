@@ -97,50 +97,111 @@
       background-color: #111827;
       background:
         linear-gradient(
+          90deg,
+          rgba(8, 15, 28, 0.08) 0%,
+          rgba(8, 15, 28, 0.16) 34%,
+          rgba(8, 15, 28, 0.78) 62%,
+          rgba(8, 15, 28, 0.9) 100%
+        ),
+        linear-gradient(
           135deg,
-          rgba(8, 15, 28, 0.82) 0%,
-          rgba(8, 15, 28, 0.62) 45%,
-          rgba(61, 83, 135, 0.08) 100%
+          rgba(8, 15, 28, 0.22) 0%,
+          rgba(61, 83, 135, 0.16) 48%,
+          rgba(191, 169, 186, 0.18) 100%
         ),
         url('water-hero1.jpg');
       background-size: cover;
-      background-position: 50% 85%;
+      background-position: 42% 82%;
       position: relative;
     }
 
     .hero-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      to right,
-      rgba(8,15,28,0.18) 0%,
-      rgba(8,15,28,0.10) 35%,
-      rgba(8,15,28,0.38) 72%,
-      rgba(8,15,28,0.58) 100%
-    );
-  pointer-events: none;
-}
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        linear-gradient(to bottom, rgba(17, 24, 39, 0.18), transparent 28%, rgba(17, 24, 39, 0.28) 100%),
+        radial-gradient(ellipse at 88% 58%, rgba(191, 169, 186, 0.18) 0%, transparent 62%);
+      pointer-events: none;
+    }
 
     .hero-content-wrapper {
       position: relative;
       z-index: 1;
-      max-width: 760px;
+      max-width: 700px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .hero-content-wrapper h1 {
+      text-shadow: 0 18px 48px rgba(0, 0, 0, 0.26);
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: rgba(226, 232, 240, 0.92);
+    }
+
+    .hero-kicker::before {
+      content: '';
+      width: 2.5rem;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      max-width: 620px;
+    }
+
+    .hero-proof-item {
+      border-top: 1px solid rgba(255, 255, 255, 0.24);
+      padding-top: 1rem;
+    }
+
+    .font-display {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     @media (max-width: 768px) {
+      .hero-content-wrapper {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+      }
+
       .hero-bg {
-        min-height: 85vh;
+        min-height: 88vh;
         background:
           linear-gradient(
+            to bottom,
+            rgba(8, 15, 28, 0.28) 0%,
+            rgba(8, 15, 28, 0.7) 45%,
+            rgba(8, 15, 28, 0.9) 100%
+          ),
+          linear-gradient(
             135deg,
-            rgba(8, 15, 28, 0.72),
-            rgba(8, 15, 28, 0.78)
+            rgba(8, 15, 28, 0.14),
+            rgba(61, 83, 135, 0.26)
           ),
           url('water-hero1.jpg');
         background-size: cover;
-        background-position: 58% center;
+        background-position: 39% center;
+      }
+
+      .hero-kicker::before {
+        width: 1.75rem;
+      }
+
+      .hero-proof {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
       }
     }
 
@@ -215,36 +276,50 @@
 </header>
 
 <section class="hero-bg min-h-[86vh] flex items-center text-white relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 w-full py-32">
+  <div class="max-w-7xl mx-auto px-6 w-full py-24 md:py-32">
 
-    <div class="max-w-xl reveal hero-content-wrapper md:ml-[460px] lg:ml-[540px]">
-
-      <p class="text-sm tracking-[0.32em] uppercase text-slate-300 mb-6 font-medium">
+    <div class="max-w-2xl reveal hero-content-wrapper md:ml-auto md:text-right">
+      <p class="hero-kicker text-xs sm:text-sm tracking-[0.28em] uppercase mb-7 font-semibold md:flex-row-reverse">
         Wasserfilter einfach erklärt
       </p>
 
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.12] tracking-tight mb-6 font-display">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-[1.03] tracking-tight mb-7 font-display">
         Besseres Wasser.<br>
         Ruhig erklärt.
       </h1>
 
-      <p class="text-lg md:text-xl text-slate-200 max-w-xl leading-[1.6] mb-10 font-light">
-        Welche Vorteile Wasserfilter bieten können, welche Systeme es gibt
-        und worauf es bei der Auswahl wirklich ankommt.
+      <p class="text-lg sm:text-xl md:text-2xl text-slate-200 max-w-2xl md:ml-auto leading-[1.65] mb-10 font-light">
+        Welche Vorteile Wasserfilter im Alltag bringen, welche Systeme sinnvoll sind und worauf es bei der Auswahl wirklich ankommt.
       </p>
 
-      <div class="flex flex-col sm:flex-row gap-5">
+      <div class="flex flex-col sm:flex-row gap-4 md:justify-end">
         <a href="index.html#produkte"
-           class="bg-white text-[#3D5387] px-10 py-5 rounded-3xl font-semibold text-lg text-center hover:bg-slate-50 transition duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
+           class="bg-white text-[#3D5387] px-8 py-4 rounded-2xl font-semibold text-base sm:text-lg text-center hover:bg-slate-50 transition duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
           Produkte ansehen
         </a>
 
         <a href="index.html#kontakt"
-           class="border border-white/40 bg-white/12 backdrop-blur-md text-white px-10 py-5 rounded-3xl font-semibold text-lg text-center hover:bg-white hover:text-[#3D5387] transition duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
+           class="border border-white/40 bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-2xl font-semibold text-base sm:text-lg text-center hover:bg-white hover:text-[#3D5387] transition duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
           Beratung anfragen
         </a>
       </div>
 
+      <div class="hero-proof mt-12 md:ml-auto text-left md:text-right">
+        <div class="hero-proof-item">
+          <p class="text-sm font-semibold text-white">Weniger Flaschen</p>
+          <p class="text-sm text-slate-300 leading-6">Direkt verfügbar im Alltag</p>
+        </div>
+
+        <div class="hero-proof-item">
+          <p class="text-sm font-semibold text-white">Besserer Geschmack</p>
+          <p class="text-sm text-slate-300 leading-6">Für Wasser, Kaffee und Tee</p>
+        </div>
+
+        <div class="hero-proof-item">
+          <p class="text-sm font-semibold text-white">Passendes System</p>
+          <p class="text-sm text-slate-300 leading-6">Nach Nutzung und Platz</p>
+        </div>
+      </div>
     </div>
 
   </div>
