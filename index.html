@@ -114,14 +114,21 @@
       background-color: #111827;
       background:
         linear-gradient(
+          90deg,
+          rgba(8, 15, 28, 0.9) 0%,
+          rgba(8, 15, 28, 0.78) 34%,
+          rgba(8, 15, 28, 0.16) 68%,
+          rgba(8, 15, 28, 0.08) 100%
+        ),
+        linear-gradient(
           135deg,
-          rgba(8, 15, 28, 0.82) 0%,
-          rgba(8, 15, 28, 0.62) 45%,
-          rgba(61, 83, 135, 0.08) 100%
+          rgba(8, 15, 28, 0.22) 0%,
+          rgba(61, 83, 135, 0.16) 48%,
+          rgba(191, 169, 186, 0.18) 100%
         ),
         url('water-hero.jpg');
       background-size: cover;
-      background-position: 50% 85%;
+      background-position: 42% 82%;
       position: relative;
     }
 
@@ -132,39 +139,82 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(ellipse at 100% 50%, rgba(61, 83, 135, 0.06) 0%, transparent 70%);
+      background:
+        linear-gradient(to bottom, rgba(17, 24, 39, 0.18), transparent 28%, rgba(17, 24, 39, 0.28) 100%),
+        radial-gradient(ellipse at 12% 58%, rgba(191, 169, 186, 0.18) 0%, transparent 62%);
       pointer-events: none;
     }
 
     .hero-content-wrapper {
       position: relative;
       z-index: 1;
-      max-width: 760px;
+      max-width: 700px;
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
 
     .hero-content-wrapper h1 {
-      text-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+      text-shadow: 0 18px 48px rgba(0, 0, 0, 0.26);
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: rgba(226, 232, 240, 0.92);
+    }
+
+    .hero-kicker::before {
+      content: '';
+      width: 2.5rem;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      max-width: 620px;
+    }
+
+    .hero-proof-item {
+      border-top: 1px solid rgba(255, 255, 255, 0.24);
+      padding-top: 1rem;
     }
 
     @media (max-width: 768px) {
       .hero-content-wrapper {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
       }
 
       .hero-bg {
-        min-height: 85vh;
+        min-height: 88vh;
         background:
           linear-gradient(
+            to bottom,
+            rgba(8, 15, 28, 0.28) 0%,
+            rgba(8, 15, 28, 0.7) 45%,
+            rgba(8, 15, 28, 0.9) 100%
+          ),
+          linear-gradient(
             135deg,
-            rgba(8, 15, 28, 0.72),
-            rgba(8, 15, 28, 0.78)
+            rgba(8, 15, 28, 0.14),
+            rgba(61, 83, 135, 0.26)
           ),
           url('water-hero.jpg');
         background-size: cover;
-        background-position: 58% center;
+        background-position: 39% center;
+      }
+
+      .hero-kicker::before {
+        width: 1.75rem;
+      }
+
+      .hero-proof {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
       }
     }
 
@@ -216,17 +266,12 @@
   </div>
 </a>
 
-   <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+     <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
   <a href="index.html" class="text-[#3D5387] font-semibold">Start</a>
 
   <a href="vorteile.html"
      class="hover:text-[#3D5387] transition">
     Vorteile
-  </a>
-
-  <a href="#produkte"
-     class="hover:text-[#3D5387] transition">
-    Produkte
   </a>
 
   <a href="#kontakt"
@@ -257,32 +302,49 @@
 </header>
 
 <section class="hero-bg min-h-[86vh] flex items-center text-white relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 w-full py-32">
+  <div class="max-w-7xl mx-auto px-6 w-full py-24 md:py-32">
 
-    <div class="max-w-2xl reveal hero-content-wrapper md:-ml-12">
-      <p class="text-sm tracking-[0.32em] uppercase text-slate-300 mb-8 font-medium">
+    <div class="max-w-2xl reveal hero-content-wrapper">
+      <p class="hero-kicker text-xs sm:text-sm tracking-[0.28em] uppercase mb-7 font-semibold">
         Premium Wasserfilter
       </p>
 
-      <h1 class="text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.15] tracking-tight mb-8 font-display">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-[1.03] tracking-tight mb-7 font-display">
         Gefiltertes Wasser.<br>
         Direkt zuhause.
       </h1>
 
-      <p class="text-xl md:text-3xl text-slate-200 max-w-3xl leading-[1.6] mb-12 font-light">
-  Moderne Wasserfilter-Systeme für Küche, Haushalt und Büro.
-</p>
+      <p class="text-lg sm:text-xl md:text-2xl text-slate-200 max-w-2xl leading-[1.65] mb-10 font-light">
+        Moderne Wasserfilter-Systeme für Küche, Haushalt und Büro.
+      </p>
 
-      <div class="flex flex-col sm:flex-row gap-5">
+      <div class="flex flex-col sm:flex-row gap-4">
         <a href="#kontakt"
-           class="bg-white text-[#3D5387] px-10 py-5 rounded-3xl font-semibold text-lg text-center hover:bg-slate-50 transition duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
+           class="bg-white text-[#3D5387] px-8 py-4 rounded-2xl font-semibold text-base sm:text-lg text-center hover:bg-slate-50 transition duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
           Beratung anfragen
         </a>
 
         <a href="#produkte"
-           class="border border-white/40 bg-white/12 backdrop-blur-md text-white px-10 py-5 rounded-3xl font-semibold text-lg text-center hover:bg-white hover:text-[#3D5387] transition duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
+           class="border border-white/40 bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-2xl font-semibold text-base sm:text-lg text-center hover:bg-white hover:text-[#3D5387] transition duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
           Produkte ansehen
         </a>
+      </div>
+
+      <div class="hero-proof mt-12 text-left">
+        <div class="hero-proof-item">
+          <p class="text-sm font-semibold text-white">Direkt aus der Küche</p>
+          <p class="text-sm text-slate-300 leading-6">Gefiltertes Wasser jederzeit</p>
+        </div>
+
+        <div class="hero-proof-item">
+          <p class="text-sm font-semibold text-white">Für Zuhause & Büro</p>
+          <p class="text-sm text-slate-300 leading-6">Kompakt bis premium</p>
+        </div>
+
+        <div class="hero-proof-item">
+          <p class="text-sm font-semibold text-white">Persönliche Beratung</p>
+          <p class="text-sm text-slate-300 leading-6">Passend zu Nutzung und Platz</p>
+        </div>
       </div>
     </div>
 
@@ -512,19 +574,20 @@
       </div>
 
       <!-- RIGHT -->
-     <div class="reveal">
+      <div class="reveal">
 
-  <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+        <div class="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-[#1f2937] to-[#111827] border border-white/10 shadow-2xl p-10">
 
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_70%)]"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_70%)]"></div>
 
-    <img src="img/luxlabel-filter.png"
-     alt="Luxlabel Premium Filter"
-     class="relative z-10 w-full rounded-[2.5rem] object-cover hover:scale-[1.02] transition duration-700">
+          <img src="luxlabel-filter.png"
+               alt="Luxlabel Premium Filter"
+               class="relative z-10 w-full max-w-md mx-auto object-contain hover:scale-[1.02] transition duration-700">
 
-  </div>
+        </div>
 
-</div>
+      </div>
+
     </div>
 
   </div>
@@ -532,47 +595,44 @@
 </section>
 
 <section class="py-32 lg:py-40 bg-gradient-to-b from-[#111827] to-[#1a2332] text-white relative overflow-hidden">
-
   <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48ZmlsdGVyIGlkPSJhIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjEiIG51bU9jdGF2ZXM9IjEiIHNlZWQ9IjUiLz48ZmVDb2xvck1hdHJpeCB0eXBlPSJzYXR1cmF0ZSIgdmFsdWVzPSIuMyIvPjwvZmlsdGVyPjwvZGVmcz48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')] opacity-30 pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-    <div class="max-w-3xl reveal">
+    <div class="grid lg:grid-cols-2 gap-20 items-center">
 
-      <p class="text-sm tracking-[0.28em] uppercase text-slate-400 font-semibold mb-7">
-        Beratung
-      </p>
-
-      <h2 class="text-4xl md:text-6xl font-semibold leading-[1.2] mb-10">
-        Nicht sicher, welches System passt?
-      </h2>
-
-      <p class="text-slate-300 text-lg leading-[1.8] mb-10">
-        Schreiben Sie kurz, wie viele Personen das System nutzen,
-        ob es für Zuhause oder Büro gedacht ist und welche Funktionen wichtig sind.
-      </p>
-
-      <div class="space-y-4 text-slate-300">
-        <p class="flex items-center gap-3">
-          <span class="inline-flex w-5 h-5 rounded-full bg-[#3D5387]/30 items-center justify-center text-sm">✓</span>
-          Persönliche Beratung
+      <div class="reveal">
+        <p class="text-sm tracking-[0.28em] uppercase text-slate-400 font-semibold mb-7">
+          Beratung
         </p>
 
-        <p class="flex items-center gap-3">
-          <span class="inline-flex w-5 h-5 rounded-full bg-[#3D5387]/30 items-center justify-center text-sm">✓</span>
-          Unverbindliche Anfrage
+        <h2 class="text-4xl md:text-6xl font-semibold leading-[1.2] mb-10">
+          Nicht sicher, welches System passt?
+        </h2>
+
+        <p class="text-slate-300 text-lg leading-[1.8] mb-10">
+          Schreiben Sie kurz, wie viele Personen das System nutzen,
+          ob es für Zuhause oder Büro gedacht ist und welche Funktionen wichtig sind.
         </p>
 
-        <p class="flex items-center gap-3">
-          <span class="inline-flex w-5 h-5 rounded-full bg-[#3D5387]/30 items-center justify-center text-sm">✓</span>
-          Empfehlung passend zur Nutzung
-        </p>
+        <div class="space-y-4 text-slate-300">
+          <p class="flex items-center gap-3"><span class="inline-flex w-5 h-5 rounded-full bg-[#3D5387]/30 items-center justify-center text-sm">✓</span> Persönliche Beratung</p>
+          <p class="flex items-center gap-3"><span class="inline-flex w-5 h-5 rounded-full bg-[#3D5387]/30 items-center justify-center text-sm">✓</span> Unverbindliche Anfrage</p>
+          <p class="flex items-center gap-3"><span class="inline-flex w-5 h-5 rounded-full bg-[#3D5387]/30 items-center justify-center text-sm">✓</span> Empfehlung passend zur Nutzung</p>
+        </div>
+      </div>
+
+      <div class="reveal image-hover rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-700/50">
+        <img src="water-detail.jpg"
+             loading="lazy"
+             alt="Wasser im Glas"
+             onerror="this.parentElement.style.background='#374151';this.style.display='none'"
+             class="w-full h-[460px] object-cover">
       </div>
 
     </div>
 
   </div>
-
 </section>
 
 <section id="kontakt" class="py-32 lg:py-40 section-light relative">
@@ -638,7 +698,7 @@
           <option value="LUXLABEL Ambient">LUXLABEL Ambient</option>
           <option value="NAIS Standard">NAIS Standard</option>
           <option value="NAIS CAFE Premium">NAIS CAFE Premium</option>
-          <option value="Untertisch-System">Untertisch-System</option>
+          <option value="Unteritsch-System">Unteritsch-System</option>
           <option value="Ich bin noch unsicher">Ich bin noch unsicher</option>
         </select>
 
