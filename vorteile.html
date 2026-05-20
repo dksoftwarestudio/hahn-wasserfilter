@@ -109,15 +109,19 @@
     }
 
     .hero-bg::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(ellipse at 100% 50%, rgba(61, 83, 135, 0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to right,
+      rgba(8,15,28,0.18) 0%,
+      rgba(8,15,28,0.10) 35%,
+      rgba(8,15,28,0.38) 72%,
+      rgba(8,15,28,0.58) 100%
+    );
+  pointer-events: none;
+}
 
     .hero-content-wrapper {
       position: relative;
@@ -213,7 +217,7 @@
 <section class="hero-bg min-h-[86vh] flex items-center text-white relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 w-full py-32">
 
-    <div class="max-w-2xl reveal hero-content-wrapper md:ml-48 lg:ml-60">
+    <div class="max-w-2xl reveal hero-content-wrapper md:ml-[420px] lg:ml-[520px]">
       <p class="text-sm tracking-[0.32em] uppercase text-slate-300 mb-8 font-medium">
         Wasserfilter einfach erklärt
       </p>
