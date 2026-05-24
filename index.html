@@ -16,6 +16,7 @@
       --soft: #F5F6FA;
       --muted: #6B7280;
       --accent: #BFA9BA;
+      --gold: #C7A56B;
     }
 
     * {
@@ -124,7 +125,7 @@
           135deg,
           rgba(8, 15, 28, 0.22) 0%,
           rgba(61, 83, 135, 0.16) 48%,
-          rgba(191, 169, 186, 0.18) 100%
+          rgba(199, 165, 107, 0.14) 100%
         ),
         url('water-hero.jpg');
       background-size: cover;
@@ -141,7 +142,7 @@
       bottom: 0;
       background:
         linear-gradient(to bottom, rgba(17, 24, 39, 0.18), transparent 28%, rgba(17, 24, 39, 0.28) 100%),
-        radial-gradient(ellipse at 12% 58%, rgba(191, 169, 186, 0.18) 0%, transparent 62%);
+        radial-gradient(ellipse at 12% 58%, rgba(199, 165, 107, 0.16) 0%, transparent 62%);
       pointer-events: none;
     }
 
@@ -161,14 +162,14 @@
       display: inline-flex;
       align-items: center;
       gap: 0.75rem;
-      color: rgba(226, 232, 240, 0.92);
+      color: var(--gold);
     }
 
     .hero-kicker::before {
       content: '';
       width: 2.5rem;
       height: 1px;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(199, 165, 107, 0.75);
     }
 
     .hero-proof {
@@ -325,24 +326,24 @@
         </a>
 
         <a href="#produkte"
-           class="border border-white/40 bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-2xl font-semibold text-base sm:text-lg text-center hover:bg-white hover:text-[#3D5387] transition duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
+           class="border border-[#C7A56B]/50 bg-[#C7A56B]/10 backdrop-blur-md text-white px-8 py-4 rounded-2xl font-semibold text-base sm:text-lg text-center hover:bg-[#C7A56B] hover:text-[#111827] transition duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
           Produkte ansehen
         </a>
       </div>
 
       <div class="hero-proof mt-12 text-left">
         <div class="hero-proof-item">
-          <p class="text-sm font-semibold text-white">Direkt aus der Küche</p>
+          <p class="text-sm font-semibold text-[#C7A56B]">Direkt aus der Küche</p>
           <p class="text-sm text-slate-300 leading-6">Gefiltertes Wasser jederzeit</p>
         </div>
 
         <div class="hero-proof-item">
-          <p class="text-sm font-semibold text-white">Für Zuhause & Büro</p>
+          <p class="text-sm font-semibold text-[#C7A56B]">Für Zuhause & Büro</p>
           <p class="text-sm text-slate-300 leading-6">Kompakt bis premium</p>
         </div>
 
         <div class="hero-proof-item">
-          <p class="text-sm font-semibold text-white">Persönliche Beratung</p>
+          <p class="text-sm font-semibold text-[#C7A56B]">Persönliche Beratung</p>
           <p class="text-sm text-slate-300 leading-6">Passend zu Nutzung und Platz</p>
         </div>
       </div>
@@ -376,7 +377,7 @@
 
   <p>
     Je nach System können verschiedene Stoffe wie Kalk,
-    Schwermetalle oder andere Rückstände reduziert werden —
+    Schwermetalle oder andere Rückstände reduziert werden –
     für frisches Wasser im Alltag.
   </p>
 
@@ -419,7 +420,7 @@
       </h2>
 
       <p class="text-slate-600 max-w-2xl mx-auto text-lg leading-[1.8]">
-        Von kompakt bis premium — je nach Haushalt, Komfortwunsch und Nutzung.
+        Von kompakt bis premium – je nach Haushalt, Komfortwunsch und Nutzung.
       </p>
     </div>
 
@@ -469,7 +470,7 @@
           </h3>
           <p class="text-slate-600 text-lg leading-[1.8] mb-8">
             Die Alltagslösung für Familien: heißes, kaltes und lauwarmes Wasser
-            direkt verfügbar — komfortabel und praktisch.
+            direkt verfügbar – komfortabel und praktisch.
           </p>
           <p class="text-4xl font-semibold text-[#3D5387] mb-3">ab 1.798 €</p>
           <p class="text-sm text-slate-500 mb-10">Montage optional (+357 €)</p>
@@ -634,7 +635,7 @@
         </h3>
 
         <p class="text-slate-400 leading-8 text-sm">
-          Verständlich erklärt — ohne komplizierte Fachbegriffe.
+          Verständlich erklärt – ohne komplizierte Fachbegriffe.
         </p>
       </div>
 
@@ -648,7 +649,7 @@
         </h3>
 
         <p class="text-slate-400 leading-8 text-sm">
-          Erst informieren und vergleichen — dann entscheiden.
+          Erst informieren und vergleichen – dann entscheiden.
         </p>
       </div>
 
@@ -750,7 +751,7 @@
           <option value="LUXLABEL Ambient">LUXLABEL Ambient</option>
           <option value="NAIS Standard">NAIS Standard</option>
           <option value="NAIS CAFE Premium">NAIS CAFE Premium</option>
-          <option value="Unteritsch-System">Unteritsch-System</option>
+          <option value="Untertisch-System">Untertisch-System</option>
           <option value="Ich bin noch unsicher">Ich bin noch unsicher</option>
         </select>
 
@@ -829,7 +830,13 @@
         <h5 class="font-semibold text-white mb-6 tracking-wide">Kontakt</h5>
         <p class="text-sm leading-relaxed mb-6">
           E-Mail: info@hahn-wasserfilter.de<br>
-          WhatsApp: +49 162 4012037
+          WhatsApp:
+          <a href="https://wa.me/491624012037"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="text-white hover:underline">
+            +49 162 4012037
+          </a>
         </p>
         <a href="https://wa.me/491624012037"
            target="_blank"
@@ -859,7 +866,8 @@
 <a href="https://wa.me/491624012037"
    target="_blank"
    rel="noopener noreferrer"
-   class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-2xl z-50 transition duration-300 hover:shadow-3xl hover:scale-110">
+   aria-label="WhatsApp schreiben"
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full shadow-2xl z-50 transition duration-300 hover:shadow-3xl hover:scale-110">
   <svg xmlns="http://www.w3.org/2000/svg"
        width="28"
        height="28"
