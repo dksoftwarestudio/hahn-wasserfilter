@@ -51,6 +51,183 @@
       transform: scale(1.02);
     }
 
+    .product-gallery {
+      position: relative;
+    }
+
+    .product-gallery img {
+      display: block;
+    }
+
+    .gallery-image {
+      cursor: zoom-in;
+    }
+
+    .gallery-control {
+      position: absolute;
+      top: 50%;
+      width: 2.75rem;
+      height: 2.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      color: #111827;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      box-shadow: 0 10px 28px rgba(17, 24, 39, 0.12);
+      transform: translateY(-50%);
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .gallery-control:hover {
+      background: #fff;
+      box-shadow: 0 14px 36px rgba(17, 24, 39, 0.18);
+      transform: translateY(-50%) scale(1.04);
+    }
+
+    .gallery-control.prev {
+      left: 1rem;
+    }
+
+    .gallery-control.next {
+      right: 1rem;
+    }
+
+    .gallery-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .gallery-dot {
+      width: 0.65rem;
+      height: 0.65rem;
+      border-radius: 999px;
+      background: rgba(17, 24, 39, 0.24);
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      transition: width 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+    }
+
+    .gallery-dot.active {
+      width: 1.6rem;
+      background: #3D5387;
+    }
+
+    .gallery-lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background: rgba(8, 15, 28, 0.86);
+      z-index: 100;
+    }
+
+    .gallery-lightbox.open {
+      display: flex;
+    }
+
+    .gallery-lightbox img {
+      max-width: min(92vw, 1100px);
+      max-height: 86vh;
+      object-fit: contain;
+      border-radius: 1.25rem;
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+    }
+
+    .lightbox-close,
+    .lightbox-control {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      color: #111827;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.24);
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+      z-index: 101;
+    }
+
+    .lightbox-close:hover,
+    .lightbox-control:hover {
+      background: #fff;
+      transform: scale(1.04);
+    }
+
+    .lightbox-close {
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 2.75rem;
+      height: 2.75rem;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .lightbox-control {
+      top: 50%;
+      width: 3.25rem;
+      height: 3.25rem;
+      font-size: 2.6rem;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+
+    .lightbox-control:hover {
+      transform: translateY(-50%) scale(1.04);
+    }
+
+    .lightbox-control.prev {
+      left: 1.25rem;
+    }
+
+    .lightbox-control.next {
+      right: 1.25rem;
+    }
+
+    @media (max-width: 640px) {
+      .gallery-control {
+        width: 2.35rem;
+        height: 2.35rem;
+      }
+
+      .gallery-control.prev {
+        left: 0.65rem;
+      }
+
+      .gallery-control.next {
+        right: 0.65rem;
+      }
+
+      .gallery-lightbox {
+        padding: 0.75rem;
+      }
+
+      .gallery-lightbox img {
+        max-width: 96vw;
+        max-height: 78vh;
+        border-radius: 1rem;
+      }
+
+      .lightbox-control {
+        width: 2.65rem;
+        height: 2.65rem;
+        font-size: 2.1rem;
+      }
+    }
+
     /* Glassmorphism */
     .glass {
       background: rgba(255, 255, 255, 0.7);
@@ -427,12 +604,25 @@
     <div class="space-y-24 lg:space-y-28">
 
       <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
-        <div class="image-hover rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-white to-slate-50 shadow-2xl p-10 border border-slate-200/50">
-          <img src="ambient-basic.jpg"
+        <div class="image-hover product-gallery rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-white to-slate-50 shadow-2xl p-10 border border-slate-200/50"
+             data-gallery-title="LUXLABEL Ambient Wasserfilter"
+             data-gallery='["img/ambient-basic1.jpg","img/ambient-basic2.jpg","img/ambient-basic3.jpg","img/ambient-basic4.jpg"]'>
+          <img src="img/ambient-basic1.jpg"
                loading="lazy"
                alt="LUXLABEL Ambient Wasserfilter"
-               onerror="this.parentElement.style.background='#f3f4f6';this.style.display='none'"
-               class="w-full h-[320px] object-contain">
+               onerror="this.closest('.product-gallery').style.background='#f3f4f6';this.style.display='none'"
+               class="gallery-image w-full h-[320px] object-contain">
+          <button type="button"
+                  class="gallery-control prev"
+                  aria-label="Vorheriges Foto">
+            ‹
+          </button>
+          <button type="button"
+                  class="gallery-control next"
+                  aria-label="Nächstes Foto">
+            ›
+          </button>
+          <div class="gallery-dots" aria-label="LUXLABEL Ambient Fotogalerie"></div>
         </div>
 
         <div>
@@ -455,12 +645,25 @@
       </div>
 
       <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
-        <div class="lg:order-2 image-hover rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-white to-slate-50 shadow-2xl p-10 border border-slate-200/50">
-          <img src="nais-standard.jpg"
+        <div class="lg:order-2 image-hover product-gallery rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-white to-slate-50 shadow-2xl p-10 border border-slate-200/50"
+             data-gallery-title="NAIS Standard Wasserfilter"
+             data-gallery='["img/nais-standard1.jpg","img/nais-standard2.jpg","img/nais-standard3.jpg"]'>
+          <img src="img/nais-standard1.jpg"
                loading="lazy"
                alt="NAIS Standard Wasserfilter"
-               onerror="this.parentElement.style.background='#f3f4f6';this.style.display='none'"
-               class="w-full h-[320px] object-contain">
+               onerror="this.closest('.product-gallery').style.background='#f3f4f6';this.style.display='none'"
+               class="gallery-image w-full h-[320px] object-contain">
+          <button type="button"
+                  class="gallery-control prev"
+                  aria-label="Vorheriges Foto">
+            ‹
+          </button>
+          <button type="button"
+                  class="gallery-control next"
+                  aria-label="Nächstes Foto">
+            ›
+          </button>
+          <div class="gallery-dots" aria-label="NAIS Standard Fotogalerie"></div>
         </div>
 
         <div class="lg:order-1">
@@ -483,12 +686,25 @@
       </div>
 
       <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
-        <div class="image-hover rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-white to-slate-50 shadow-2xl p-10 border border-slate-200/50">
-          <img src="nais-cafe.jpg"
+        <div class="image-hover product-gallery rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-white to-slate-50 shadow-2xl p-10 border border-slate-200/50"
+             data-gallery-title="NAIS CAFE Premium Wasserfilter"
+             data-gallery='["img/nais-cafe1.jpg","img/nais-cafe2.jpg","img/nais-cafe3.jpg","img/nais-cafe4.jpg","img/nais-cafe5.jpg","img/nais-cafe6.jpg"]'>
+          <img src="img/nais-cafe1.jpg"
                loading="lazy"
                alt="NAIS CAFE Premium Wasserfilter"
-               onerror="this.parentElement.style.background='#f3f4f6';this.style.display='none'"
-               class="w-full h-[320px] object-contain">
+               onerror="this.closest('.product-gallery').style.background='#f3f4f6';this.style.display='none'"
+               class="gallery-image w-full h-[320px] object-contain">
+          <button type="button"
+                  class="gallery-control prev"
+                  aria-label="Vorheriges Foto">
+            ‹
+          </button>
+          <button type="button"
+                  class="gallery-control next"
+                  aria-label="Nächstes Foto">
+            ›
+          </button>
+          <div class="gallery-dots" aria-label="NAIS CAFE Fotogalerie"></div>
         </div>
 
         <div>
@@ -877,6 +1093,26 @@
   </svg>
 </a>
 
+<div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+  <button type="button"
+          class="lightbox-close"
+          aria-label="Foto schließen">
+    ×
+  </button>
+  <button type="button"
+          class="lightbox-control prev"
+          aria-label="Vorheriges Foto">
+    ‹
+  </button>
+  <img src=""
+       alt="">
+  <button type="button"
+          class="lightbox-control next"
+          aria-label="Nächstes Foto">
+    ›
+  </button>
+</div>
+
 <script>
  document.addEventListener('DOMContentLoaded', () => {
   const heroReveal = document.querySelector('.hero-bg .reveal');
@@ -888,6 +1124,106 @@
   }
 
   const items = document.querySelectorAll('.reveal:not(.visible)');
+  const lightbox = document.getElementById('galleryLightbox');
+  const lightboxImage = lightbox?.querySelector('img');
+  const lightboxClose = lightbox?.querySelector('.lightbox-close');
+  const lightboxPrevious = lightbox?.querySelector('.lightbox-control.prev');
+  const lightboxNext = lightbox?.querySelector('.lightbox-control.next');
+  let activeGallery = null;
+
+  document.querySelectorAll('[data-gallery]').forEach(gallery => {
+    const images = JSON.parse(gallery.dataset.gallery || '[]');
+    const title = gallery.dataset.galleryTitle || 'Produktfoto';
+    const image = gallery.querySelector('.gallery-image');
+    const dotsContainer = gallery.querySelector('.gallery-dots');
+    const previousButton = gallery.querySelector('.gallery-control.prev');
+    const nextButton = gallery.querySelector('.gallery-control.next');
+    let currentIndex = 0;
+
+    if (!image || images.length === 0) return;
+
+    gallery.galleryState = {
+      images,
+      title,
+      currentIndex,
+      showImage: index => {}
+    };
+
+    const dots = images.map((_, index) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'gallery-dot';
+      dot.setAttribute('aria-label', `Foto ${index + 1} anzeigen`);
+      dot.addEventListener('click', () => showImage(index));
+      dotsContainer.appendChild(dot);
+      return dot;
+    });
+
+    const showImage = index => {
+      currentIndex = (index + images.length) % images.length;
+      gallery.galleryState.currentIndex = currentIndex;
+      image.src = images[currentIndex];
+      image.alt = `${title} Foto ${currentIndex + 1}`;
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('active', dotIndex === currentIndex);
+      });
+    };
+
+    gallery.galleryState.showImage = showImage;
+
+    previousButton?.addEventListener('click', () => showImage(currentIndex - 1));
+    nextButton?.addEventListener('click', () => showImage(currentIndex + 1));
+    image.addEventListener('click', () => {
+      activeGallery = gallery.galleryState;
+      openLightbox();
+    });
+    showImage(0);
+  });
+
+  const openLightbox = () => {
+    if (!lightbox || !lightboxImage || !activeGallery) return;
+
+    lightboxImage.src = activeGallery.images[activeGallery.currentIndex];
+    lightboxImage.alt = `${activeGallery.title} Foto ${activeGallery.currentIndex + 1}`;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    if (!lightbox) return;
+
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  const showLightboxImage = direction => {
+    if (!activeGallery) return;
+
+    activeGallery.showImage(activeGallery.currentIndex + direction);
+    openLightbox();
+  };
+
+  lightboxClose?.addEventListener('click', closeLightbox);
+  lightboxPrevious?.addEventListener('click', event => {
+    event.stopPropagation();
+    showLightboxImage(-1);
+  });
+  lightboxNext?.addEventListener('click', event => {
+    event.stopPropagation();
+    showLightboxImage(1);
+  });
+  lightbox?.addEventListener('click', event => {
+    if (event.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', event => {
+    if (!lightbox?.classList.contains('open')) return;
+
+    if (event.key === 'Escape') closeLightbox();
+    if (event.key === 'ArrowLeft') showLightboxImage(-1);
+    if (event.key === 'ArrowRight') showLightboxImage(1);
+  });
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
