@@ -1155,7 +1155,7 @@
       dot.className = 'gallery-dot';
       dot.setAttribute('aria-label', `Foto ${index + 1} anzeigen`);
       dot.addEventListener('click', () => showImage(index));
-      dotsContainer.appendChild(dot);
+      dotsContainer?.appendChild(dot);
       return dot;
     });
 
