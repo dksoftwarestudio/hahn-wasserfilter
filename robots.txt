@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hahn-wasserfilter.de/sitemap.xml
