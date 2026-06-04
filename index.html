@@ -17,15 +17,8 @@
   <meta name="twitter:title" content="hahn-wasserfilter.de | Premium Wasserfilter für Zuhause">
   <meta name="twitter:description" content="Wasserfilter-Systeme für Zuhause und Büro. Klare Preise, persönliche Beratung und unverbindliche Anfrage.">
   <meta name="twitter:image" content="https://hahn-wasserfilter.de/water-hero.jpg">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6SJPMXTRV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-P6SJPMXTRV');
-</script>
+  <link rel="stylesheet" href="css/cookie-consent.css">
+  <link rel="preload" as="image" href="water-hero.opt.jpg">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -324,7 +317,7 @@
           rgba(61, 83, 135, 0.16) 48%,
           rgba(199, 165, 107, 0.14) 100%
         ),
-        url('water-hero.jpg');
+        url('water-hero.opt.jpg');
       background-size: cover;
       background-position: 42% 82%;
       position: relative;
@@ -401,7 +394,7 @@
             rgba(8, 15, 28, 0.14),
             rgba(61, 83, 135, 0.26)
           ),
-          url('water-hero.jpg');
+          url('water-hero.opt.jpg');
         background-size: cover;
         background-position: 39% center;
       }
@@ -448,8 +441,9 @@
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
 
     <a href="index.html" class="flex items-center gap-3">
-  <img src="logo-hahn.jpg"
-       loading="lazy"
+  <img src="logo-hahn-176.jpg"
+       width="1254"
+       height="1254"
        alt="Hahn Wasserfilter Logo"
        onerror="this.style.display='none'"
        class="w-11 h-11 rounded-2xl object-cover shadow-sm">
@@ -485,17 +479,23 @@
 
   </div>
 
-  <div class="md:hidden grid grid-cols-2 gap-3 px-6 pb-4">
-  <a href="vorteile.html"
-     class="text-center bg-white border border-[#3D5387] text-[#3D5387] py-3 rounded-2xl font-medium">
-    Vorteile
-  </a>
+  <div class="md:hidden px-6 pb-4 space-y-3">
+  <div class="grid grid-cols-2 gap-3">
+    <a href="vorteile.html"
+       class="text-center bg-white border border-[#3D5387] text-[#3D5387] py-3 rounded-2xl font-medium">
+      Vorteile
+    </a>
 
-  <a href="#produkte"
-     class="text-center bg-[#3D5387] text-white py-3 rounded-2xl font-medium">
-    Produkte
-  </a>
+    <a href="#produkte"
+       class="text-center bg-[#3D5387] text-white py-3 rounded-2xl font-medium">
+      Produkte
+    </a>
+  </div>
 
+  <a href="#kontakt"
+     class="block text-center bg-white border border-[#3D5387] text-[#3D5387] py-3 rounded-2xl font-medium">
+    Kontakt
+  </a>
 </div>
 </header>
 
@@ -593,6 +593,8 @@
 
   <div class="reveal image-hover rounded-[2.5rem] overflow-hidden shadow-2xl bg-slate-200">
     <img src="img/water-kitchen2.jpg"
+         width="1290"
+         height="1595"
          loading="lazy"
          alt="Moderner Wasserfilter in heller Küche"
          onerror="this.parentElement.style.background='#e2e8f0';this.style.display='none'"
@@ -626,8 +628,10 @@
       <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
         <div class="image-hover product-gallery rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-white to-slate-50 shadow-2xl p-10 border border-slate-200/50"
              data-gallery-title="LUXLABEL Ambient Wasserfilter"
-             data-gallery='["ambient-basic.jpg","img/ambient-basic1.jpg","img/ambient-basic2.jpg","img/ambient-basic4.jpg"]'>
-          <img src="ambient-basic.jpg"
+             data-gallery='["ambient-basic.opt.jpg","img/ambient-basic1.opt.jpg","img/ambient-basic2.opt.jpg","img/ambient-basic4.opt.jpg"]'>
+          <img src="ambient-basic.opt.jpg"
+               width="1290"
+               height="1441"
                loading="lazy"
                alt="LUXLABEL Ambient Wasserfilter"
                onerror="this.closest('.product-gallery').style.background='#f3f4f6';this.style.display='none'"
@@ -667,8 +671,10 @@
       <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
         <div class="lg:order-2 image-hover product-gallery rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-white to-slate-50 shadow-2xl p-10 border border-slate-200/50"
              data-gallery-title="NAIS Standard Wasserfilter"
-             data-gallery='["nais-standard.jpg","img/nais-standard1.jpg","img/nais-standard2.jpg","img/nais-standard3.jpg"]'>
-          <img src="nais-standard.jpg"
+             data-gallery='["nais-standard.opt.jpg","img/nais-standard1.opt.jpg","img/nais-standard2.opt.jpg","img/nais-standard3.opt.jpg"]'>
+          <img src="nais-standard.opt.jpg"
+               width="1290"
+               height="1280"
                loading="lazy"
                alt="NAIS Standard Wasserfilter"
                onerror="this.closest('.product-gallery').style.background='#f3f4f6';this.style.display='none'"
@@ -708,8 +714,10 @@
       <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
         <div class="image-hover product-gallery rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-white to-slate-50 shadow-2xl p-10 border border-slate-200/50"
              data-gallery-title="NAIS CAFE Premium Wasserfilter"
-             data-gallery='["nais-cafe.jpg","img/nais-cafe1.jpg","img/nais-cafe2.jpg","img/nais-cafe3.jpg","img/nais-cafe4.jpg","img/nais-cafe5.jpg","img/nais-cafe6.jpg"]'>
-          <img src="nais-cafe.jpg"
+             data-gallery='["nais-cafe.opt.jpg","img/nais-cafe1.opt.jpg","img/nais-cafe2.opt.jpg","img/nais-cafe3.opt.jpg","img/nais-cafe4.opt.jpg","img/nais-cafe5.opt.jpg","img/nais-cafe6.opt.jpg"]'>
+          <img src="nais-cafe.opt.jpg"
+               width="1290"
+               height="1283"
                loading="lazy"
                alt="NAIS CAFE Premium Wasserfilter"
                onerror="this.closest('.product-gallery').style.background='#f3f4f6';this.style.display='none'"
@@ -815,6 +823,9 @@
 
         <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
           <img src="img/luxlabel-filter.jpg"
+               width="1200"
+               height="800"
+               loading="lazy"
                alt="Luxlabel Premium Filter"
                class="w-full rounded-[2.5rem] object-cover hover:scale-[1.02] transition duration-700">
         </div>
@@ -958,43 +969,73 @@
          value="hahn-wasserfilter.de">
 
         <div class="grid md:grid-cols-2 gap-6">
-          <input type="text"
-                 name="name"
-                 placeholder="Vor- und Nachname"
-                 required
-                 autocomplete="name"
-                 class="w-full px-6 py-4 rounded-2xl bg-[#F9FAFB] border border-slate-200 focus:outline-none focus:border-[#3D5387] focus:ring-2 focus:ring-[#3D5387]/10 transition">
+          <div>
+            <label for="contact-name" class="block text-sm font-medium text-slate-700 mb-2">
+              Vor- und Nachname
+            </label>
+            <input type="text"
+                   id="contact-name"
+                   name="name"
+                   placeholder="Vor- und Nachname"
+                   required
+                   autocomplete="name"
+                   class="w-full px-6 py-4 rounded-2xl bg-[#F9FAFB] border border-slate-200 focus:outline-none focus:border-[#3D5387] focus:ring-2 focus:ring-[#3D5387]/10 transition">
+          </div>
 
-          <input type="tel"
-                 name="phone"
-                 placeholder="Telefonnummer"
+          <div>
+            <label for="contact-phone" class="block text-sm font-medium text-slate-700 mb-2">
+              Telefonnummer
+            </label>
+            <input type="tel"
+                   id="contact-phone"
+                   name="phone"
+                   placeholder="Telefonnummer"
+                   required
+                   autocomplete="tel"
+                   class="w-full px-6 py-4 rounded-2xl bg-[#F9FAFB] border border-slate-200 focus:outline-none focus:border-[#3D5387] focus:ring-2 focus:ring-[#3D5387]/10 transition">
+          </div>
+        </div>
+
+        <div>
+          <label for="contact-email" class="block text-sm font-medium text-slate-700 mb-2">
+            E-Mail-Adresse
+          </label>
+          <input type="email"
+                 id="contact-email"
+                 name="email"
+                 placeholder="E-Mail-Adresse"
                  required
-                 autocomplete="tel"
+                 autocomplete="email"
                  class="w-full px-6 py-4 rounded-2xl bg-[#F9FAFB] border border-slate-200 focus:outline-none focus:border-[#3D5387] focus:ring-2 focus:ring-[#3D5387]/10 transition">
         </div>
 
-        <input type="email"
-               name="email"
-               placeholder="E-Mail-Adresse"
-               required
-               autocomplete="email"
-               class="w-full px-6 py-4 rounded-2xl bg-[#F9FAFB] border border-slate-200 focus:outline-none focus:border-[#3D5387] focus:ring-2 focus:ring-[#3D5387]/10 transition">
+        <div>
+          <label for="contact-interest" class="block text-sm font-medium text-slate-700 mb-2">
+            Interesse
+          </label>
+          <select id="contact-interest"
+                  name="interest"
+                  required
+                  class="w-full px-6 py-4 rounded-2xl bg-[#F9FAFB] border border-slate-200 text-slate-800 focus:outline-none focus:border-[#3D5387] focus:ring-2 focus:ring-[#3D5387]/10 transition">
+            <option value="" disabled selected>Wofür interessieren Sie sich?</option>
+            <option value="LUXLABEL Ambient">LUXLABEL Ambient</option>
+            <option value="NAIS Standard">NAIS Standard</option>
+            <option value="NAIS CAFE Premium">NAIS CAFE Premium</option>
+            <option value="Untertisch-System">Untertisch-System</option>
+            <option value="Ich bin noch unsicher">Ich bin noch unsicher</option>
+          </select>
+        </div>
 
-       <select name="interest"
-        required
-        class="w-full px-6 py-4 rounded-2xl bg-[#F9FAFB] border border-slate-200 text-slate-800 focus:outline-none focus:border-[#3D5387] focus:ring-2 focus:ring-[#3D5387]/10 transition">
-          <option value="" disabled selected>Wofür interessieren Sie sich?</option>
-          <option value="LUXLABEL Ambient">LUXLABEL Ambient</option>
-          <option value="NAIS Standard">NAIS Standard</option>
-          <option value="NAIS CAFE Premium">NAIS CAFE Premium</option>
-          <option value="Untertisch-System">Untertisch-System</option>
-          <option value="Ich bin noch unsicher">Ich bin noch unsicher</option>
-        </select>
-
-        <textarea name="message"
-                  rows="5"
-                  placeholder="Ihre Nachricht"
-                  class="resize-none w-full px-6 py-4 rounded-2xl bg-[#F9FAFB] border border-slate-200 focus:outline-none focus:border-[#3D5387] focus:ring-2 focus:ring-[#3D5387]/10 transition"></textarea>
+        <div>
+          <label for="contact-message" class="block text-sm font-medium text-slate-700 mb-2">
+            Ihre Nachricht
+          </label>
+          <textarea id="contact-message"
+                    name="message"
+                    rows="5"
+                    placeholder="Ihre Nachricht"
+                    class="resize-none w-full px-6 py-4 rounded-2xl bg-[#F9FAFB] border border-slate-200 focus:outline-none focus:border-[#3D5387] focus:ring-2 focus:ring-[#3D5387]/10 transition"></textarea>
+        </div>
 
         <label class="flex items-start gap-3 text-sm leading-6 text-slate-600">
           <input type="checkbox"
@@ -1032,7 +1073,9 @@
       <div>
         <div class="flex items-center gap-3 mb-6">
           <div class="w-11 h-11 rounded-xl overflow-hidden shadow-sm">
-  <img src="logo-hahn.jpg"
+  <img src="logo-hahn-176.jpg"
+       width="1254"
+       height="1254"
        loading="lazy"
        alt="Hahn Wasserfilter Logo"
        onerror="this.parentElement.style.display='none'"
@@ -1118,7 +1161,7 @@
    target="_blank"
    rel="noopener noreferrer"
    aria-label="WhatsApp schreiben"
-   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full shadow-2xl z-50 transition duration-300 hover:shadow-3xl hover:scale-110">
+   class="hwf-whatsapp-fab fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full shadow-2xl z-50 transition duration-300 hover:shadow-3xl hover:scale-110">
   <svg xmlns="http://www.w3.org/2000/svg"
        width="28"
        height="28"
@@ -1273,6 +1316,8 @@
   items.forEach(item => observer.observe(item));
 });
 </script>
+
+<script src="js/cookie-consent.js" defer></script>
 
 </body>
 </html>

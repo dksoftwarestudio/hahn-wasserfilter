@@ -1,0 +1,111 @@
+.hwf-cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom, 0px));
+  pointer-events: none;
+}
+
+.hwf-cookie-banner__inner {
+  pointer-events: auto;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(61, 83, 135, 0.12);
+  box-shadow: 0 16px 48px rgba(17, 24, 39, 0.14);
+  backdrop-filter: blur(8px);
+}
+
+.hwf-cookie-banner__text {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.hwf-cookie-banner__link {
+  color: #3d5387;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hwf-cookie-banner__link:hover {
+  color: #111827;
+}
+
+.hwf-cookie-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  justify-content: flex-end;
+}
+
+.hwf-cookie-banner__btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.hwf-cookie-banner__btn:focus {
+  outline: none;
+}
+
+.hwf-cookie-banner__btn:focus-visible {
+  outline: 2px solid #c7a56b;
+  outline-offset: 2px;
+}
+
+.hwf-cookie-banner__btn--decline {
+  background: #fff;
+  color: #3d5387;
+  border: 1px solid #3d5387;
+}
+
+.hwf-cookie-banner__btn--decline:hover {
+  background: #f5f6fa;
+  color: #111827;
+}
+
+.hwf-cookie-banner__btn--accept {
+  background: #3d5387;
+  color: #fff;
+  border: 1px solid #3d5387;
+}
+
+.hwf-cookie-banner__btn--accept:hover {
+  background: #111827;
+  border-color: #111827;
+}
+
+@media (max-width: 767px) {
+  body.hwf-cookie-banner-visible .hwf-whatsapp-fab {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .hwf-cookie-banner__inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.125rem 1.5rem;
+  }
+
+  .hwf-cookie-banner__text {
+    margin: 0;
+    flex: 1;
+  }
+
+  .hwf-cookie-banner__actions {
+    flex-shrink: 0;
+  }
+}
